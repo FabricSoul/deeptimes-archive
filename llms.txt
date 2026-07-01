@@ -1,0 +1,36 @@
+# 深度时空太空游戏攻略存档 (DeepTimes Space Game Archive)
+
+> 已关站的中文太空游戏社区『深度时空 bbs.deeptimes.net』的攻略存档。共 43 篇，涵盖 X3/X4/自由枪骑兵/群星/太空引擎等。内容版权归原作者，为社区保存性镜像。
+
+## 按游戏分区
+- [X3：地球人冲突 / 阿尔比恩序曲（X3: Terran Conflict / Albion Prelude / Farnham's Legacy）](https://fabricsoul.github.io/deeptimes-archive/s/x3-terran-conflict-albion-prelude.html) — 30 篇
+- [X4：基石（X4: Foundations）](https://fabricsoul.github.io/deeptimes-archive/s/x4-foundations.html) — 6 篇
+- [深度时空宇宙/太空游戏社区](https://fabricsoul.github.io/deeptimes-archive/s/sec-cc1593.html) — 1 篇
+- [菱堡】4.0 全局综合船厂（空间站）](https://fabricsoul.github.io/deeptimes-archive/s/sec-eb7e6b.html) — 1 篇
+- [第4页](https://fabricsoul.github.io/deeptimes-archive/s/sec-61be97.html) — 1 篇
+- [第2页](https://fabricsoul.github.io/deeptimes-archive/s/sec-487483.html) — 1 篇
+- [坎巴拉太空计划(Kerbal Space Program)](https://fabricsoul.github.io/deeptimes-archive/s/kerbal-space-program.html) — 1 篇
+- [太空游戏综合区](https://fabricsoul.github.io/deeptimes-archive/s/sec-bbfd1a.html) — 1 篇
+- [第5页](https://fabricsoul.github.io/deeptimes-archive/s/sec-fea3a8.html) — 1 篇
+
+## 代表性攻略
+- [X3:TC九大任务的开启条件和详细攻略&X3TC全星图.(2024/2/27 再编辑)](https://fabricsoul.github.io/deeptimes-archive/t/2171209.html)
+- [新的星际之剑出来了](https://fabricsoul.github.io/deeptimes-archive/t/2158851.html)
+- [〓〓〓〓〓【X3系列资源总部，资源不定期更新】〓〓〓〓〓](https://fabricsoul.github.io/deeptimes-archive/t/2126274.html)
+- [《X3：阿尔比恩序曲》主线任务——全球最详尽中文新手攻略](https://fabricsoul.github.io/deeptimes-archive/t/2117811.html)
+- [X3:TC 新人上手手记（教程、攻略、心得）](https://fabricsoul.github.io/deeptimes-archive/t/32854.html)
+- [X3AP 3.0 主线任务详细攻略](https://fabricsoul.github.io/deeptimes-archive/t/2138918.html)
+- [给一脸懵逼的新人们写的攻略](https://fabricsoul.github.io/deeptimes-archive/t/2151090.html)
+- [X3 TC-AP 游戏本体 + 推荐脚本 + XRM+XTC分享（包含个人修改）](https://fabricsoul.github.io/deeptimes-archive/t/2140148.html)
+- [任务、建厂与组建舰队经验【SRM+CMOD4+IR】](https://fabricsoul.github.io/deeptimes-archive/t/2108341.html)
+- [新人第二贴　各主线任务要点指南 （11.3部分细节等更新）](https://fabricsoul.github.io/deeptimes-archive/t/21427.html)
+- [不开seta不作弊，三天赚10亿! 官网最高效新人赚钱方式分享!](https://fabricsoul.github.io/deeptimes-archive/t/33217.html)
+- [新手指导（7月15号更新）](https://fabricsoul.github.io/deeptimes-archive/t/29582.html)
+- [教你玩转原版X3TC——选船篇](https://fabricsoul.github.io/deeptimes-archive/t/2115172.html)
+- [打造你的特混舰队（CODEA武器系统3300完美汉化及使用心得）](https://fabricsoul.github.io/deeptimes-archive/t/2108098.html)
+- [新手进阶之二：什么是CAG（Commercial Agent）（官方奖励包）](https://fabricsoul.github.io/deeptimes-archive/t/2115722.html)
+- [X3 TC 索引（Jul.15.2011 更新）](https://fabricsoul.github.io/deeptimes-archive/t/2109725.html)
+- [TC2.1 Treasure Hunt任务流程【严重剧透】](https://fabricsoul.github.io/deeptimes-archive/t/28851.html)
+- [>>> Kerbal Space Program 资源、教程索引 (WIP) <<<](https://fabricsoul.github.io/deeptimes-archive/t/2129189.html)
+- [新人上手TC的一些心得~(30楼建厂指南，36楼HUB任务参考方案)](https://fabricsoul.github.io/deeptimes-archive/t/27595.html)
+- [TC2.6 A New Home 任务大揭底！【剧透啦】（已更新攻略）](https://fabricsoul.github.io/deeptimes-archive/t/38335.html)
