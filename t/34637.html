@@ -1,0 +1,195 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>X3 Editor 基本武器及船艦修改教學｜X3：地球人冲突 / 阿尔比恩序曲攻略｜深度时空存档</title>
+<meta name="description" content="很多人都對遊戲內的設定感到不滿，如HEPT速度太慢、砲塔不能安裝FAA等。現在，就一起創造一個自己滿意的X3世界吧！ 這是本人首次寫教學貼，如有錯漏，敬請原諒 回貼是美德，雖然我沒有設定隱藏內容，但我還請各位看過後留下一些意見，謝謝 一樓: 第零章 --- 尋找檔案的準則 第一章 --- 船艦修改 ">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://fabricsoul.github.io/deeptimes-archive/t/34637.html">
+<meta property="og:type" content="website"><meta property="og:site_name" content="深度时空太空游戏攻略存档">
+<meta property="og:title" content="X3 Editor 基本武器及船艦修改教學｜X3：地球人冲突 / 阿尔比恩序曲攻略｜深度时空存档"><meta property="og:description" content="很多人都對遊戲內的設定感到不滿，如HEPT速度太慢、砲塔不能安裝FAA等。現在，就一起創造一個自己滿意的X3世界吧！ 這是本人首次寫教學貼，如有錯漏，敬請原諒 回貼是美德，雖然我沒有設定隱藏內容，但我還請各位看過後留下一些意見，謝謝 一樓: 第零章 --- 尋找檔案的準則 第一章 --- 船艦修改 ">
+<meta property="og:url" content="https://fabricsoul.github.io/deeptimes-archive/t/34637.html"><meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "DiscussionForumPosting", "headline": "X3 Editor 基本武器及船艦修改教學", "articleBody": "本帖最后由 FreemanGL 于 2013-10-5 00:18 编辑 \n\n很多人都對遊戲內的設定感到不滿，如HEPT速度太慢、砲塔不能安裝FAA等。現在，就一起創造一個自己滿意的X3世界吧！\n\r\n\n\r\n這是本人首次寫教學貼，如有錯漏，敬請原諒\n\r\n回貼是美德，雖然我沒有設定隱藏內容，但我還請各位看過後留下一些意見，謝謝\n\r\n\n\r\n一樓: 第零章 --- 尋找檔案的準則\n\r\n        第一章 ---  船艦修改\n\r\n\n\r\n二樓: 第二章 --- 砲塔屬性修改\n\r\n\n\r\n三樓: 第三章 --- 武器屬性修改\n\r\n\n\r\n四樓: 第四章 --- 護盾屬性修改\n\r\n\n\r\n\n\r\nX3 Editor 2下載網址:\n\r\n1: X3 Editor 官方載點 (0.0.28版): http://x3e2.doubleshadow.wz.cz/download/X3%20Editor%202-2.0.23.0-setup.exe\n\r\n2: 本討論區的網盤載點 (0.0.23版): http://cid-153be45b27ccc8e2.skydrive.live.com/browse.aspx/X3TC%e7%9b%b8%e5%85%b3/TC%e5%b7%a5%e5%85%b7/X3Editor%5E0ModManager\n\r\n\n\r\n增補資料:\n\r\n有關省卻尋找檔案的程序和解決漢化版X3TC無法正常執行的方法，請參考28樓\n\r\n\n\r\n第零章: 尋找檔案的準則:\n\r\n由於X3是以最後的數字檔案優先，假如15和16出現同一檔案的話，遊戲只會載入16的檔案。\n\r\n例子: 你想找Tships.pck檔案，發現\"06\"及\"07\"內都含有這個檔案，那麼修改07內的Tships.pck就可以了。\n\r\n\n\r\n所以，找檔案應從最大數字開始找，最先找到便是了\n\r\n\n\r\n\n\r\n\n\r\n\n\r\n\n\r\n\n\r\n\n\r\n\n\r\n第一章: 船艦修改\n\r\n先開啟X3 Editor 2 \n\r\n\n\r\n\n\r\n然後按Open>open\n\r\n\n\r\n\n\r\n\n\r\n出來後見到很多檔案:\n\r\n\n\r\n其中01-XX就是我們的主角。\n\r\n\n\r\n\n\r\n從最大數字的檔案找，直至找到一個名為\"types\"的資料夾:\n\r\n\n\r\n進入types，尋找名為Tships.pck的檔案，沒有的話在其他數字檔內繼續找\n\r\n \n\r\n\n\r\n選\"T File Editor\"\n\r\n\n\r\n\n\r\n開啟後見到這樣:\n\r\n \n\r\n左面是船艦列表，右面是數據，也就是你將會修改的東西。\n\r\n我們以Argon Titan 作為例子\n\r\n\n\r\n在General裏，較為常用的分別是: (在希望修改的參數上連按兩下即可作出修改)\n\r\n \n\r\n\n\r\nMax Cargo Size: 最大可載的貨物種類 (Extra Large Containers XL 就是最大可載XL級貨物了)\n\r\nCargo min (buy): 購買時貨倉可載的貨物數目\n\r\nCargo max: 最大貨倉可載的貨物數目\n\r\nDocking Shots: 該船能載多少架小飛機 (若本身沒有內部停泊點，要另外自己加，我自己也不太懂)\n\r\nMinumum Noteriety: 需要有該種族多少的聲望才能買。 \n\r\n\n\r\n在Performance裏，較為常用的分別是:\n\r\n \n\r\nyaw, pitch, roll: 操控性，分別是X/Y/Z軸的轉向速度\n\r\nSpeed(Base): 購買時的速度\n\r\nAcceleration: 加速度 (這個數值是沒有Engine Tuning時)\n\r\nSpeed Extension: 可以安裝多少Engine Tuning (會改變Max Speed最大速度)\n\r\nSteering Extension: 可以安裝多少Rudder Optimization\n\r\nPower: 護盾發電機的功率\n\r\nHull Strength: 船體的血量\n\r\nShield: 最大可安裝甚麼類型的護盾\n\r\nMax Shield count: 最多可同時安裝多少護盾 (如Argon Titan, Shield 是2Gj, max shield count是4，最大護盾便是2Gjx4 = 8Gj)\n\r\nWeapons Energy: 武器能量最大值\n\r\nWeapons Recharge Rate: 武器能量回復速度\n\r\n\n\r\nModel:\n\r\n \n\r\n建議不要修改，這會改變船艦的使用模型\n\r\n\n\r\nTurrets:\n\r\n \n\r\n下面的count代表該砲塔不同位置所擁有的武器數量。(如count改為2，則會有兩門砲從同一位置發射)\n\r\n在Argon Titan的前砲塔上，看到共有8個定點位，每個定點位有1門砲(count=1)，所以Argon Titan的前砲塔共有(8x1=8)門砲。\n\r\n(注意: 每砲塔不能多於12門砲)\n\r\n\n\r\n \n\r\n在上面的空格，代表不同砲塔所用的武器設定檔 (決定該砲塔能使用的武器)\n\r\nSS_COCKPIT_A_FRONT_M2等就是設定檔的名字，雙擊可以改變使用的設定檔，可是每個設定檔本身就不是在這修改。\n\r\n\n\r\n \n\r\nCompatible Gun: 主砲可安裝的武器，由於Argon Titan沒有主砲，所以是空白)\n\r\n\n\r\nCompatible Missile: 可發射的飛彈類型\n\r\n\n\r\nWare: 預設已經安裝的軟件 (不能直接修改)", "author": {"@type": "Person", "name": "kanhf0514"}, "url": "https://fabricsoul.github.io/deeptimes-archive/t/34637.html", "inLanguage": "zh-CN", "about": "X3：地球人冲突 / 阿尔比恩序曲（X3: Terran Conflict / Albion Prelude / Farnham's Legacy）", "isPartOf": {"@type": "WebSite", "name": "深度时空太空游戏攻略存档", "url": "https://fabricsoul.github.io/deeptimes-archive/"}, "commentCount": 9, "datePublished": "2010-1-5"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "首页", "item": "https://fabricsoul.github.io/deeptimes-archive/"}, {"@type": "ListItem", "position": 2, "name": "X3：地球人冲突 / 阿尔比恩序曲", "item": "https://fabricsoul.github.io/deeptimes-archive/s/x3-terran-conflict-albion-prelude.html"}, {"@type": "ListItem", "position": 3, "name": "X3 Editor 基本武器及船艦修改教學", "item": "https://fabricsoul.github.io/deeptimes-archive/t/34637.html"}]}</script>
+</head><body>
+<header class="site"><a href="../index.html" class="brand">深度时空 · 太空游戏攻略存档</a>
+<span class="tag">DeepTimes Space Game Archive</span></header>
+<nav class="crumb"><a href="../index.html">首页</a> › <a href="../s/x3-terran-conflict-albion-prelude.html">X3：地球人冲突 / 阿尔比恩序曲</a> › <span>X3 Editor 基本武器及船艦修改教學</span></nav>
+<article><h1>X3 Editor 基本武器及船艦修改教學</h1>
+<p class="src">原作者：kanhf0514　发表：2010-1-5　来源：bbs.deeptimes.net（已关站）· <a href="https://web.archive.org/web/20191021140602/https://bbs.deeptimes.net/forum.php?mod=viewthread&tid=34637" rel="nofollow">Wayback 存档</a></p>
+<section class="floor"><span class="fl">#1</span><p>本帖最后由 FreemanGL 于 2013-10-5 00:18 编辑 </p>
+<p>很多人都對遊戲內的設定感到不滿，如HEPT速度太慢、砲塔不能安裝FAA等。現在，就一起創造一個自己滿意的X3世界吧！</p>
+<p>這是本人首次寫教學貼，如有錯漏，敬請原諒</p>
+<p>回貼是美德，雖然我沒有設定隱藏內容，但我還請各位看過後留下一些意見，謝謝</p>
+<p>一樓: 第零章 --- 尋找檔案的準則</p>
+<p>        第一章 ---  船艦修改</p>
+<p>二樓: 第二章 --- 砲塔屬性修改</p>
+<p>三樓: 第三章 --- 武器屬性修改</p>
+<p>四樓: 第四章 --- 護盾屬性修改</p>
+<p>X3 Editor 2下載網址:</p>
+<p>1: X3 Editor 官方載點 (0.0.28版): http://x3e2.doubleshadow.wz.cz/download/X3%20Editor%202-2.0.23.0-setup.exe</p>
+<p>2: 本討論區的網盤載點 (0.0.23版): http://cid-153be45b27ccc8e2.skydrive.live.com/browse.aspx/X3TC%e7%9b%b8%e5%85%b3/TC%e5%b7%a5%e5%85%b7/X3Editor%5E0ModManager</p>
+<p>增補資料:</p>
+<p>有關省卻尋找檔案的程序和解決漢化版X3TC無法正常執行的方法，請參考28樓</p>
+<p>第零章: 尋找檔案的準則:</p>
+<p>由於X3是以最後的數字檔案優先，假如15和16出現同一檔案的話，遊戲只會載入16的檔案。</p>
+<p>例子: 你想找Tships.pck檔案，發現&quot;06&quot;及&quot;07&quot;內都含有這個檔案，那麼修改07內的Tships.pck就可以了。</p>
+<p>所以，找檔案應從最大數字開始找，最先找到便是了</p>
+<p>第一章: 船艦修改</p>
+<p>先開啟X3 Editor 2 </p>
+<p>然後按Open&gt;open</p>
+<p>出來後見到很多檔案:</p>
+<p>其中01-XX就是我們的主角。</p>
+<p>從最大數字的檔案找，直至找到一個名為&quot;types&quot;的資料夾:</p>
+<p>進入types，尋找名為Tships.pck的檔案，沒有的話在其他數字檔內繼續找</p>
+<p>選&quot;T File Editor&quot;</p>
+<p>開啟後見到這樣:</p>
+<p>左面是船艦列表，右面是數據，也就是你將會修改的東西。</p>
+<p>我們以Argon Titan 作為例子</p>
+<p>在General裏，較為常用的分別是: (在希望修改的參數上連按兩下即可作出修改)</p>
+<p>Max Cargo Size: 最大可載的貨物種類 (Extra Large Containers XL 就是最大可載XL級貨物了)</p>
+<p>Cargo min (buy): 購買時貨倉可載的貨物數目</p>
+<p>Cargo max: 最大貨倉可載的貨物數目</p>
+<p>Docking Shots: 該船能載多少架小飛機 (若本身沒有內部停泊點，要另外自己加，我自己也不太懂)</p>
+<p>Minumum Noteriety: 需要有該種族多少的聲望才能買。 </p>
+<p>在Performance裏，較為常用的分別是:</p>
+<p>yaw, pitch, roll: 操控性，分別是X/Y/Z軸的轉向速度</p>
+<p>Speed(Base): 購買時的速度</p>
+<p>Acceleration: 加速度 (這個數值是沒有Engine Tuning時)</p>
+<p>Speed Extension: 可以安裝多少Engine Tuning (會改變Max Speed最大速度)</p>
+<p>Steering Extension: 可以安裝多少Rudder Optimization</p>
+<p>Power: 護盾發電機的功率</p>
+<p>Hull Strength: 船體的血量</p>
+<p>Shield: 最大可安裝甚麼類型的護盾</p>
+<p>Max Shield count: 最多可同時安裝多少護盾 (如Argon Titan, Shield 是2Gj, max shield count是4，最大護盾便是2Gjx4 = 8Gj)</p>
+<p>Weapons Energy: 武器能量最大值</p>
+<p>Weapons Recharge Rate: 武器能量回復速度</p>
+<p>Model:</p>
+<p>建議不要修改，這會改變船艦的使用模型</p>
+<p>Turrets:</p>
+<p>下面的count代表該砲塔不同位置所擁有的武器數量。(如count改為2，則會有兩門砲從同一位置發射)</p>
+<p>在Argon Titan的前砲塔上，看到共有8個定點位，每個定點位有1門砲(count=1)，所以Argon Titan的前砲塔共有(8x1=8)門砲。</p>
+<p>(注意: 每砲塔不能多於12門砲)</p>
+<p>在上面的空格，代表不同砲塔所用的武器設定檔 (決定該砲塔能使用的武器)</p>
+<p>SS_COCKPIT_A_FRONT_M2等就是設定檔的名字，雙擊可以改變使用的設定檔，可是每個設定檔本身就不是在這修改。</p>
+<p>Compatible Gun: 主砲可安裝的武器，由於Argon Titan沒有主砲，所以是空白)</p>
+<p>Compatible Missile: 可發射的飛彈類型</p>
+<p>Ware: 預設已經安裝的軟件 (不能直接修改)</p></section>
+<section class="floor"><span class="fl">#2</span><p>本帖最后由 kanhf0514 于 2010-1-5 22:04 编辑 </p>
+<p>第二章: 砲塔屬性修改:</p>
+<p>在Types資料夾內尋找&quot;TCockpits.pck&quot; (同樣是修改最大數字檔內的Tcockpits.pck就行了)</p>
+<p>一樣用T File Editor, 開啟後:</p>
+<p>找到要修改的設定檔 (如在第一章的Argon Titan前砲塔就是使用SS_COCKPIT_A_FRONT_M2檔，修改這個檔便能改變Argon Titan前砲塔所使用的武器。</p>
+<p>左邊是現在支援的武器，右邊是其餘武器。要增加支援的武器，只要在右邊你想用的武器上按一下，再按&quot;Add&quot;就行了。</p></section>
+<section class="floor"><span class="fl">#3</span><p>本帖最后由 kanhf0514 于 2011-3-21 19:26 编辑 </p>
+<p>第三章: 武器屬性修改</p>
+<p>控制武器屬性的分別是&quot;Tbullets.pck&quot;和&quot;TLaser.pck&quot;，同樣在&quot;types&quot;資料夾內。</p>
+<p>同樣用T File Editor作修改。</p>
+<p>嚴格來說，TLaser.pck是武器本身的參數，TBullet.pck則是武器發射出來的子彈的參數。</p>
+<p>現在先介紹TLaser.pck</p>
+<p>開啟後看見這:</p>
+<p>較常用的參數:</p>
+<p>Rotation X/Y: 安裝此武器的砲塔的最大旋轉速度(X/Y軸)。修改這對Photon Pulse Cannon這類的武器很有用啊~</p>
+<p>Rotation Z則不要修改，所有武器都是0的。</p>
+<p>Rate Of Fire: 每分鐘發射多少發</p>
+<p>Projectile: 該武器使用甚麼子彈(名字對應TBullets.pck內的設定檔名字)</p>
+<p>Size: 該武器屬甚麼貨物類型 (如Small Containers S表示S貨倉就能載著這武器)</p>
+<p>Minimum notoriety: 最少需有多少聲望才能購買這武器。</p>
+<p>對於其他參數，如傷害值、射程等，均在TBullets.pck修改。</p>
+<p>開啟後: (緊記在左上方選&quot;ID&quot;，否則列表全都是&quot;Unknown Object&quot;</p>
+<p>跟修改砲塔相似，需要先知道你想修改的武器是用甚麼子彈，記得武器英文簡寫會方便一些。</p>
+<p>如&quot;SS_BULLET_EMP&quot;就是Electro-magnetic Plasma Cannon的子彈。</p>
+<p>General常用參數:</p>
+<p>Model File: 改變子彈的樣貌，例如將&quot;SS_BULLET_PAC&quot;內&quot;Model File&quot;的數值抄到&quot;SS_BULLET_IRE&quot;的話，Impulse Ray Emitter的子彈效果就會變為Particle Accelerator Cannon (其他數據仍然跟IRE一樣)</p>
+<p>Bullet Data常用參數:</p>
+<p>Hull Damage: 單發對船體的傷害</p>
+<p>Shield Damage: 單發對護盾的傷害</p>
+<p>Energy Used: 每發射一發子彈需用多少能量</p>
+<p>Lifetime: 子彈在空中能夠維持的時間 (秒)</p>
+<p>Speed: 子彈飛行速度 </p>
+<p>Range: 射程。唯讀數據，自動計算，修改&quot;Lifetime&quot;和&quot;Speed&quot;就會改變這數值。</p>
+<p>Ammunition: 該子彈所使用的彈藥類型 (像mass Driver這些會消耗彈藥的武器會有用)</p>
+<p>若希望將要消耗彈藥的武器變為不用的話，將此參數改為&quot;128&quot;，及反選取 &quot;Flags&quot;內的&quot;Use Ammo&quot;</p>
+<p>註: 若是光速砲的話，子彈會立刻到達目標，lifetime只用來控制光速的維持時間，Speed只用來控制射程，不會控制子彈速度。例: Lifetime = 2, Speed = 2500m，即是光速維持2秒，射程=2x2500 = 5000m</p>
+<p>Flags各參數功用:</p>
+<p>PAC: 不明，選取後應會有像Particle Accelerator Cannon的效果，不過我不知是甚麼效果</p>
+<p>Beam: 選取後使用該子彈的武器會是光速砲</p>
+<p>Zig Zag: 選取後使用該子彈的武器會變成像Ion Disruptor一樣，發射像電，能夠自動跟著目標的武器</p>
+<p>Areal: 選取後變成大範圍武器 (像Phased Shockwave Generator 和 Plasma Burst Generator)</p>
+<p>Disable Shield: 停止對方護盾運作。(實際效用不明，預設只有Ion Disruptor有選取這選項)</p>
+<p>Ignore Shield: 選取後會無視護盾</p>
+<p>Use Ammo: 選取後使用該使用該子彈的武器會另外消耗彈藥，所使用的彈藥在&quot;Ammunition&quot;內設定</p>
+<p>Repair: 選取後使用該子彈的武器變為維修性質，每發維修的血量等同&quot;Hull Damage&quot;的數值</p>
+<p>Flak: 選取後使用該子彈的武器會變成防空砲，子彈消失後會有爆炸效果。(實際效果由Impact Effect控制)</p>
+<p>Reduce Speed: 選取後目標若被這子彈命中會減速。</p>
+<p>減速幅度在&quot;Reduce Target Speed - Percentage&quot;修改，單位為百分比</p>
+<p>受影響時間在&quot;Reduce Target Speed - Duration&quot;修改，單位為秒</p>
+<p>Drain Weapon: 選取後目標若被這子彈命中會失去部份武器能量</p>
+<p>Damage Over Time: 選取後目標若被這子彈命中會再受持續的傷害</p>
+<p>傷害值在&quot;Damage Over Time - Energy&quot;修改</p>
+<p>持續傷害時間在&quot;Damage Over Time - Duration&quot;修改，單位為秒</p>
+<p>Fragmentation: 選取後該子彈變為爆裂彈(如Cluster Flak Array及Fragmentation Bomb Launcher)</p>
+<p>爆裂出來的子彈類型在&quot;Create Fragment&quot;選取 (例子: 若在PAC內的create fragment設定為&quot;SS_BULLET_IRE&quot;，則每發PAC都會爆裂為幾發IRE，傷害、射程等跟&quot;SS_BULLET_IRE&quot;一樣)</p>
+<p>Number of Fragments: 每發子彈將會分裂出多少塊碎片</p>
+<p>Charged Weapon: 選取後該子彈能夠使用蓄能攻擊</p>
+<p>蓄能後威力的增強在&quot;Charged Weapon - Energy Amplifier&quot;修改，貌似單位為倍數</p>
+<p>蓄能後該子彈的大小在&quot;Charged Weapon - Size Amplifier&quot;修改，貌似單位為倍數</p>
+<p>飛彈修改:</p>
+<p>還真抱歉，我竟然不記得寫有關飛彈的修改。</p>
+<p>所需要修改的檔案是 TMissiles.pck。尋找跟開啟方法跟以上一樣。</p>
+<p>因為懶惰，不截圖了[S:;P:] </p>
+<p>常用的數據:</p>
+<p>Rotation X: 飛彈左右轉向的速度</p>
+<p>Rotation Y: 飛彈上下轉向的速度</p>
+<p>Speed: 飛彈極速</p>
+<p>Acceleration: 飛彈加速</p>
+<p>Damage: 傷害值 (飛彈對盾和船體的傷害值是一樣，所以即使是M2，當它的盾被爆掉後，少量飛彈就能炸掉船體。如一枚Firestorm Torpedo就能一發炸掉任何主力艦，因為它有100萬的傷害值，而原版船體最堅古的船Deca也只有90萬)</p>
+<p>Blast Radius: 爆炸半徑，單位貌似是毫米(mm)</p>
+<p>Life Time: 飛彈發射後多少秒會自爆，用以配合speed來控制射程</p>
+<p>Rate of Fire: 一分鐘可發射多少發 (由於M7M有多管飛彈發射器，所以能夠以極高速度發射飛彈)</p>
+<p>Volume: 一發飛彈佔多少空間</p>
+<p>Size: 最少需要甚麼類型的貨倉才能運載(注意:不是使用，只是能夠儲存在貨倉)</p>
+<p>Minimum notoriety: 最少需有多少聲望才能購買這飛彈</p></section>
+<section class="floor"><span class="fl">#4</span><p>本帖最后由 kanhf0514 于 2010-1-5 22:41 编辑 </p>
+<p>第四章: 護盾屬性修改</p>
+<p>護盾屬性是在&quot;TShields.pck&quot;裏，同樣是在&quot;types&quot;資料夾內，一樣使用&quot;T File Editor&quot;進行修改</p>
+<p>開啟後:</p>
+<p>常用參數:</p>
+<p>Capacity: 該護盾的總能量，這和它的名字無關，若你將1MJ護盾的capacity改為50000，那麼你的1MJ護盾將會有50000血量</p>
+<p>Power Drain: 這是盾的基本回復參數，如在1MJ，數值是33，那麼它便每秒回復33點</p>
+<p>注意: 若安裝此護盾的船，護盾發電機功率不夠高，它便不能以全速回盾。後面會再解釋。</p>
+<p>Efficiency: 效率，護盾回復速度也受這影響。</p>
+<p>Volume: 此盾佔貨倉多少空間</p>
+<p>Size: 此盾的貨物種類，如&quot;Small Container S&quot;即表示&quot;S&quot;級貨倉便能載此護盾</p>
+<p>Minimum Noteriety: 購買此護盾最少需要的聲望</p>
+<p>護盾回復速度計算:</p>
+<p>以此1MJ盾作例子:</p>
+<p>Power Drain = 33kW</p>
+<p>Efficiency = 4</p>
+<p>那麼此盾的最高回復速度便是 33x4 = 132kW，那麼實質不用10秒便能把此盾完全充電。</p>
+<p>特別例子: 如果你的船的護盾發電機只有30kW的功率，那麼你的船使用此護盾時，最大回復速度只有: 30/33 x 33 x 4 = 30 x 4 = 120kW</p></section>
+<section class="floor"><span class="fl">#5</span><p>谢谢LZ分享~~~~</p></section>
+<section class="floor"><span class="fl">#6</span><p>建设完毕了，过来验收，……嗯，施工质量很不错</p></section>
+<section class="floor"><span class="fl">#7</span><p>謝謝，希望不會太亂吧~ 好像一次過寫了很多技術性東西......</p></section>
+<section class="floor"><span class="fl">#8</span><p>希望楼主能在顶楼给个编辑器的下载链接。</p>
+<p>另外，我想改一下工厂的产品，因为我的Crystal Fab L产出的是Wheat，而不是Crystals，我曾经打开过TFactories，但不知道怎样修改，如果LZ了解修改方法还请不吝指教。</p></section>
+<section class="floor"><span class="fl">#9</span><p>暫時我只想到用作弊腳本，很少研究有關產品的修改</p></section>
+<section class="floor"><span class="fl">#10</span><p>9# kanhf0514 哦，那就遗憾了，不过还是很感谢楼主的慷慨分享。</p></section>
+<aside class="related"><h2>同版块相关攻略</h2><ul>
+<li><a href="../t/2171209.html">X3:TC九大任务的开启条件和详细攻略&amp;X3TC全星图.(2024/2/27 再编辑)</a></li>
+<li><a href="../t/2109647.html">X³: TC · Bonus Material（XTC+奖励包+手册）</a></li>
+<li><a href="../t/2108195.html">[转]官方MSCI命令大全(漫天代码，慎入!)</a></li>
+<li><a href="../t/2117811.html">《X3：阿尔比恩序曲》主线任务——全球最详尽中文新手攻略</a></li>
+<li><a href="../t/2138918.html">X3AP 3.0 主线任务详细攻略</a></li>
+<li><a href="../t/2140148.html">X3 TC-AP 游戏本体 + 推荐脚本 + XRM+XTC分享（包含个人修改）</a></li>
+<li><a href="../t/2126274.html">〓〓〓〓〓【X3系列资源总部，资源不定期更新】〓〓〓〓〓 - 第4页</a></li>
+<li><a href="../t/2108341.html">任务、建厂与组建舰队经验【SRM+CMOD4+IR】</a></li>
+</ul></aside>
+</article>
+<footer class="site">
+<p><strong>关于本站</strong>：这是对已关站的太空游戏社区 <b>深度时空 bbs.deeptimes.net</b> 的非官方社区存档，
+内容取自 <a href="https://web.archive.org/web/*/bbs.deeptimes.net" rel="nofollow">Wayback Machine</a> 公开存档，
+<b>版权归各原作者所有</b>，帖内保留了原作者署名与发帖时间。仅供游戏玩家学习交流与资料保存之用。</p>
+<p>如您是原作者或原站长，希望某内容下架或补充署名，请提交 GitHub Issue，我们会尽快处理。</p>
+<p class="muted">Archive of the defunct Chinese space-game forum DeepTimes (bbs.deeptimes.net). Content © original authors. Preservation mirror.</p>
+</footer></body></html>

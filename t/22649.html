@@ -1,0 +1,281 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>自由枪骑兵宽屏解决方法｜自由枪骑兵攻略｜深度时空存档</title>
+<meta name="description" content="不知道有人发过吗? 1)my documents &gt; my games &gt; freelancer &gt; prefoptions.ini. [Display] size= 1680, 1050 或其他宽屏分辨率 2) c: &gt; program files &gt; microsoft games &gt; free">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://fabricsoul.github.io/deeptimes-archive/t/22649.html">
+<meta property="og:type" content="website"><meta property="og:site_name" content="深度时空太空游戏攻略存档">
+<meta property="og:title" content="自由枪骑兵宽屏解决方法｜自由枪骑兵攻略｜深度时空存档"><meta property="og:description" content="不知道有人发过吗? 1)my documents &gt; my games &gt; freelancer &gt; prefoptions.ini. [Display] size= 1680, 1050 或其他宽屏分辨率 2) c: &gt; program files &gt; microsoft games &gt; free">
+<meta property="og:url" content="https://fabricsoul.github.io/deeptimes-archive/t/22649.html"><meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "DiscussionForumPosting", "headline": "自由枪骑兵宽屏解决方法", "articleBody": "本帖最后由 z4977888 于 2009-9-12 21:27 编辑 \n\n不知道有人发过吗?\n\r\n1)my documents > my games > freelancer > prefoptions.ini.\n\r\n \n\r\n[Display] size= 1680, 1050 或其他宽屏分辨率\n\r\n\n\r\n2) c: > program files > microsoft games > freelancer > DATA > cameras.ini\n\r\n(或其他安装目录)（乱码无所谓，只要删除掉就ok了)\n\r\n\n\r\n删除并复制:[WinCamera]\n\rfovx = 63.504809977813375\n\r\n\r[CockpitCamera]\n\rfovx = 90\n\rznear = 2.000000\n\r\n\r[ChaseCamera]\n\rfovx = 90\n\r\n\r[DeathCamera]\n\rfovx = 90\n\r\n复制代码\n这是16：10的宽屏设置，16:9宽屏将[WinCamera]处改为\n\r\n[WinCamera]\n\r\nfovx =68.88\n\r\n保存\n\r\n3) c: > program files > microsoft games > freelancer > EXE > freelancer.ini\n\r\n\n\r\n第9行 \n\r\nsize = 1680,1050 \n\r\n保存\n\r\n\n\r\n4) c: > program files > microsoft games > freelancer > FONTS >fonts.ini\n\r\n\n\r\n删除并复制:\n\r[TrueType]\n\rnickname = ButtonText\n\rfont = Agency FB\n\rfixed_height = 0.038500\n\r\n\r[TrueType]\n\rnickname = PageHeader\n\rfont = Agency FB\n\rfixed_height = 0.041000\n\r\n\r[TrueType]\n\rnickname = SubHeader\n\rfont = Agency FB\n\rfixed_height = 0.034500\n\r\n\r[TrueType]\n\rnickname = ItemName\n\rfont = Agency FB\n\rfixed_height = 0.021000\n\r\n\r[TrueType]\n\rnickname = ListText\n\rfont = Arial Unicode MS\n\rfixed_height = 0.026000\n\r\n\r[TrueType]\n\rnickname = ToolTip\n\rfont = Arial Unicode MS\n\rfixed_height = 0.026000\n\r\n\r[TrueType]\n\rnickname = Rollover\n\rfont = Arial Unicode MS\n\rfixed_height = 0.022000\n\r\n\r[TrueType]\n\rnickname = HudSmall\n\rfont = Agency FB\n\rfixed_height = 0.026000\n\r\n\r[TrueType]\n\rnickname = MissionObjective\n\rfont = Agency FB\n\rfixed_height = 0.056000\n\r\n\r[TrueType]\n\rnickname = Normal\n\rfont = Agency FB\n\rfixed_height = 0.031000\n\r\n\r[TrueType]\n\rnickname = NewsMission\n\rfont = Agency FB\n\rfixed_height = 0.026000\n\r\n\r[TrueType]\n\rnickname = NewsTicker\n\rfont = Agency FB\n\rfixed_height = 0.041000\n\r\n\r[TrueType]\n\rnickname = PlayerName\n\rfont = Arial Unicode MS\n\rfixed_height = 0.021000\n\r\n\r[TrueType]\n\rnickname = TradePlayerName\n\rfont = Arial Unicode MS\n\rfixed_height = 0.021000\n\r\n\r[TrueType]\n\rnickname = DebugText\n\rfont = FixedSys\n\rfixed_height = 0.026000\n\r\n\r[TrueType]\n\rnickname = ConfirmPlayerText\n\rfont = Arial Unicode MS\n\rfixed_height = 0.036000\n\r\n\r[TrueType]\n\rnickname = ConfirmText\n\rfont = Agency FB\n\rfixed_height = 0.036000\n\r\n\r[TrueType]\n\rnickname = NavMap1600\n\rfont = Agency FB\n\rfixed_height = 0.015000\n\r\n\r[TrueType]\n\rnickname = NavMap1024\n\rfont = Agency FB\n\rfixed_height = 0.020000\n\r\n\r[TrueType]\n\rnickname = NavMap1280\n\rfont = Agency FB\n\rfixed_height = 0.01900\n\r\n\r[TrueType]\n\rnickname = NavMap800\n\rfont = Agency FB\n\rfixed_height = 0.02300\n复制代码\n保存\n\r\n\n\r\n5)同一目录下rich_fonts.ini\n\r[TrueType]\n\rfont = 0, Arial Unicode MS, 18\n\rfont = 1, Agency FB, 26\n\rfont = 2, Arial Unicode MS, 22\n\rfont = 3, Agency FB, 24\n\rfont = 4, Agency FB, 96\n\rfont = 5, Agency FB, 20\n\rfont = 6, Agency FB, 30\n\rfont = 7, Agency FB, 18\n\r\n\r[Style]\n\rname = STYLE_CONSOLE\n\rfont = 0\n\rbold = false\n\ritalic = false\n\runderline = false\n\rcolor = 255, 255, 255\n\r\n\r[Style]\n\rname = STYLE_DIALOG\n\rfont = 1\n\rbold = false\n\ritalic = false\n\runderline = false\n\rcolor = 135, 195, 224\n\r\n\r[Style]\n\rname = STYLE_DIALOG_SMALL\n\rfont = 5\n\rbold = false\n\ritalic = false\n\runderline = false\n\rcolor = 135, 195, 224\n\r\n\r[Style]\n\rname = STYLE_BUTTON\n\rfont = 6\n\rbold = false\n\ritalic = false\n\runderline = false\n\rcolor = 135, 195, 224\n\r\n\r[Style]\n\rname = STYLE_LOCTABLE\n\rfont = 0\n\rbold = false\n\ritalic = false\n\runderline = false\n\rcolor = 135, 195, 224\n\r\n\r[Style]\n\rname = STYLE_LOCTABLE_SELECT\n\rfont = 0\n\rbold = false\n\ritalic = false\n\runderline = false\n\rcolor = 245, 234, 82\n\r\n\r[Style]\n\rname = STYLE_LOCTABLE_INACTIVE\n\rfont = 0\n\rbold = false\n\ritalic = false\n\runderline = false\n\rcolor = 182, 182, 182\n\r\n\r[Style]\n\rname = STYLE_SMALL_HEADER\n\rfont = 5\n\rbold = false\n\ritalic = false\n\runderline = false\n\rcolor = 135, 195, 224\n\r\n\r[Style]\n\rname = STYLE_SMALL_HEADER_ACTIVE\n\rfont = 5\n\rbold = false\n\ritalic = false\n\runderline = false\n\rcolor = 245, 234, 82\n\r\n\r[Style]\n\rname = STYLE_SUBSUBTITLE\n\rfont = 1\n\rbold = false\n\ritalic = false\n\runderline = false\n\rcolor = 135, 195, 224\n\r\n\r[Style]\n\rname = STYLE_TITLE\n\rfont = 3\n\rbold = false\n\ritalic = false\n\runderline = false\n\rcolor = 135, 195, 224\n\rjustify = center\n\r\n\r[Style]\n\rname = STYLE_ERROR\n\rfont = 0\n\rbold = false\n\ritalic = false\n\runderline = false\n\rcolor = 191, 29, 29\n\r\n\r[Style]\n\rname = STYLE_NN_AGENCY\n\rfont = 5\n\rbold = false\n\ritalic = false\n\runderline = false\n\rcolor = 135, 195, 224\n\r\n\r[Style]\n\rname = STYLE_PRIVATE\n\rfont = 0\n\rbold = false\n\ritalic = false\n\runderline = false\n\rcolor = 59, 191, 29\n\r\n\r[Style]\n\rname = STYLE_CONSOLE_SENDER\n\rfont = 2\n\rbold = false\n\ritalic = false\n\runderline = false\n\rcolor = 0, 255, 0\n复制代码\n保存\n\r\n\n\r\n现在进入游戏试试看?\n\r\n我第一次的时候上面也被截掉了,但出停靠站就正常了.\n\r\n具体怎么出我现在也忘了，汗，但是进入游戏后可以先F1读档:先保存一个在空间站外的，以后进游戏分两次读档就OK了，希望我还没有记错。", "author": {"@type": "Person", "name": "z4977888"}, "url": "https://fabricsoul.github.io/deeptimes-archive/t/22649.html", "inLanguage": "zh-CN", "about": "自由枪骑兵（Freelancer）", "isPartOf": {"@type": "WebSite", "name": "深度时空太空游戏攻略存档", "url": "https://fabricsoul.github.io/deeptimes-archive/"}, "commentCount": 8, "datePublished": "2008-12-19"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "首页", "item": "https://fabricsoul.github.io/deeptimes-archive/"}, {"@type": "ListItem", "position": 2, "name": "自由枪骑兵", "item": "https://fabricsoul.github.io/deeptimes-archive/s/freelancer.html"}, {"@type": "ListItem", "position": 3, "name": "自由枪骑兵宽屏解决方法", "item": "https://fabricsoul.github.io/deeptimes-archive/t/22649.html"}]}</script>
+</head><body>
+<header class="site"><a href="../index.html" class="brand">深度时空 · 太空游戏攻略存档</a>
+<span class="tag">DeepTimes Space Game Archive</span></header>
+<nav class="crumb"><a href="../index.html">首页</a> › <a href="../s/freelancer.html">自由枪骑兵</a> › <span>自由枪骑兵宽屏解决方法</span></nav>
+<article><h1>自由枪骑兵宽屏解决方法</h1>
+<p class="src">原作者：z4977888　发表：2008-12-19　来源：bbs.deeptimes.net（已关站）· <a href="https://web.archive.org/web/20190920170855/https://bbs.deeptimes.net/forum.php?mod=viewthread&tid=22649" rel="nofollow">Wayback 存档</a></p>
+<section class="floor"><span class="fl">#1</span><p>本帖最后由 z4977888 于 2009-9-12 21:27 编辑 </p>
+<p>不知道有人发过吗?</p>
+<p>1)my documents &gt; my games &gt; freelancer &gt; prefoptions.ini.</p>
+<p>[Display] size= 1680, 1050 或其他宽屏分辨率</p>
+<p>2) c: &gt; program files &gt; microsoft games &gt; freelancer &gt; DATA &gt; cameras.ini</p>
+<p>(或其他安装目录)（乱码无所谓，只要删除掉就ok了)</p>
+<p>删除并复制:[WinCamera]
+fovx = 63.504809977813375</p>
+<p>[CockpitCamera]
+fovx = 90
+znear = 2.000000</p>
+<p>[ChaseCamera]
+fovx = 90</p>
+<p>[DeathCamera]
+fovx = 90</p>
+<p>复制代码
+这是16：10的宽屏设置，16:9宽屏将[WinCamera]处改为</p>
+<p>[WinCamera]</p>
+<p>fovx =68.88</p>
+<p>保存</p>
+<p>3) c: &gt; program files &gt; microsoft games &gt; freelancer &gt; EXE &gt; freelancer.ini</p>
+<p>第9行 </p>
+<p>size = 1680,1050 </p>
+<p>保存</p>
+<p>4) c: &gt; program files &gt; microsoft games &gt; freelancer &gt; FONTS &gt;fonts.ini</p>
+<p>删除并复制:
+[TrueType]
+nickname = ButtonText
+font = Agency FB
+fixed_height = 0.038500</p>
+<p>[TrueType]
+nickname = PageHeader
+font = Agency FB
+fixed_height = 0.041000</p>
+<p>[TrueType]
+nickname = SubHeader
+font = Agency FB
+fixed_height = 0.034500</p>
+<p>[TrueType]
+nickname = ItemName
+font = Agency FB
+fixed_height = 0.021000</p>
+<p>[TrueType]
+nickname = ListText
+font = Arial Unicode MS
+fixed_height = 0.026000</p>
+<p>[TrueType]
+nickname = ToolTip
+font = Arial Unicode MS
+fixed_height = 0.026000</p>
+<p>[TrueType]
+nickname = Rollover
+font = Arial Unicode MS
+fixed_height = 0.022000</p>
+<p>[TrueType]
+nickname = HudSmall
+font = Agency FB
+fixed_height = 0.026000</p>
+<p>[TrueType]
+nickname = MissionObjective
+font = Agency FB
+fixed_height = 0.056000</p>
+<p>[TrueType]
+nickname = Normal
+font = Agency FB
+fixed_height = 0.031000</p>
+<p>[TrueType]
+nickname = NewsMission
+font = Agency FB
+fixed_height = 0.026000</p>
+<p>[TrueType]
+nickname = NewsTicker
+font = Agency FB
+fixed_height = 0.041000</p>
+<p>[TrueType]
+nickname = PlayerName
+font = Arial Unicode MS
+fixed_height = 0.021000</p>
+<p>[TrueType]
+nickname = TradePlayerName
+font = Arial Unicode MS
+fixed_height = 0.021000</p>
+<p>[TrueType]
+nickname = DebugText
+font = FixedSys
+fixed_height = 0.026000</p>
+<p>[TrueType]
+nickname = ConfirmPlayerText
+font = Arial Unicode MS
+fixed_height = 0.036000</p>
+<p>[TrueType]
+nickname = ConfirmText
+font = Agency FB
+fixed_height = 0.036000</p>
+<p>[TrueType]
+nickname = NavMap1600
+font = Agency FB
+fixed_height = 0.015000</p>
+<p>[TrueType]
+nickname = NavMap1024
+font = Agency FB
+fixed_height = 0.020000</p>
+<p>[TrueType]
+nickname = NavMap1280
+font = Agency FB
+fixed_height = 0.01900</p>
+<p>[TrueType]
+nickname = NavMap800
+font = Agency FB
+fixed_height = 0.02300
+复制代码
+保存</p>
+<p>5)同一目录下rich_fonts.ini
+[TrueType]
+font = 0, Arial Unicode MS, 18
+font = 1, Agency FB, 26
+font = 2, Arial Unicode MS, 22
+font = 3, Agency FB, 24
+font = 4, Agency FB, 96
+font = 5, Agency FB, 20
+font = 6, Agency FB, 30
+font = 7, Agency FB, 18</p>
+<p>[Style]
+name = STYLE_CONSOLE
+font = 0
+bold = false
+italic = false
+underline = false
+color = 255, 255, 255</p>
+<p>[Style]
+name = STYLE_DIALOG
+font = 1
+bold = false
+italic = false
+underline = false
+color = 135, 195, 224</p>
+<p>[Style]
+name = STYLE_DIALOG_SMALL
+font = 5
+bold = false
+italic = false
+underline = false
+color = 135, 195, 224</p>
+<p>[Style]
+name = STYLE_BUTTON
+font = 6
+bold = false
+italic = false
+underline = false
+color = 135, 195, 224</p>
+<p>[Style]
+name = STYLE_LOCTABLE
+font = 0
+bold = false
+italic = false
+underline = false
+color = 135, 195, 224</p>
+<p>[Style]
+name = STYLE_LOCTABLE_SELECT
+font = 0
+bold = false
+italic = false
+underline = false
+color = 245, 234, 82</p>
+<p>[Style]
+name = STYLE_LOCTABLE_INACTIVE
+font = 0
+bold = false
+italic = false
+underline = false
+color = 182, 182, 182</p>
+<p>[Style]
+name = STYLE_SMALL_HEADER
+font = 5
+bold = false
+italic = false
+underline = false
+color = 135, 195, 224</p>
+<p>[Style]
+name = STYLE_SMALL_HEADER_ACTIVE
+font = 5
+bold = false
+italic = false
+underline = false
+color = 245, 234, 82</p>
+<p>[Style]
+name = STYLE_SUBSUBTITLE
+font = 1
+bold = false
+italic = false
+underline = false
+color = 135, 195, 224</p>
+<p>[Style]
+name = STYLE_TITLE
+font = 3
+bold = false
+italic = false
+underline = false
+color = 135, 195, 224
+justify = center</p>
+<p>[Style]
+name = STYLE_ERROR
+font = 0
+bold = false
+italic = false
+underline = false
+color = 191, 29, 29</p>
+<p>[Style]
+name = STYLE_NN_AGENCY
+font = 5
+bold = false
+italic = false
+underline = false
+color = 135, 195, 224</p>
+<p>[Style]
+name = STYLE_PRIVATE
+font = 0
+bold = false
+italic = false
+underline = false
+color = 59, 191, 29</p>
+<p>[Style]
+name = STYLE_CONSOLE_SENDER
+font = 2
+bold = false
+italic = false
+underline = false
+color = 0, 255, 0
+复制代码
+保存</p>
+<p>现在进入游戏试试看?</p>
+<p>我第一次的时候上面也被截掉了,但出停靠站就正常了.</p>
+<p>具体怎么出我现在也忘了，汗，但是进入游戏后可以先F1读档:先保存一个在空间站外的，以后进游戏分两次读档就OK了，希望我还没有记错。</p></section>
+<section class="floor"><span class="fl">#2</span><p>其实我就是宽屏</p></section>
+<section class="floor"><span class="fl">#3</span><p>以前有人发过，不过你发的最详细，多谢分享</p></section>
+<section class="floor"><span class="fl">#4</span><p>哈哈,摘抄的啦</p></section>
+<section class="floor"><span class="fl">#5</span><p>很好很强大</p></section>
+<section class="floor"><span class="fl">#6</span><p>16：10的比率如下，多种笔记本都是16：10的</p>
+<p>[WinCamera]</p>
+<p>fovx = 63.36</p></section>
+<section class="floor"><span class="fl">#7</span><p>我的cameras.ini文件打开是乱码</p></section>
+<section class="floor"><span class="fl">#8</span><p>感谢LZ,强烈要求帮忙搞下16：10的其他分辨率，谢谢啊~~</p>
+<p>或者谁来教教我</p></section>
+<section class="floor"><span class="fl">#9</span><p>装SDK，下载http://eoa.seriouszone.com/louvadeus.php#flsdk</p></section>
+<aside class="related"><h2>同版块相关攻略</h2><ul>
+<li><a href="../t/17683.html">爆裂服规则英文稿！</a></li>
+<li><a href="../t/35392.html">Whats the best antivirus that i havn&#x27;t already ruled out getting?</a></li>
+<li><a href="../t/23507.html">新人必读：FL→ER 我的菜鸟笔记（09年1月29日更新）</a></li>
+<li><a href="../t/25711.html">Defender的PVP完全攻略</a></li>
+<li><a href="../t/27680.html">教程：ERI新人跑商之路</a></li>
+<li><a href="../t/22906.html">[资料]ER所有重型战机资料,购买地点及酷图(新增灰蝙蝠)</a></li>
+<li><a href="../t/23197.html">飞机技术分级与训练指导（8月30号更新）</a></li>
+<li><a href="../t/22956.html">新人快速发展法~~&quot;挖坟&quot;</a></li>
+</ul></aside>
+</article>
+<footer class="site">
+<p><strong>关于本站</strong>：这是对已关站的太空游戏社区 <b>深度时空 bbs.deeptimes.net</b> 的非官方社区存档，
+内容取自 <a href="https://web.archive.org/web/*/bbs.deeptimes.net" rel="nofollow">Wayback Machine</a> 公开存档，
+<b>版权归各原作者所有</b>，帖内保留了原作者署名与发帖时间。仅供游戏玩家学习交流与资料保存之用。</p>
+<p>如您是原作者或原站长，希望某内容下架或补充署名，请提交 GitHub Issue，我们会尽快处理。</p>
+<p class="muted">Archive of the defunct Chinese space-game forum DeepTimes (bbs.deeptimes.net). Content © original authors. Preservation mirror.</p>
+</footer></body></html>

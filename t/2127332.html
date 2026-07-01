@@ -1,0 +1,200 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>StandardX 招工 - 第2页｜星际统治者2/星际统治者(Star Ruler)攻略｜深度时空存档</title>
+<meta name="description" content="- -没用过SR的开发系统，不知道Debug的难度如何。。。。。 可以一试">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://fabricsoul.github.io/deeptimes-archive/t/2127332.html">
+<meta property="og:type" content="website"><meta property="og:site_name" content="深度时空太空游戏攻略存档">
+<meta property="og:title" content="StandardX 招工 - 第2页｜星际统治者2/星际统治者(Star Ruler)攻略｜深度时空存档"><meta property="og:description" content="- -没用过SR的开发系统，不知道Debug的难度如何。。。。。 可以一试">
+<meta property="og:url" content="https://fabricsoul.github.io/deeptimes-archive/t/2127332.html"><meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "DiscussionForumPosting", "headline": "StandardX 招工 - 第2页", "articleBody": "- -没用过SR的开发系统，不知道Debug的难度如何。。。。。\n\r\n\n\r\n可以一试", "author": {"@type": "Person", "name": "FRIGHTER"}, "url": "https://fabricsoul.github.io/deeptimes-archive/t/2127332.html", "inLanguage": "zh-CN", "about": "星际统治者2/星际统治者(Star Ruler)", "isPartOf": {"@type": "WebSite", "name": "深度时空太空游戏攻略存档", "url": "https://fabricsoul.github.io/deeptimes-archive/"}, "commentCount": 8, "datePublished": "2013-6-16"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "首页", "item": "https://fabricsoul.github.io/deeptimes-archive/"}, {"@type": "ListItem", "position": 2, "name": "星际统治者2/星际统治者(Star Ruler)", "item": "https://fabricsoul.github.io/deeptimes-archive/s/star-ruler.html"}, {"@type": "ListItem", "position": 3, "name": "StandardX 招工 - 第2页", "item": "https://fabricsoul.github.io/deeptimes-archive/t/2127332.html"}]}</script>
+</head><body>
+<header class="site"><a href="../index.html" class="brand">深度时空 · 太空游戏攻略存档</a>
+<span class="tag">DeepTimes Space Game Archive</span></header>
+<nav class="crumb"><a href="../index.html">首页</a> › <a href="../s/star-ruler.html">星际统治者2/星际统治者(Star Ruler)</a> › <span>StandardX 招工 - 第2页</span></nav>
+<article><h1>StandardX 招工 - 第2页</h1>
+<p class="src">原作者：FRIGHTER　发表：2013-6-16　来源：bbs.deeptimes.net（已关站）· <a href="https://web.archive.org/web/20190715181241/https://bbs.deeptimes.net/forum.php?mod=viewthread&tid=2127332" rel="nofollow">Wayback 存档</a></p>
+<section class="floor"><span class="fl">#1</span><p>- -没用过SR的开发系统，不知道Debug的难度如何。。。。。</p>
+<p>可以一试</p></section>
+<section class="floor"><span class="fl">#2</span><p>额  俺对C语言程序什么的是个小白。</p>
+<p>精神上支持大侠们！</p></section>
+<section class="floor"><span class="fl">#3</span><p>比较忙，需要排查哪类错误？</p></section>
+<section class="floor"><span class="fl">#4</span><p>跳跃引擎故障的问题~</p></section>
+<section class="floor"><span class="fl">#5</span><p>求相关段落的代码- -</p></section>
+<section class="floor"><span class="fl">#6</span><p>const string[url=home.php?mod=space&amp;uid=20834]@[/url] strFuel = &quot;Fuel&quot;;</p>
+<p>float checkRange(const Object@ src, const Object@ trg, const Effector@ eff) {
+        //Can only jump to significant sources of gravity
+        if(trg.toStar() is null &amp;&amp; trg.toPlanet() is null &amp;&amp; trg.toSystem() is null)
+                return 0.f;</p>
+<p>        //Check that it is within range
+        float dist = src.getPosition().getDistanceFromSQ(trg.getPosition());
+        if(dist &lt; eff[0] * eff[0]) // || dist &gt; eff[1] * eff[1]) //Max range is implied in the effector
+                return 0.f;</p>
+<p>        return 1.f;
+}</p>
+<p>float checkFuel(const Object@ src, const Object@ trg, const Effector@ eff) {
+        const State@ fuel = src.getState(strFuel);</p>
+<p>        if(fuel.val - eff[4] &lt; fuel.max * 0.05f || fuel.max &lt;= 0)
+                return 0.f;</p>
+<p>        return 1.f;
+}</p>
+<p>void checkJumpSetting(Event@ evt) {
+        if(getGameSetting(&quot;GAME_AUTO_JUMP&quot;, 0.f) &gt;= 0.5f) {
+                if(@evt.target != null &amp;&amp; @evt.obj != null) {
+                        HulledObj@ ship = evt.obj;
+                        uint cnt = ship.getSubSystemCount();
+                        for(uint i = 0; i &lt; cnt; i++) {
+                                subSystem@ sys = ship.getSubSystem(i).system;
+                                if(sys.type.hasTag(&quot;JumpDrive&quot;)) {
+                                        triggerAutoJump(evt.obj);
+                                        return;
+                                }
+                        }
+                }
+        }
+}</p>
+<p>void triggerAutoJump(Object@ obj) {
+        Effect AutomatedJumpEvent(&quot;AutomatedJumpEvent&quot;);        
+        obj.addTimedEffect(AutomatedJumpEvent, pow(10, 35), 0.f, obj, null, null, TEF_None);
+}</p>
+<p>void autoJump(Event@ evt) {
+        Object@ obj = evt.target;</p>
+<p>        if(obj.getTarget() !is null) {
+                Object@ targ = obj.getTarget();</p>
+<p>                if(obj.toHulledObj().canUseToolOn(&quot;JumpDrive&quot;, targ)) {
+                        OrderList orders;
+                        if(orders.prepare(obj))
+                                orders.giveUseToolOrder(&quot;JumpDrive&quot;, targ, true, true, false);
+                }
+        }
+}</p>
+<p>void Jump(Event@ evt, float FuelCost) {
+        Object@ jumpShip = evt.obj;
+        Object@ jumpTo = evt.target;</p>
+<p>        State@ fuel = jumpShip.getState(strFuel);</p>
+<p>        //Checks if the planet or star is in the same system and if not sets the target to the edge of the target system
+        if(jumpTo.toPlanet() !is null || jumpTo.toStar() !is null) {
+                if(jumpTo.getCurrentSystem() !is jumpShip.getCurrentSystem())
+                        @jumpTo = jumpTo.getCurrentSystem().toObject();
+        }</p>
+<p>        //Clear Orders, Consume Fuel and do the jump.
+        clearOrders(jumpShip);        
+        fuel.consume(FuelCost, jumpShip);
+        doJump(jumpShip, jumpTo);</p>
+<p>        evt.state = ESC_DISABLE;
+}        </p>
+<p>void doJump(Object@ jumpShip, Object@ jumpTo) {        
+        //Get the direction and distance to move the ship
+        vector toTarg = jumpTo.getPosition() - jumpShip.getPosition();
+        float len = toTarg.getLength();
+        if(jumpTo.toSystem() !is null)
+                len -= jumpShip.radius + (jumpTo.radius - 134.f); //Jump 67 units closer to the target
+        else
+                len -= jumpShip.radius + jumpTo.radius + 67.f; //Jump 67 units away from the target
+        toTarg.normalize(len);</p>
+<p>        //Move the ship
+        jumpShip.position += toTarg;
+        jumpShip.velocity = vector(0, 0, 0);</p>
+<p>        //Convince it not to wander off
+        jumpShip.setDestination(jumpShip.getPosition());</p>
+<p>        //Clear orbiting object so it re-evaluates
+        jumpShip.orbitAround(null);</p>
+<p>        //Force it to be reparented correctly
+        jumpShip.reparent();
+        //NOTE: It will take 2 game frames to relocate the ship to the other system
+}</p>
+<p>const string@ strStargate = &quot;Stargate&quot;;
+float checkStargate(const Object@ src, const Object@ trg, const Effector@ eff) {
+        const HulledObj@ stargate = trg;
+        if (@stargate !is null){
+                const HullLayout@ stargateHull = stargate.getHull();
+                if (@stargateHull !is null){
+                        if(src.getOwner() is trg.getOwner() || src.getOwner().isAllied(trg.getOwner())){        
+                                if(stargateHull.hasSystemWithTag(strStargate)){
+                                        return 1.f;
+                                }
+                        }
+                }
+        }
+        return 0;
+}</p>
+<p>void createLink(Event@ evt) {
+        evt.obj.getState(strStargate).val = evt.target.uid;
+        evt.obj.getOwner().postMessage(&quot;Hyperspace route established from #link:o&quot;+evt.obj.uid+&quot;##c:red#&quot;+evt.obj.getName()+&quot;#c##link# to #link:o&quot;+evt.target.uid+&quot;##c:red#&quot;+evt.target.getName()+&quot;#c##link#.&quot;);        
+        clearOrders(evt.obj);
+}</p>
+<p>void GateJump(Event@ evt) {
+        Object@ jumpShip = evt.obj;
+        Object@ jumpFrom = evt.target;
+        const State@ targetID = jumpFrom.getState(strStargate);</p>
+<p>        if(@targetID !is null){
+                Object@ jumpTo = getObjectByID(targetID.val);
+                if (@jumpTo !is null){
+                        if(jumpTo.isValid()){
+                                float jumpShipScale = jumpShip.radius * jumpShip.radius;
+                                float jumpFromScale = jumpFrom.radius * jumpFrom.radius;
+                                float jumpToScale = jumpTo.radius * jumpTo.radius;
+                                if(jumpShipScale &lt;= jumpFromScale){
+                                        if(jumpShipScale &lt;= jumpToScale){
+                                                doJump(jumpShip, jumpTo);
+                                                return;
+                                        }
+                                        else{
+                                                jumpShip.getOwner().postMessage(&quot;#link:o&quot;+jumpShip.uid+&quot;##c:red#&quot;+jumpShip.getName()+&quot;#c##link#: Aborting stargate jump. End point #link:o&quot;+jumpTo.uid+&quot;##c:red#&quot;+jumpTo.getName()+&quot;#c##link# is too small to pass.&quot;);
+                                                return;
+                                        }
+                                }
+                                else{
+                                        jumpShip.getOwner().postMessage(&quot;#link:o&quot;+jumpShip.uid+&quot;##c:red#&quot;+jumpShip.getName()+&quot;#c##link#: Aborting stargate jump. Starting point #link:o&quot;+jumpFrom.uid+&quot;##c:red#&quot;+jumpFrom.getName()+&quot;#c##link# is too small to pass.&quot;);
+                                        return;
+                                }
+                        }
+                }
+        }
+        jumpShip.getOwner().postMessage(&quot;#link:o&quot;+jumpShip.uid+&quot;##c:red#&quot;+jumpShip.getName()+&quot;#c##link#: Aborting stargate jump. #link:o&quot;+jumpFrom.uid+&quot;##c:red#&quot;+jumpFrom.getName()+&quot;#c##link# has invalid hyperspace coordinates.&quot;);        
+}</p>
+<p>void clearOrders(Object@ obj){
+        AIStance old = obj.getStance();
+        obj.setStance(AIS_HoldFire);
+        obj.setStance(old);</p>
+<p>        OrderList orders;
+        if(orders.prepare(obj)) {
+                orders.clearOrders(false);
+                orders.prepare(null);                
+        }
+}
+复制代码
+Game Data\scripts\server 里面的JUMPDRIVE.AS文件。帮忙排查一下，跟Game Data\scripts\server文件夹里面的哪一个文件冲突了……comgbat.AS ？？</p></section>
+<section class="floor"><span class="fl">#7</span><p>看了一下。。。。</p>
+<p>虽然似乎有不少地方值得调整，例如几个Check都是用浮点数作为返回值这个- -。。。。。</p>
+<p>不过似乎没有遇到神么特别明显的错误。能具体说说游戏里到底是出现了什么错误么- -</p>
+<p>另外你看看第10行，双斜杠是不是多了一个，if的括号里面有一个双斜杠难道不会屏蔽掉后面的内容吗？。。。。</p></section>
+<section class="floor"><span class="fl">#8</span><p>那一段数据是正常的。……</p>
+<p>这一通篇代码放到游戏里面的效果就是</p>
+<p>当你想让舰船启动跳跃装置时，发现跳跃装置部件只会在不断的刷新状态，无限刷CD中，可就是不执行跳跃动作）</p>
+<p>我弄不清楚哪一段还是返回的数值导致的跳跃条件判定失败了。</p></section>
+<section class="floor"><span class="fl">#9</span><p>虽然能看懂，但毕竟不是我学的那门，想只看代码排错还真是吃力了点。。。。</p>
+<p>关于Debug我给你点建议好了。。。现在手头上没有游戏</p>
+<p>在各个阶段（目前就我所见至少可以分成三个阶段了）检查、调用、执行。在每个阶段里添加一行能产生不同效果的语句，例如文本输出之类的（比方说在float checkRange 里就可以加一行输出文本输出”距离检查完成“之类的字样）这样看最后输出到哪个地方输出不出来了，就知道哪个地方出了问题了。。。。</p>
+<p>然后知道哪里出了问题之后，再到那个段落里面，在不同的位置添加一个输出文本，把那部分的运行结果输出出来。看是哪里的运行结果跟预期值不符。最后就只要在那一小段代码里找问题就简单很多了。。。。</p></section>
+<aside class="related"><h2>同版块相关攻略</h2><ul>
+<li><a href="../t/2126646.html">添加装甲时,需注意的问题!!! - 第2页</a></li>
+<li><a href="../t/2134977.html">★ Star Ruler StandardX v1.5-v1.51 MOD 星际统治者 最终纪念版模组 - 第3页</a></li>
+<li><a href="../t/2115817.html">SR汉化补丁（坑爹版）BAGA MOD版限定 更新中（版本V1.3）</a></li>
+<li><a href="../t/2134587.html">MOD Project Extend 0.0.2 for SR1.2.1.2更新</a></li>
+<li><a href="../t/2142195.html">原创进阶攻略</a></li>
+<li><a href="../t/2158604.html">sr1各种装甲，武器伤害研究心得</a></li>
+<li><a href="../t/2118466.html">【SR-1】【必看】新手攻略（完本） - 第2页</a></li>
+<li><a href="../t/2116093.html">Star Ruler 1.2/1.1 繁/簡 全本文汉化补丁 含升级&amp;修正補丁 07/26/12</a></li>
+</ul></aside>
+</article>
+<footer class="site">
+<p><strong>关于本站</strong>：这是对已关站的太空游戏社区 <b>深度时空 bbs.deeptimes.net</b> 的非官方社区存档，
+内容取自 <a href="https://web.archive.org/web/*/bbs.deeptimes.net" rel="nofollow">Wayback Machine</a> 公开存档，
+<b>版权归各原作者所有</b>，帖内保留了原作者署名与发帖时间。仅供游戏玩家学习交流与资料保存之用。</p>
+<p>如您是原作者或原站长，希望某内容下架或补充署名，请提交 GitHub Issue，我们会尽快处理。</p>
+<p class="muted">Archive of the defunct Chinese space-game forum DeepTimes (bbs.deeptimes.net). Content © original authors. Preservation mirror.</p>
+</footer></body></html>

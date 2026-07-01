@@ -1,0 +1,74 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>X3飞船模型导入导出教程｜X3：地球人冲突/阿尔比恩序曲 模组脚本攻略｜深度时空存档</title>
+<meta name="description" content="此教程只涉及模型导入和导出 首先，需要的工具： X3 Editor 2 X2BC DBOX2 3ds max/gmax X2BC的安装： 把X2BC文件夹里的东西（别整个文件夹拖进去，要的是里面的东西）放进System32文件夹里，64位系统的话还要要把X2BC的.dll放进SysWOW64文件夹里">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://fabricsoul.github.io/deeptimes-archive/t/2109308.html">
+<meta property="og:type" content="website"><meta property="og:site_name" content="深度时空太空游戏攻略存档">
+<meta property="og:title" content="X3飞船模型导入导出教程｜X3：地球人冲突/阿尔比恩序曲 模组脚本攻略｜深度时空存档"><meta property="og:description" content="此教程只涉及模型导入和导出 首先，需要的工具： X3 Editor 2 X2BC DBOX2 3ds max/gmax X2BC的安装： 把X2BC文件夹里的东西（别整个文件夹拖进去，要的是里面的东西）放进System32文件夹里，64位系统的话还要要把X2BC的.dll放进SysWOW64文件夹里">
+<meta property="og:url" content="https://fabricsoul.github.io/deeptimes-archive/t/2109308.html"><meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "DiscussionForumPosting", "headline": "X3飞船模型导入导出教程", "articleBody": "本帖最后由 黑暗枪骑兵 于 2011-4-1 17:10 编辑 \n\n此教程只涉及模型导入和导出\n\r\n\n\r\n首先，需要的工具：\n\r\nX3 Editor 2\n\r\nX2BC\n\r\nDBOX2\n\r\n3ds max/gmax\n\r\n\n\r\nX2BC的安装：\n\r\n把X2BC文件夹里的东西（别整个文件夹拖进去，要的是里面的东西）放进System32文件夹里，64位系统的话还要要把X2BC的.dll放进SysWOW64文件夹里。详细作用我后面说\n\r\n\n\r\nDBOX2的安装：\n\r\n安装到你的3ds或者gmax的安装目录里就行了，如果出错，安装到某个地方然后把那些文件夹覆盖到3d软件的安装目录下(没显示覆盖文件夹就说明放错位置了）\n\r\n\n\r\n导出到3DSMAX/GMAX\n\r\n用X3E2从CAT文件提取东西我就不说了\n\r\n一个飞船有两个文件，一个是模型(bob格式,有时候会是.bod格式），一个是Scene(.bod格式）\n\r\n因为DBOX2只能读取.bod格式的文件，X3E2自带的转换器从来就没成功转换过，所以必须用X2BC\n\r\n把.bob转换成.bod很简单，直接把.bob的打开方式改成X2BC就可以了，或者把.bob文件拖进X2BC里,.bod文件会在.bob文件同目录下生成.\n\r\n用DBOX2导入模型文件\n\r\n\n\r\n导入回CAT文件里\n\r\n用DBOX2导出模型\n\r\n把.bod转换回.bob，还是要用到X2BC，但是就是有点麻烦\n\r\n运行cmd,输入x2bc -c --bob \"X:\\input.bod\" \"X:\\output.bob\" \n复制代码\n(因为要用到cmd然后从那运行X2BC，所以才把X2BC的东西拖进系统文件夹\n\r\n转换成功后，把转换好的模型文件拖进CAT里对应的地方，搞定。。\n\r\n\n\r\n制作飞船过程的教程还是等我显得蛋疼的时候再写吧。。太多要注意的东西了", "author": {"@type": "Person", "name": "黑暗枪骑兵"}, "url": "https://fabricsoul.github.io/deeptimes-archive/t/2109308.html", "inLanguage": "zh-CN", "about": "X3：地球人冲突/阿尔比恩序曲 模组脚本（TC/AP MOD & Scripts）", "isPartOf": {"@type": "WebSite", "name": "深度时空太空游戏攻略存档", "url": "https://fabricsoul.github.io/deeptimes-archive/"}, "commentCount": 9, "datePublished": "2011-4-2"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "首页", "item": "https://fabricsoul.github.io/deeptimes-archive/"}, {"@type": "ListItem", "position": 2, "name": "X3：地球人冲突/阿尔比恩序曲 模组脚本", "item": "https://fabricsoul.github.io/deeptimes-archive/s/x3-tc-ap-mods.html"}, {"@type": "ListItem", "position": 3, "name": "X3飞船模型导入导出教程", "item": "https://fabricsoul.github.io/deeptimes-archive/t/2109308.html"}]}</script>
+</head><body>
+<header class="site"><a href="../index.html" class="brand">深度时空 · 太空游戏攻略存档</a>
+<span class="tag">DeepTimes Space Game Archive</span></header>
+<nav class="crumb"><a href="../index.html">首页</a> › <a href="../s/x3-tc-ap-mods.html">X3：地球人冲突/阿尔比恩序曲 模组脚本</a> › <span>X3飞船模型导入导出教程</span></nav>
+<article><h1>X3飞船模型导入导出教程</h1>
+<p class="src">原作者：黑暗枪骑兵　发表：2011-4-2　来源：bbs.deeptimes.net（已关站）· <a href="https://web.archive.org/web/20191021163513/https://bbs.deeptimes.net/forum.php?mod=viewthread&tid=2109308" rel="nofollow">Wayback 存档</a></p>
+<section class="floor"><span class="fl">#1</span><p>本帖最后由 黑暗枪骑兵 于 2011-4-1 17:10 编辑 </p>
+<p>此教程只涉及模型导入和导出</p>
+<p>首先，需要的工具：</p>
+<p>X3 Editor 2</p>
+<p>X2BC</p>
+<p>DBOX2</p>
+<p>3ds max/gmax</p>
+<p>X2BC的安装：</p>
+<p>把X2BC文件夹里的东西（别整个文件夹拖进去，要的是里面的东西）放进System32文件夹里，64位系统的话还要要把X2BC的.dll放进SysWOW64文件夹里。详细作用我后面说</p>
+<p>DBOX2的安装：</p>
+<p>安装到你的3ds或者gmax的安装目录里就行了，如果出错，安装到某个地方然后把那些文件夹覆盖到3d软件的安装目录下(没显示覆盖文件夹就说明放错位置了）</p>
+<p>导出到3DSMAX/GMAX</p>
+<p>用X3E2从CAT文件提取东西我就不说了</p>
+<p>一个飞船有两个文件，一个是模型(bob格式,有时候会是.bod格式），一个是Scene(.bod格式）</p>
+<p>因为DBOX2只能读取.bod格式的文件，X3E2自带的转换器从来就没成功转换过，所以必须用X2BC</p>
+<p>把.bob转换成.bod很简单，直接把.bob的打开方式改成X2BC就可以了，或者把.bob文件拖进X2BC里,.bod文件会在.bob文件同目录下生成.</p>
+<p>用DBOX2导入模型文件</p>
+<p>导入回CAT文件里</p>
+<p>用DBOX2导出模型</p>
+<p>把.bod转换回.bob，还是要用到X2BC，但是就是有点麻烦</p>
+<p>运行cmd,输入x2bc -c --bob &quot;X:\input.bod&quot; &quot;X:\output.bob&quot; 
+复制代码
+(因为要用到cmd然后从那运行X2BC，所以才把X2BC的东西拖进系统文件夹</p>
+<p>转换成功后，把转换好的模型文件拖进CAT里对应的地方，搞定。。</p>
+<p>制作飞船过程的教程还是等我显得蛋疼的时候再写吧。。太多要注意的东西了</p></section>
+<section class="floor"><span class="fl">#2</span><p>本帖最后由 0809000 于 2011-4-2 06:27 编辑 </p>
+<p>太简洁了~~估计~~问问题的会很多很多~~</p>
+<p>X2bc~~其实扔哪都一样~~</p>
+<p>CMD有那么难用吗~~跳转盘符~~直接输盘符+：就可以跳转~~同盘符文件夹~~用CD跳转~~</p></section>
+<section class="floor"><span class="fl">#3</span><p>我比较喜欢傻瓜点的方法，不然每次都需要输入。。多麻烦啊</p></section>
+<section class="floor"><span class="fl">#4</span><p>X2BC在哪有下呢？找不到唉。</p></section>
+<section class="floor"><span class="fl">#5</span><p>X3E2 哪里下载？</p></section>
+<section class="floor"><span class="fl">#6</span><p>还有 CAT文件提取东西 如何提取求教</p></section>
+<section class="floor"><span class="fl">#7</span><p>直接通过X3e2从CAT里拉出来就行了</p></section>
+<section class="floor"><span class="fl">#8</span><p>谢谢大大搞定！</p></section>
+<section class="floor"><span class="fl">#9</span><p>学习了。。。</p></section>
+<section class="floor"><span class="fl">#10</span><p>很纠结啊。。。我晕了。。。</p></section>
+<aside class="related"><h2>同版块相关攻略</h2><ul>
+<li><a href="../t/2109739.html">Ship Rebalance Mod:Continued v1.06 (27/4/11): A Huge Update</a></li>
+<li><a href="../t/2110042.html">X3: Time Of The Truth V1.1</a></li>
+<li><a href="../t/2111136.html">[MOD] Combat Mod 4 - v4.13 14/6/11 - Tweaks and Sounds</a></li>
+<li><a href="../t/2110038.html">[MOD] Combat Mod 4 - v4.11b 20/5/11 - Fixes &amp; SRM 1.08 compatibility</a></li>
+<li><a href="../t/2109845.html">[MOD] Combat Mod 4 - v4.10 4/5/11 - New IonD Implimentation</a></li>
+<li><a href="../t/2117112.html">TC(AP)、RE常用脚本集………………</a></li>
+<li><a href="../t/2109834.html">2011年1月23日 Lucikes_Skript_Kollektion脚本个人汉化</a></li>
+<li><a href="../t/2109073.html">Tship数据批量修改器</a></li>
+</ul></aside>
+</article>
+<footer class="site">
+<p><strong>关于本站</strong>：这是对已关站的太空游戏社区 <b>深度时空 bbs.deeptimes.net</b> 的非官方社区存档，
+内容取自 <a href="https://web.archive.org/web/*/bbs.deeptimes.net" rel="nofollow">Wayback Machine</a> 公开存档，
+<b>版权归各原作者所有</b>，帖内保留了原作者署名与发帖时间。仅供游戏玩家学习交流与资料保存之用。</p>
+<p>如您是原作者或原站长，希望某内容下架或补充署名，请提交 GitHub Issue，我们会尽快处理。</p>
+<p class="muted">Archive of the defunct Chinese space-game forum DeepTimes (bbs.deeptimes.net). Content © original authors. Preservation mirror.</p>
+</footer></body></html>

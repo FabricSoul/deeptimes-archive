@@ -1,0 +1,816 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>[转]官方MSCI命令大全(漫天代码，慎入!)｜X3：地球人冲突 / 阿尔比恩序曲攻略｜深度时空存档</title>
+<meta name="description" content="此贴包含了所有的MSCI代码，官网上有每条代码的详细信息及用法 原地址: http://forum.egosoft.com/viewforum.php?f=105 »» General Commands »» Flow Control end conditional else continue br">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://fabricsoul.github.io/deeptimes-archive/t/2108195.html">
+<meta property="og:type" content="website"><meta property="og:site_name" content="深度时空太空游戏攻略存档">
+<meta property="og:title" content="[转]官方MSCI命令大全(漫天代码，慎入!)｜X3：地球人冲突 / 阿尔比恩序曲攻略｜深度时空存档"><meta property="og:description" content="此贴包含了所有的MSCI代码，官网上有每条代码的详细信息及用法 原地址: http://forum.egosoft.com/viewforum.php?f=105 »» General Commands »» Flow Control end conditional else continue br">
+<meta property="og:url" content="https://fabricsoul.github.io/deeptimes-archive/t/2108195.html"><meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "DiscussionForumPosting", "headline": "[转]官方MSCI命令大全(漫天代码，慎入!)", "articleBody": "本帖最后由 黑暗枪骑兵 于 2011-1-22 23:32 编辑 \n\n此贴包含了所有的MSCI代码，官网上有每条代码的详细信息及用法\n\r\n原地址:\n\r\nhttp://forum.egosoft.com/viewforum.php?f=105\n\r»» General Commands \n\r»» Flow Control \n\rend conditional \n\relse \n\rcontinue \n\rbreak \n\rgoto label <Label> \n\rgosub <Label> \n\rdefine label <Label> \n\rendsub \n\r\n\r»» Script Calls \n\r@ <RetVar/IF/Start><RefObj> call script <Script Name> : <Parameter> \n\rx <RefObj> interrupt with script <Script Name> and prio <Var/Number>: arg1=<Value> arg2=<Value> arg3=<Value> arg4=<Value> \n\rx <RefObj> interrupt task <Var/Number> with script <Script Name> and prio <Var/Number>: arg1=<Value> arg2=<Value> arg3=<Value> arg4=<Value> \n\rx <RefObj> start task <Var/Number> with script <Script Name> and prio <Var/Number>: arg1=<Value> arg2=<Value> arg3=<Value> arg4=<Value> \n\rx return <Value> \n\rx <RetVar/IF><RefObj> is script <Script Name> on stack of task=<Var/Number> \n\rx <RetVar/IF><RefObj> is task <Var/Number> in use \n\rx <RetVar/IF><RefObj> call named script: name=<Var/String>, <Value>, <Value>, <Value>, <Value>, <Value> \n\rx <RefObj> start named script: task=<Var/Number> scriptname=<Var/String> prio=<Var/Number>, <Value>, <Value>, <Value>, <Value>, <Value> \n\rx <RetVar> = <RefObj> get next available task: starting <Var/Number> \n\rx <RefObj> interrupt with script <Script Name> and prio <Var/Number> \n\r\n\r»» Arrays \n\r<RetVar> = array alloc: size=<Var/Number> \n\r<RetVar/IF><Var/Array>[<Var/Number>] \n\r<Var/Array>[<Var/Number>] = <Value> \n\r<RetVar/IF><Var/Array>[<Var/Number>][<Var/Number>] \n\r<Var/Array>[<Var/Number>][<Var/Number>] = <Value> \n\r<RetVar/IF> size of array <Var/Array> \n\r<RetVar> = clone array <Var/Array> : index <Var/Number> … <Var/Number> \n\rcopy array <Var/Array> index <Var/Number> … <Var/Number> into array <Var/Array> at index <Var/Number> \n\rinsert <Value> into array <Var/Array> at index <Var/Number> \n\rappend <Value> to array <Var/Array> \n\rremove element from array <Var/Array> at index <Var/Number> \n\rresize array <Var/Array> to <Var/Number> \n\r<RetVar> = get index of <Value> in array <Var/Array> offset=<Var/Number> + 1 \n\r<Var/Array>[<Var/Number>] = <Var/Array>[<Var/Number>] \n\r<RetVar> = sort array <Value> \n\r<RetVar> = sort array: data=<Value> sort values=<Value> \n\r<RetVar/IF> find <Value> in array: <Value> \n\r<RetVar> = create new array, arguments=<Value>, <Value>, <Value>, <Value>, <Value> \n\r<RetVar/IF> reverse array <Value> \n\r<RetVar/IF> arrays <Value> and <Value> are equal \n\r\n\r»» Strings \n\r<RetVar/IF> get length of string <Var/String> \n\r<RetVar> = find position of pattern <Var/String> in <Var/String> \n\r<RetVar> = get substring of <Var/String> offset=<Var/Number> length=<Var/Number> \n\r<RetVar> = string <Var/String> to integer \n\r<RetVar> = substitute in string <Var/String>: pattern <Var/String> with <Var/String> \n\r<RetVar> = convert number <Var/Number> to string \n\r<RetVar> = format time: <Var/Number> \n\r<RetVar/IF> match regular expression: <Var/String> to string <Var/String> \n\r<RetVar/IF> get string font length: <Var/String> \n\r\n\r»» Math \n\rx <RetVar> = = fixed sin <Var/Number> \n\rx <RetVar> = = fixed cos <Var/Number> \n\rx <RetVar> = square root of <Var/Number> \n\r\n\r»» Commands/Signals \n\rWiP <RefObj> connect ship command/signal <Object Command/Signal> to script <Script Name> with prio <Var/Number> \n\rx <RefObj> set ship command/signal <Object Command/Signal> to global default behaviour \n\rx <RefObj> ignore ship command/signal <Object Command/Signal> \n\rx <RefObj> add secondary signal: signal=<Object Signal>, script=<Script Name>, prio=<Var/Number>, name=<Var/String> \n\rx <RefObj> remove secondary signal: signal=<Object Signal>, name=<Var/String> \n\rx global secondary signal map: add signal=<Object Signal> race=<Var/Race> class=<Var/Class> script=<Script Name> prio=<Var/Number> name=<Var/String> \n\rx global secondary signal map: remove signal=<Object Signal> race=<Var/Race> class=<Var/Class> name=<Var/String> \n\rx global script map: set key=<Object Command/Signal>, class=<Var/Class>, race=<Var/Race>, script=<Script Name>, prio=<Var/Number> \n\rx global script map: remove key=<Object Command/Signal>, class=<Var/Class>, race=<Var/Race> \n\rx global script map: ignore key=<Object Command/Signal>, class=<Var/Class>, race=<Var/Race> \n\rx set script command upgrade: command=<Object Command/Signal> upgrade=<Var/Ware> \n\rx <RetVar> = get script command upgrade: command=<Object Command/Signal> \n\rx set script command upgrade: command=<Object Command/Signal> upgrade=<Var/Ware> script=<Script Name> \n\rx set ship command preload script: command=<Object Command/Signal> script=<Script Name> \n\rx global script map for wings: key=<Var/Wing Command> race=<Var/Race> script=<Script Name> prio=<Var/Number> \n\rx set script command upgrade: wing command=<Var/Wing Command> upgrade=<Var/Ware> \n\rx set script command upgrade: wing command=<Var/Wing Command> upgrade=<Var/Ware> script=<Script Name> \n\rx set wing command preload script: wing command=<Var/Wing Command> script=<Script Name> \n\rx add ship custom command: id=<Var/Number> \n\rx remove ship custom command: id=<Va", "author": {"@type": "Person", "name": "黑暗枪骑兵"}, "url": "https://fabricsoul.github.io/deeptimes-archive/t/2108195.html", "inLanguage": "zh-CN", "about": "X3：地球人冲突 / 阿尔比恩序曲（X3: Terran Conflict / Albion Prelude / Farnham's Legacy）", "isPartOf": {"@type": "WebSite", "name": "深度时空太空游戏攻略存档", "url": "https://fabricsoul.github.io/deeptimes-archive/"}, "commentCount": 9, "datePublished": "2011-1-23"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "首页", "item": "https://fabricsoul.github.io/deeptimes-archive/"}, {"@type": "ListItem", "position": 2, "name": "X3：地球人冲突 / 阿尔比恩序曲", "item": "https://fabricsoul.github.io/deeptimes-archive/s/x3-terran-conflict-albion-prelude.html"}, {"@type": "ListItem", "position": 3, "name": "[转]官方MSCI命令大全(漫天代码，慎入!)", "item": "https://fabricsoul.github.io/deeptimes-archive/t/2108195.html"}]}</script>
+</head><body>
+<header class="site"><a href="../index.html" class="brand">深度时空 · 太空游戏攻略存档</a>
+<span class="tag">DeepTimes Space Game Archive</span></header>
+<nav class="crumb"><a href="../index.html">首页</a> › <a href="../s/x3-terran-conflict-albion-prelude.html">X3：地球人冲突 / 阿尔比恩序曲</a> › <span>[转]官方MSCI命令大全(漫天代码，慎入!)</span></nav>
+<article><h1>[转]官方MSCI命令大全(漫天代码，慎入!)</h1>
+<p class="src">原作者：黑暗枪骑兵　发表：2011-1-23　来源：bbs.deeptimes.net（已关站）· <a href="https://web.archive.org/web/20191021140408/https://bbs.deeptimes.net/forum.php?mod=viewthread&tid=2108195" rel="nofollow">Wayback 存档</a></p>
+<section class="floor"><span class="fl">#1</span><p>本帖最后由 黑暗枪骑兵 于 2011-1-22 23:32 编辑 </p>
+<p>此贴包含了所有的MSCI代码，官网上有每条代码的详细信息及用法</p>
+<p>原地址:</p>
+<p>http://forum.egosoft.com/viewforum.php?f=105
+»» General Commands 
+»» Flow Control 
+end conditional 
+else 
+continue 
+break 
+goto label &lt;Label&gt; 
+gosub &lt;Label&gt; 
+define label &lt;Label&gt; 
+endsub </p>
+<p>»» Script Calls 
+@ &lt;RetVar/IF/Start&gt;&lt;RefObj&gt; call script &lt;Script Name&gt; : &lt;Parameter&gt; 
+x &lt;RefObj&gt; interrupt with script &lt;Script Name&gt; and prio &lt;Var/Number&gt;: arg1=&lt;Value&gt; arg2=&lt;Value&gt; arg3=&lt;Value&gt; arg4=&lt;Value&gt; 
+x &lt;RefObj&gt; interrupt task &lt;Var/Number&gt; with script &lt;Script Name&gt; and prio &lt;Var/Number&gt;: arg1=&lt;Value&gt; arg2=&lt;Value&gt; arg3=&lt;Value&gt; arg4=&lt;Value&gt; 
+x &lt;RefObj&gt; start task &lt;Var/Number&gt; with script &lt;Script Name&gt; and prio &lt;Var/Number&gt;: arg1=&lt;Value&gt; arg2=&lt;Value&gt; arg3=&lt;Value&gt; arg4=&lt;Value&gt; 
+x return &lt;Value&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; is script &lt;Script Name&gt; on stack of task=&lt;Var/Number&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; is task &lt;Var/Number&gt; in use 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; call named script: name=&lt;Var/String&gt;, &lt;Value&gt;, &lt;Value&gt;, &lt;Value&gt;, &lt;Value&gt;, &lt;Value&gt; 
+x &lt;RefObj&gt; start named script: task=&lt;Var/Number&gt; scriptname=&lt;Var/String&gt; prio=&lt;Var/Number&gt;, &lt;Value&gt;, &lt;Value&gt;, &lt;Value&gt;, &lt;Value&gt;, &lt;Value&gt; 
+x &lt;RetVar&gt; = &lt;RefObj&gt; get next available task: starting &lt;Var/Number&gt; 
+x &lt;RefObj&gt; interrupt with script &lt;Script Name&gt; and prio &lt;Var/Number&gt; </p>
+<p>»» Arrays 
+&lt;RetVar&gt; = array alloc: size=&lt;Var/Number&gt; 
+&lt;RetVar/IF&gt;&lt;Var/Array&gt;[&lt;Var/Number&gt;] 
+&lt;Var/Array&gt;[&lt;Var/Number&gt;] = &lt;Value&gt; 
+&lt;RetVar/IF&gt;&lt;Var/Array&gt;[&lt;Var/Number&gt;][&lt;Var/Number&gt;] 
+&lt;Var/Array&gt;[&lt;Var/Number&gt;][&lt;Var/Number&gt;] = &lt;Value&gt; 
+&lt;RetVar/IF&gt; size of array &lt;Var/Array&gt; 
+&lt;RetVar&gt; = clone array &lt;Var/Array&gt; : index &lt;Var/Number&gt; … &lt;Var/Number&gt; 
+copy array &lt;Var/Array&gt; index &lt;Var/Number&gt; … &lt;Var/Number&gt; into array &lt;Var/Array&gt; at index &lt;Var/Number&gt; 
+insert &lt;Value&gt; into array &lt;Var/Array&gt; at index &lt;Var/Number&gt; 
+append &lt;Value&gt; to array &lt;Var/Array&gt; 
+remove element from array &lt;Var/Array&gt; at index &lt;Var/Number&gt; 
+resize array &lt;Var/Array&gt; to &lt;Var/Number&gt; 
+&lt;RetVar&gt; = get index of &lt;Value&gt; in array &lt;Var/Array&gt; offset=&lt;Var/Number&gt; + 1 
+&lt;Var/Array&gt;[&lt;Var/Number&gt;] = &lt;Var/Array&gt;[&lt;Var/Number&gt;] 
+&lt;RetVar&gt; = sort array &lt;Value&gt; 
+&lt;RetVar&gt; = sort array: data=&lt;Value&gt; sort values=&lt;Value&gt; 
+&lt;RetVar/IF&gt; find &lt;Value&gt; in array: &lt;Value&gt; 
+&lt;RetVar&gt; = create new array, arguments=&lt;Value&gt;, &lt;Value&gt;, &lt;Value&gt;, &lt;Value&gt;, &lt;Value&gt; 
+&lt;RetVar/IF&gt; reverse array &lt;Value&gt; 
+&lt;RetVar/IF&gt; arrays &lt;Value&gt; and &lt;Value&gt; are equal </p>
+<p>»» Strings 
+&lt;RetVar/IF&gt; get length of string &lt;Var/String&gt; 
+&lt;RetVar&gt; = find position of pattern &lt;Var/String&gt; in &lt;Var/String&gt; 
+&lt;RetVar&gt; = get substring of &lt;Var/String&gt; offset=&lt;Var/Number&gt; length=&lt;Var/Number&gt; 
+&lt;RetVar&gt; = string &lt;Var/String&gt; to integer 
+&lt;RetVar&gt; = substitute in string &lt;Var/String&gt;: pattern &lt;Var/String&gt; with &lt;Var/String&gt; 
+&lt;RetVar&gt; = convert number &lt;Var/Number&gt; to string 
+&lt;RetVar&gt; = format time: &lt;Var/Number&gt; 
+&lt;RetVar/IF&gt; match regular expression: &lt;Var/String&gt; to string &lt;Var/String&gt; 
+&lt;RetVar/IF&gt; get string font length: &lt;Var/String&gt; </p>
+<p>»» Math 
+x &lt;RetVar&gt; = = fixed sin &lt;Var/Number&gt; 
+x &lt;RetVar&gt; = = fixed cos &lt;Var/Number&gt; 
+x &lt;RetVar&gt; = square root of &lt;Var/Number&gt; </p>
+<p>»» Commands/Signals 
+WiP &lt;RefObj&gt; connect ship command/signal &lt;Object Command/Signal&gt; to script &lt;Script Name&gt; with prio &lt;Var/Number&gt; 
+x &lt;RefObj&gt; set ship command/signal &lt;Object Command/Signal&gt; to global default behaviour 
+x &lt;RefObj&gt; ignore ship command/signal &lt;Object Command/Signal&gt; 
+x &lt;RefObj&gt; add secondary signal: signal=&lt;Object Signal&gt;, script=&lt;Script Name&gt;, prio=&lt;Var/Number&gt;, name=&lt;Var/String&gt; 
+x &lt;RefObj&gt; remove secondary signal: signal=&lt;Object Signal&gt;, name=&lt;Var/String&gt; 
+x global secondary signal map: add signal=&lt;Object Signal&gt; race=&lt;Var/Race&gt; class=&lt;Var/Class&gt; script=&lt;Script Name&gt; prio=&lt;Var/Number&gt; name=&lt;Var/String&gt; 
+x global secondary signal map: remove signal=&lt;Object Signal&gt; race=&lt;Var/Race&gt; class=&lt;Var/Class&gt; name=&lt;Var/String&gt; 
+x global script map: set key=&lt;Object Command/Signal&gt;, class=&lt;Var/Class&gt;, race=&lt;Var/Race&gt;, script=&lt;Script Name&gt;, prio=&lt;Var/Number&gt; 
+x global script map: remove key=&lt;Object Command/Signal&gt;, class=&lt;Var/Class&gt;, race=&lt;Var/Race&gt; 
+x global script map: ignore key=&lt;Object Command/Signal&gt;, class=&lt;Var/Class&gt;, race=&lt;Var/Race&gt; 
+x set script command upgrade: command=&lt;Object Command/Signal&gt; upgrade=&lt;Var/Ware&gt; 
+x &lt;RetVar&gt; = get script command upgrade: command=&lt;Object Command/Signal&gt; 
+x set script command upgrade: command=&lt;Object Command/Signal&gt; upgrade=&lt;Var/Ware&gt; script=&lt;Script Name&gt; 
+x set ship command preload script: command=&lt;Object Command/Signal&gt; script=&lt;Script Name&gt; 
+x global script map for wings: key=&lt;Var/Wing Command&gt; race=&lt;Var/Race&gt; script=&lt;Script Name&gt; prio=&lt;Var/Number&gt; 
+x set script command upgrade: wing command=&lt;Var/Wing Command&gt; upgrade=&lt;Var/Ware&gt; 
+x set script command upgrade: wing command=&lt;Var/Wing Command&gt; upgrade=&lt;Var/Ware&gt; script=&lt;Script Name&gt; 
+x set wing command preload script: wing command=&lt;Var/Wing Command&gt; script=&lt;Script Name&gt; 
+x add ship custom command: id=&lt;Var/Number&gt; 
+x remove ship custom command: id=&lt;Var/Number&gt; 
+x &lt;RetVar&gt; = ship custom command exists: id=&lt;Var/Number&gt; 
+x set script command: &lt;Object Command/Signal&gt; 
+x &lt;RetVar/IF&gt; = get script command 
+x set script command target: &lt;Value&gt; 
+x &lt;RetVar/IF&gt; get script command target 
+x &lt;RefObj&gt; connect wing command/signal &lt;Object Command/Signal&gt; to script &lt;Script Name&gt; with prio &lt;Var/Number&gt; </p>
+<p>&lt;RetVar/IF&gt;&lt;Expression&gt; 
+inc &lt;RetVar&gt; = 
+dec &lt;RetVar&gt; = 
+@ &lt;RetVar/IF&gt; wait &lt;Var/Number&gt; ms 
+@ &lt;RetVar/IF&gt; wait randomly from &lt;Var/Number&gt; to &lt;Var/Number&gt; ms 
+&lt;Var/Number&gt; = random value from 0 to &lt;Var/Number&gt; -1 
+&lt;Var/Number&gt; = random value from &lt;Var/Number&gt; to &lt;Var/Number&gt; -1 
+* &lt;Comment&gt; 
+&lt;RetVar&gt; = script engine version 
+&lt;RetVar&gt; = get script version 
+x &lt;RetVar/IF&gt; is a new script version available 
+&lt;RetVar&gt; = get script name 
+&lt;RetVar&gt; = = get script priority 
+set script priority to &lt;Var/Number&gt; 
+infinite loop detection enabled=&lt;Var/Number&gt; 
+&lt;RetVar/IF&gt; is script with prio &lt;Var/Number&gt; on stack 
+&lt;RetVar/IF&gt; get task ID 
+&lt;RetVar/IF&gt; get PID 
+enable signal/interrupt handling: &lt;Var/Number&gt; 
+&lt;RetVar/IF&gt; is signal/interrupt handling on 
+WiP &lt;RefObj&gt; set local variable: name=&lt;Var/String&gt; value=&lt;Value&gt; 
+WiP &lt;RetVar/IF&gt;&lt;RefObj&gt; get local variable: name=&lt;Var/String&gt; 
+WiP set global variable: name=&lt;Var/String&gt; value=&lt;Value&gt; 
+WiP &lt;RetVar/IF&gt; get global variable: name=&lt;Var/String&gt; 
+&lt;RetVar&gt; = datatyp[ &lt;Value&gt; ] 
+&lt;RetVar/IF&gt; is datatyp[ &lt;Value&gt; ] == &lt;Var/Script Data Type&gt; 
+&lt;RetVar&gt; = read text: page=&lt;Var/Number&gt; id=&lt;Var/Number&gt; 
+&lt;RetVar/IF&gt; = read text: page id=&lt;Var/Number&gt;, from &lt;Var/Number&gt; to &lt;Var/Number&gt; to array, include empty=&lt;Var/Boolean&gt; 
+&lt;RetVar/IF&gt; = read text: page id=&lt;Var/Number&gt;, id=&lt;Var/Number&gt; exists 
+&lt;RetVar&gt; = sprintf: fmt=&lt;Var/String&gt;, &lt;Value&gt;, &lt;Value&gt;, &lt;Value&gt;, &lt;Value&gt;, &lt;Value&gt; 
+&lt;RetVar&gt; = sprintf: pageid=&lt;Var/Number&gt; textid=&lt;Var/Number&gt;, &lt;Value&gt;, &lt;Value&gt;, &lt;Value&gt;, &lt;Value&gt;, &lt;Value&gt; 
+load text: id=&lt;Var/Number&gt; 
+WiP &lt;RetVar/IF&gt; state of news article: page=&lt;Var/Number&gt; id=&lt;Var/Number&gt; 
+WiP set state of news article page=&lt;Var/Number&gt; id=&lt;Var/Number&gt; to &lt;Var/Number&gt; 
+&lt;RetVar/IF&gt; system date is month=&lt;Var/Number&gt;, day=&lt;Var/Number&gt; 
+&lt;RetVar&gt; = playing time 
+&lt;RetVar/IF&gt; is plot &lt;Var/Number&gt; state flag &lt;Var/Number&gt; 
+&lt;RetVar&gt; = register hotkey &lt;Var/String&gt; to call script &lt;Script Name&gt; 
+&lt;RetVar&gt; = register hotkey &lt;Var/String&gt; to call script name &lt;Var/String&gt; 
+unregister hotkey &lt;Var/Number&gt; 
+&lt;RetVar&gt; = last load time 
+WiP &lt;RetVar/IF&gt;&lt;RefObj&gt; get all local variable keys, starting with=&lt;Var/String&gt; 
+WiP &lt;RetVar/IF&gt; get all global variable keys, starting with=&lt;Var/String&gt; 
+WiP &lt;RetVar/IF&gt;&lt;RefObj&gt; get local variables: regular expression=&lt;Var/String&gt; 
+WiP &lt;RetVar/IF&gt; get global variables: regular expression=&lt;Var/String&gt; 
+WiP &lt;RetVar&gt; = get maximum, &lt;Var/Number&gt;, &lt;Var/Number&gt;, &lt;Var/Number&gt;, &lt;Var/Number&gt;, &lt;Var/Number&gt; 
+复制代码</p></section>
+<section class="floor"><span class="fl">#2</span><p>»» Audio Commands 
+play sample &lt;Var/Number&gt; 
+play sample: incoming transmission &lt;Var/Number&gt;, from object &lt;Value&gt; 
+&lt;RefObj&gt; send audio message &lt;Var/Number&gt; to player 
+send incoming message &lt;Var/String&gt; to player: display it=&lt;Var/Number&gt; 
+WiP &lt;RefObj&gt; send incoming message: text=&lt;Var/String&gt; temporary=&lt;Var/Boolean&gt; 
+WiP send incoming question &lt;Var/String&gt; to player: callback=&lt;Script Name&gt; 
+WiP send incoming question &lt;Var/String&gt; to player: callback=&lt;Script Name&gt; flags=&lt;Var/Number&gt; 
+WiP &lt;RetVar&gt; = &lt;RefObj&gt; serialise object 
+&lt;RetVar/IF/START&gt; speak text: page=&lt;Var/Number&gt; id=&lt;Var/Number&gt; priority=&lt;Var/Number&gt; 
+display subtitle text: text=&lt;Var/String&gt; duration=&lt;Var/Number&gt; ms 
+&lt;RetVar/IF&gt;&lt;RefObj&gt; get object name array 
+&lt;RetVar/IF&gt; get text id: ware=&lt;Var/Ware&gt; 
+&lt;RetVar/IF/START&gt; speak array: &lt;Value&gt; prio=&lt;Var/Number&gt; 
+复制代码</p></section>
+<section class="floor"><span class="fl">#3</span><p>»» Logbook Commands 
+write to player logbook &lt;Value&gt; 
+write to player logbook: printf: fmt=&lt;Var/String&gt;, &lt;Value&gt;, &lt;Value&gt;, &lt;Value&gt;, &lt;Value&gt;, &lt;Value&gt; 
+write to player logbook: printf: pageid=&lt;Var/Number&gt; textid=&lt;Var/Number&gt;, &lt;Value&gt;, &lt;Value&gt;, &lt;Value&gt;, &lt;Value&gt;, &lt;Value&gt; 
+&lt;RefObj&gt; write to logbook &lt;Value&gt; 
+write to log file #&lt;Var/Number&gt; append=&lt;Var/Number&gt; value=&lt;Value&gt; 
+write to log file #&lt;Var/Number&gt; append=&lt;Var/Number&gt; printf: fmt=&lt;Var/String&gt;, &lt;Value&gt;, &lt;Value&gt;, &lt;Value&gt;, &lt;Value&gt;, &lt;Value&gt; 
+write to log file #&lt;Var/Number&gt; append=&lt;Var/Number&gt; printf: pageid=&lt;Var/Number&gt; textid=&lt;Var/Number&gt;, &lt;Value&gt;, &lt;Value&gt;, &lt;Value&gt;, &lt;Value&gt;, &lt;Value&gt; 
+复制代码</p></section>
+<section class="floor"><span class="fl">#4</span><p>»» Fly Commands 
+»» Wings 
+x &lt;RetVar/IF&gt; create new flight wing: name=&lt;Var/String&gt; race=&lt;Var/Race&gt; 
+x &lt;RetVar/IF&gt; find flight wing: name=&lt;Var/String&gt; race=&lt;Var/Race&gt; 
+x disband flight wing: wing=&lt;Var/Wing&gt; 
+x remove ship from flight wing: wing=&lt;Var/Wing&gt; ship=&lt;Var/Ship&gt; 
+x add ship to flight wing: wing=&lt;Var/Wing&gt; ship=&lt;Var/Ship&gt; 
+x &lt;RetVar/IF&gt; get flight wing ship array: wing=&lt;Var/Wing&gt; 
+x &lt;RetVar/IF&gt; get flight wing array 
+x &lt;RefObj&gt; add to flight wing: wing=&lt;Var/Wing&gt; 
+x &lt;RefObj&gt; remove from flight wing 
+x global script map for wings: key=&lt;Var/Wing Command&gt; race=&lt;Var/Race&gt; script=&lt;Script Name&gt; prio &lt;Var/Number&gt; 
+x set script command upgrade: wing command=&lt;Var/Wing Command&gt; upgrade=&lt;Var/Ware&gt; 
+x set script command upgrade: wing command=&lt;Var/Wing Command&gt; upgrade=&lt;Var/Ware&gt; script=&lt;Script Name&gt; 
+x &lt;RetVar&gt; get wing command upgrade: command=&lt;Var/Wing Command&gt; 
+x &lt;RefObj&gt; set wing command: &lt;Var/Wing Command&gt; 
+x &lt;RefObj&gt; set wing command: &lt;Var/Wing Command&gt; target=&lt;Value&gt; target2=&lt;Value&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get wing natural formation 
+x &lt;RefObj&gt; set wing natural formation: formation=&lt;Var/Number&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; is temporarily removed from wing 
+x &lt;RefObj&gt; temporarily removed from wing 
+x &lt;RefObj&gt; return to wing 
+x &lt;RetVar/IF&gt; get predefined wing: wing=&lt;Var/Number&gt; 
+x &lt;RefObj&gt; add wing additional ship command: id=&lt;Var/String&gt; script=&lt;Script Name&gt; pageid=&lt;Var/Number&gt; textid=&lt;Var/Number&gt; &gt;&gt;&gt;&gt; 
+x &lt;RefObj&gt; add wing additional ship command: id=&lt;Var/String&gt; script=&lt;Script Name&gt; pageid=&lt;Var/Number&gt; textid=&lt;Var/Number&gt; &gt;&gt;&gt;&gt; 
+x &lt;RefObj&gt; remove wing additional ship command: id=&lt;Var/String&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; does wing additional ship command exists: id=&lt;Var/String&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get ship array for wing command upgrade: command=&lt;Var/Wing Command&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; ship has wing command upgrade: command=&lt;Var/Wing Command&gt; 
+x add wing custom command: id=&lt;Var/Number&gt; 
+x remove wing custom command: id=&lt;Var/Number&gt; 
+x &lt;RetVar&gt; = wing custom command exists: id=&lt;Var/Number&gt; 
+x START &lt;RefObj&gt; wing command &lt;Var/Wing Command&gt; : arg1=&lt;Value&gt;, arg2=&lt;Value&gt;, arg3=&lt;Value&gt;, arg4=&lt;Value&gt;, &gt;&gt;&gt;&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; is in same wing as &lt;Var/Ship&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get wing formation leaders 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get temporarily removed ship array from wing 
+x set wing command preload script: wing command=&lt;Var/Wing Command&gt; script=&lt;Script Name&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get number of wing formation leaders 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get max number of ships per wing formation </p>
+<p>x @ &lt;RetVar/IF&gt;&lt;RefObj&gt; fly to homebase 
+x @ &lt;RetVar/IF&gt;&lt;RefObj&gt; fly to station &lt;Var/Station&gt; 
+x @ &lt;RetVar/IF&gt;&lt;RefObj&gt; fly to sector &lt;Var/Sector&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; find nearest enemy ship: max.dist=&lt;Var/Number&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; find nearest enemy station: max.dist=&lt;Var/Number&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; fire lasers on target &lt;Value&gt; using turret &lt;Var/Number&gt; 
+x @ &lt;RetVar/IF&gt;&lt;RefObj&gt; turn turret &lt;Var/Number&gt; to target &lt;Var/Ship/Station&gt; : timeout=&lt;Var/Number&gt; ms 
+x @ &lt;RetVar/IF&gt;&lt;RefObj&gt; attack run on target &lt;Value&gt; : timeout=&lt;Var/Number&gt; ms 
+x @ &lt;RetVar/IF&gt;&lt;RefObj&gt; defensive move: type=&lt;Var/Number&gt;, internsity=&lt;Var/Number&gt;, timeout=&lt;Var/Number&gt; ms 
+x @ &lt;RetVar/IF&gt;&lt;RefObj&gt; move to ware object &lt;Value&gt; for collecting: timeout=&lt;Var/Number&gt; ms 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; catch ware object &lt;Value&gt; 
+x @ &lt;RetVar/IF&gt;&lt;RefObj&gt; move around &lt;Var/Number&gt; ms 
+x @ &lt;RetVar/IF&gt;&lt;RefObj&gt; escort ship &lt;Var/Ship&gt; 
+x @ &lt;RetVar/IF&gt;&lt;RefObj&gt; escort ship &lt;Var/Ship&gt;: timeout=&lt;Var/Number&gt; ms 
+x &lt;RefObj&gt; set formation &lt;Var/Number&gt; 
+x &lt;RefObj&gt; add to formation with leader &lt;Var/Ship&gt; 
+x &lt;RefObj&gt; remove from formation 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get formation leader 
+x &lt;RetVar&gt; = &lt;RefObj&gt; get formation follower ships 
+x &lt;RetVar&gt; = &lt;RefObj&gt; get formation 
+x &lt;RetVar&gt; = &lt;RefObj&gt; select new formation leader by: ship class=&lt;Var/Number&gt; strength=&lt;Var/Number&gt; min.speed &gt;&gt;&gt;&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; has formation ships 
+x &lt;RefObj&gt; give formation leadership to &lt;Var/Ship&gt; 
+x &lt;RefObj&gt; set as player wingman: &lt;Var/Number&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; is player wingman 
+x START &lt;RefObj&gt; command &lt;Object Command&gt; : arg1=&lt;Value&gt;, arg2=&lt;Value&gt;, arg3=&lt;Value&gt;, arg4=&lt;Value&gt; 
+x START &lt;RefObj&gt; delayed command &lt;Object Command&gt; : arg1=&lt;Value&gt;, arg2=&lt;Value&gt;, arg3=&lt;Value&gt;, arg4=&lt;Value&gt; 
+x &lt;RefObj&gt; send signal &lt;Object Signal&gt; : arg1=&lt;Value&gt;, arg2=&lt;Value&gt;, arg3=&lt;Value&gt;, arg4=&lt;Value&gt; 
+@ &lt;RetVar/IF&gt;&lt;RefObj&gt; follow object &lt;Var/Ship&gt; with precision &lt;Var/Number&gt; m 
+@ &lt;RetVar/IF&gt;&lt;RefObj&gt; follow &lt;Var/Ship&gt; with precision &lt;Var/Number&gt; m : timeout=&lt;Var/Number&gt; ms 
+&lt;RefObj&gt; set follow mode &lt;Var/Number&gt; 
+&lt;RetVar/IF&gt;&lt;RefObj&gt; get follow mode 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; use jump drive: target=&lt;Value&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; needed jump drive energy for jump to sector &lt;Var/Sector&gt; 
+&lt;RefObj&gt; set destination to &lt;Value&gt; 
+&lt;RetVar/IF&gt;&lt;RefObj&gt; get destination 
+&lt;RefObj&gt; set attack target to &lt;Value&gt; 
+&lt;RetVar/IF&gt;&lt;RefObj&gt; get attack target 
+@ &lt;RetVar/IF&gt;&lt;RefObj&gt; move to position: x=&lt;Var/Number&gt; y=&lt;Var/Number&gt; z=&lt;Var/Number&gt; with precision &lt;Var/Number&gt; m 
+x &lt;RefObj&gt; set command &lt;Object Command&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get command 
+x &lt;RefObj&gt; set command target: &lt;Value&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get command target 
+x &lt;RefObj&gt; set command target2: &lt;Value&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get command target2 
+x &lt;RetVar/IF&gt; get player tracking aim 
+x set player tracking aim to &lt;RefObj&gt; 
+x @ &lt;RetVar/IF&gt;&lt;RefObj&gt; fly to sector &lt;Var/Sector&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; is &lt;Var/ship/Station&gt; in firing range of turret &lt;Var/Number&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; find enemy in firing range of turret &lt;Var/Number&gt; 
+x &lt;RefObj&gt; set command: &lt;Object Command&gt; target=&lt;Value&gt; target2=&lt;Value&gt; par1=&lt;Value&gt; par2=&lt;Value&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; fire missile &lt;Var/Ware&gt; on &lt;Value&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; fire missile &lt;Var/Ware&gt; from turret &lt;Var/Number&gt; on &lt;Value&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; find best missile for target &lt;Value&gt; 
+x &lt;RetVar&gt; =best missile type for target &lt;Value&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get current missile 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; is missile &lt;Var/Ware&gt; ready to fire 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; should a missile be fired 
+x &lt;RetVar&gt; = &lt;RefObj&gt; get fire missile probability 
+x &lt;RetVar&gt; = &lt;RefObj&gt; get fire missile time difference in seconds 
+x &lt;RefObj&gt; set fire missile probabilty &lt;Var/Number&gt; 
+x &lt;RefObj&gt; set fire missile time difference to &lt;Var/Number&gt; ms 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; check, select and fire missile on &lt;Value&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; launch &lt;Var/Number&gt; fight drones: protect me or attack target=&lt;Value&gt; 
+x &lt;RetVar&gt; = &lt;RefObj&gt; find nearest missile aiming to me 
+x &lt;RetVar&gt; = &lt;RefObj&gt; get array of missiles aiming to me 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; decouple ships 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; is decoupled ships leader 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get current galaxy flight timestep in ms 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; is landing 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; is starting 
+x @ &lt;RetVar/IF&gt;&lt;RefObj&gt; move to position continue: x=&lt;Var/Number&gt; y=&lt;Var/Number&gt; z=&lt;Var/Number&gt; with precision &lt;Var/Number&gt; m 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; move to debris/asteroid &lt;Value&gt; and turn turret &lt;Var/Number&gt; to target: timeout=&lt;Var/Number&gt; &gt;&gt;&gt;&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; add big ship &lt;Var/Ship&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; has a free ship dock port: ship subtype=&lt;Value&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; can be controled by race logic 
+x &lt;RefObj&gt; set race logic control enabled to &lt;Var/Number&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; can excute StartAction 
+x &lt;RefObj&gt; set StartAction enabled to &lt;Var/Number&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get current action 
+x &lt;RefObj&gt; set pirate cover state to &lt;Var/Number&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; scan potential pirate &lt;Var/Ship&gt; for illegal wares 
+x @ &lt;RetVar/IF&gt;&lt;RefObj&gt; attack run on target &lt;Value&gt; : timeout=&lt;Var/Number&gt;ms speedlimit=&lt;Var/Number&gt; 
+x &lt;RetVar&gt; = &lt;RefObj&gt; get scanner range 
+x &lt;RefObj&gt; select and switch lasers for target &lt;Var/Ship/Station&gt; in turret &lt;Var/Number&gt;: scan for friends &lt;Var/Number&gt; &gt;&gt;&gt;&gt; 
+x &lt;RetVar&gt; = &lt;RefObj&gt; select best lasers for target &lt;Var/Ship/Station&gt; in turret &lt;Var/Number&gt;: scan for friends &lt;Var/Number&gt; &gt;&gt;&gt;&gt; 
+x &lt;RefObj&gt; start job 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get job id 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get job leader 
+x &lt;RetVar&gt; = &lt;RefObj&gt; get job idle rate 
+x &lt;RetVar&gt; = &lt;RefObj&gt; get job jump range 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; wait idle rate minimum: &lt;Var/Number&gt; ms 
+x &lt;RetVar&gt; = &lt;RefObj&gt; get flight time 
+x &lt;RefObj&gt; reset flight time 
+x &lt;RefObj&gt; auto sync patrol sector with environment: &lt;Var/Number&gt; 
+x &lt;RefObj&gt; add to patrol group for sector: &lt;Var/Sector&gt; 
+x &lt;RefObj&gt; remove from patrol group for sector: &lt;Var/Sector&gt; 
+x &lt;RefObj&gt; remove all patrol group references 
+x &lt;RetVar&gt; = &lt;RefObj&gt; find nearest enemy ship in range: class=&lt;Var/Class&gt; 
+x &lt;RetVar&gt; = get freight scanner range 
+x &lt;RetVar&gt; = get transporter range 
+x &lt;RetVar&gt; = get mineral scanner range 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; is in freight scanner range: ship=&lt;Var/Ship&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; is in transporter range: ship=&lt;Var/Ship&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; is in mineral scanner range: asteriod=&lt;Var/Asteriod&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; is autojump activated 
+x &lt;RefObj&gt; set autojump active: &lt;Var/Boolean&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get autojump minimum jumps 
+x &lt;RefObj&gt; autojump minimum jumps=&lt;Var/Number&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; is emergency jump activated 
+x &lt;RefObj&gt; set emergency jump active: &lt;Var/Number&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get emergency jump minimum shield threshold 
+x &lt;RefObj&gt; autojump emergency jump shield threshold=&lt;Var/Number&gt;% 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get missile resupply: missile=&lt;Var/Ware&gt; 
+x &lt;RefObj&gt; set missile resupply: missile=&lt;Var/Ware&gt; amount=&lt;Var/Number&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get ammo resupply: ammo=&lt;Var/Ware&gt; 
+x &lt;RefObj&gt; set ammo resupply: ammo=&lt;Var/Ware&gt; amount=&lt;Var/Number&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get jumpdrive fuel resupply 
+x &lt;RefObj&gt; set jumpdrive fuel resupply: amount=&lt;Var/Number&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; send marines to board ship: &lt;Var/Ship&gt; marines=&lt;Value&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; launch boarding pod on target: victim=&lt;Var/Ship&gt; marines=&lt;Value&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get resupply fuel required 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get all formation followers 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get highest formation leader 
+x &lt;RetVar/IF&gt; is player warping 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get desired speed 
+x &lt;RefObj&gt; set desired speed: &lt;Var/Number&gt; 
+复制代码</p></section>
+<section class="floor"><span class="fl">#5</span><p>»» Trade Commands 
+»» for Ships 
+WiP &lt;RetVar/IF&gt;&lt;RefObj&gt; buy &lt;Var/Number&gt; units of &lt;Var/Ware&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; buy &lt;Var/Number&gt; units of &lt;Var/Ware&gt; to a max. price of &lt;Var/Number&gt; Cr 
+WiP &lt;RetVar/IF&gt;&lt;RefObj&gt; sell &lt;Var/Number&gt; units of &lt;Var/Ware&gt; 
+WiP &lt;RetVar/IF&gt;&lt;RefObj&gt; load &lt;Var/Number&gt; units of &lt;Var/Ware&gt; 
+WiP &lt;RetVar/IF&gt;&lt;RefObj&gt; unload &lt;Var/Number&gt; units of &lt;Var/Ware&gt; 
+&lt;RetVar/IF&gt;&lt;RefObj&gt; get max. ware transport class 
+&lt;RetVar/IF&gt;&lt;RefObj&gt; get cargo bay size 
+&lt;RetVar/IF&gt;&lt;RefObj&gt; get free volume of cargo bay 
+&lt;RetVar/IF&gt;&lt;RefObj&gt; get volume of ware &lt;Var/Ware&gt; in cargo bay 
+&lt;RetVar/IF&gt;&lt;RefObj&gt; get true volume of ware &lt;Var/Ware&gt; in cargo bay 
+&lt;RetVar/IF&gt;&lt;RefObj&gt; get free volume of ware &lt;Var/Ware&gt; in cargo bay 
+&lt;RetVar/IF&gt;&lt;RefObj&gt; get total volume in cargo bay 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; can transport &lt;Var/Ware&gt; 
+x &lt;RefObj&gt; add default items to ship 
+x &lt;RefObj&gt; add lasers per value: &lt;Var/Number&gt; flags: &lt;Var/Number&gt; 
+x &lt;RefObj&gt; add shields per value: &lt;Var/Number&gt; 
+x &lt;RefObj&gt; switch laser in turret &lt;Var/Number&gt; gun &lt;Var/Number&gt; to &lt;Var/Ware&gt; 
+x &lt;RefObj&gt; set wanted ware count to &lt;Var/Number&gt; 
+x &lt;RefObj&gt; set wanted ware to &lt;Var/Ware&gt; 
+x &lt;RetVar&gt; = &lt;RefObj&gt; get wanted ware count 
+x &lt;RetVar&gt; = &lt;RefObj&gt; get wanted ware 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; has illegal ware onboard: race=&lt;Var/Race&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get tradeable ware array from ship 
+x &lt;RetVar&gt; = get warearray for &lt;Var/Ship&gt; 
+x &lt;RetVar&gt; = &lt;RefObj&gt; get upgrade price: cargo-speed-rot &lt;Var/Ware&gt; units: &lt;Var/Number&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get defined amount of ware &lt;Var/Ware&gt; as ship hardware 
+x &lt;Var/Ware&gt;&lt;RefObj&gt; set defined amount of ware &lt;Var/Number&gt; as ship hardware 
+x &lt;RetVar&gt; = &lt;RefObj&gt; get ship hardware as array 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; can buy ware &lt;Var/Ware&gt; at station &lt;Var/Station&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; can buy ware &lt;Var/Ware&gt; from race &lt;Var/Race&gt; </p>
+<p>»» for Stations 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get best store amount of ware &lt;Var/Ware&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get max. store amount of ware &lt;Var/Ware&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; can buy ware &lt;Var/Ware&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get intermediates buyable 
+x &lt;RefObj&gt; set intermediates buyable to &lt;Var/Number&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; can sell ware &lt;Var/Ware&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get intermediates sellable 
+x &lt;RefObj&gt; set intermediates sellable to &lt;Var/Number&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get price of ware &lt;Var/Ware&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get average price of ware &lt;Var/Ware&gt; 
+x &lt;RefObj&gt; set price of ware &lt;Var/Ware&gt; to &lt;Var/Number&gt; Cr 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; uses ware &lt;Var/Ware&gt; as primary resource 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; uses ware &lt;Var/Ware&gt; as secondary resource 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; trades with ware &lt;Var/Ware&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get product ware 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get number of resources 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get number of primary resources 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get number of secondary resources 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get max trade jumps 
+x &lt;RefObj&gt; set max trade jumps &lt;Var/Number&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; only player own ships can trade with 
+x &lt;RetVar&gt; = &lt;RefObj&gt; get tradeable ware array from station 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get products 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; uses ware &lt;Var/Ware&gt; as product 
+x &lt;RetVar&gt; = &lt;RefObj&gt; get production cycle time: account for secondary resources=&lt;Var/Number&gt; 
+x &lt;RetVar&gt; = &lt;RefObj&gt; get remaining production cycle time 
+x &lt;RetVar&gt; = &lt;RefObj&gt; get number of products per cycle of ware &lt;Var/Ware&gt; 
+x &lt;RetVar&gt; = &lt;RefObj&gt; get production status: as percentage=&lt;Var/Number&gt; 
+x &lt;RefObj&gt; add product to factory or dock: &lt;Var/Ware&gt; 
+x &lt;RefObj&gt; add primary resource to factory: &lt;Var/Ware&gt; 
+x &lt;RefObj&gt; add secondary resource to factory: &lt;Var/Ware&gt; 
+x &lt;RefObj&gt; remove product to factory or dock: &lt;Var/Ware&gt; 
+x &lt;RefObj&gt; remove primary resource to factory: &lt;Var/Ware&gt; 
+x &lt;RefObj&gt; remove secondary resource to factory: &lt;Var/Ware&gt; 
+x &lt;RefObj&gt; factory production task: on=&lt;Var/Number&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get repair cost of ship &lt;Var/Ship&gt; 
+x &lt;RefObj&gt; add default wares to station/dock </p>
+<p>»» for Ships and Stations 
+&lt;RetVar/IF&gt;&lt;RefObj&gt; get money 
+&lt;RefObj&gt; add money: &lt;Var/Number&gt; 
+&lt;RetVar/IF&gt;&lt;RefObj&gt; get amount of ware &lt;Var/Ware&gt; in cargo bay 
+&lt;RetVar/IF&gt;&lt;RefObj&gt; get true amount of ware &lt;Var/Ware&gt; in cargo bay 
+&lt;RetVar/IF&gt;&lt;RefObj&gt; get free amount of ware &lt;Var/Ware&gt; in cargo bay 
+&lt;RetVar/IF&gt;&lt;RefObj&gt; get max amount of ware &lt;Var/Ware&gt; in cargo bay 
+&lt;RetVar/IF&gt;&lt;RefObj&gt; get ware storage percentage: ware &lt;Var/Ware&gt; in cargo bay </p>
+<p>»» Merchants 
+add merchant &lt;Var/String&gt; base=&lt;RefObj&gt; wanted wares=&lt;Var/Array&gt; owned wares=&lt;Var/Array&gt; cash=&lt;Var/Number&gt; 
+&lt;RetVar&gt; = &lt;RefObj&gt; get merchants 
+remove merchant &lt;Var/String&gt; 
+x merchant &lt;Var/String&gt; got ware &lt;Var/Ware&gt;: quantity=&lt;Var/Number&gt; merchant &lt;Var/String&gt; sold ware &lt;Var/Ware&gt;: quantity=&lt;Var/Number&gt; reset merchant &lt;Var/String&gt; expiry 
+x &lt;RetVar&gt; = get data for merchant &lt;Var/String&gt;: item number=&lt;Var/Number&gt; </p>
+<p>»» Passengers 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; create passenger in ship: name=&lt;Var/String&gt; race=&lt;Var/Race&gt; voice=&lt;Var/Number&gt; face=&lt;Var/String&gt;? 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; add pilot of ship &lt;Var/Ship&gt; as passenger: disable ship=&lt;Var/Boolean&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get passenger array 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; move passenger to ship &lt;Var/Ship&gt;: set passenger as pilot=&lt;Var/Boolean&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; eject passenger 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; enslave passenger 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; destroy passenger 
+x &lt;RefObj&gt; train passenger to marine 
+x &lt;RefObj&gt; create marine from passenger: fighting=&lt;Var/Number&gt; hacking=&lt;Var/Number&gt; mechanical=&lt;Var/Number&gt; engineering=&lt;Var/Number&gt; 
+x &lt;RefObj&gt; set marine skill: fighting=&lt;Var/Number&gt; 
+x &lt;RefObj&gt; set marine skill: hacking=&lt;Var/Number&gt; 
+x &lt;RefObj&gt; set marine skill: mechanical=&lt;Var/Number&gt; 
+x &lt;RefObj&gt; set marine skill: engineering=&lt;Var/Number&gt; 
+x &lt;RetVar/IF&gt; is marine: passenger/astronaut=&lt;Var/Passenger&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; can transport passenger:=&lt;Var/Passenger&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; can launch marines 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; is ship boardable 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get marines array 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; free space for marines 
+x &lt;RefObj&gt; set passenger transport, destination=&lt;Var/Station&gt;, payment=&lt;Var/Number&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; is passenger to be transported 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get passenger transport destination 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get passenger transport payment 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get marine buy price 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get number of marines can board 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get maximum number of marines 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get number of marines attacking 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; add marine &lt;Var/Passenger&gt; to attack group on ship 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get incoming marines 
+x &lt;RefObj&gt; stop incoming marines 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get marine fighting skill 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get marine mechanical skill 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get marine hacking skill 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get marine engineering skill 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get marine overall skill 
+x @&lt;RetVar/IF&gt;&lt;RefObj&gt; move marine to board: &lt;Value&gt;, timeout=&lt;Var/Number&gt; </p>
+<p>&lt;RetVar/IF&gt; get player money 
+add money to player: &lt;Var/Number&gt; 
+&lt;RetVar/IF&gt;&lt;RefObj&gt; add &lt;Var/Number&gt; units of &lt;Var/Ware&gt; 
+&lt;RetVar/IF&gt;&lt;RefObj&gt; install &lt;Var/Number&gt; units of &lt;Var/Ware&gt; 
+&lt;RetVar&gt; = get volume of ware &lt;Var/Ware&gt; 
+&lt;RetVar&gt; = get transport class of ware &lt;Var/Ware&gt; 
+&lt;RetVar/IF&gt; find station: product &lt;Var/Ware&gt; with best price: max.price=&lt;Var/Number&gt;, amount=&lt;Var/Number&gt;, max.jumps=&lt;Var/Number&gt;, startsector=&lt;Var/Sector&gt;, trader=&lt;Var/String&gt;, exclude array=&lt;Value&gt; 
+&lt;RetVar/IF&gt;&lt;RefObj&gt; find station: product &lt;Var/Ware&gt; with best price: max.price=&lt;Var/Number&gt;, amount=&lt;Var/Number&gt;, max.jumps=&lt;Var/Number&gt;, startsector=&lt;Var/Sector&gt;, trader=&lt;Var/String&gt;, exclude array=&lt;Value&gt; 
+&lt;RetVar/IF&gt; find station: product &lt;Var/Ware&gt; with min. jumps: max.price=&lt;Var/Number&gt;, amount=&lt;Var/Number&gt;, max.jumps=&lt;Var/Number&gt;, startsector=&lt;Var/Sector&gt;, trader=&lt;Var/String&gt;, exclude array=&lt;Value&gt; 
+&lt;RetVar/IF&gt;&lt;RefObj&gt; find station: product &lt;Var/Ware&gt; with min. jumps: max.price=&lt;Var/Number&gt;, amount=&lt;Var/Number&gt;, max.jumps=&lt;Var/Number&gt;, startsector=&lt;Var/Sector&gt;, trader=&lt;Var/String&gt;, exclude array=&lt;Value&gt; 
+&lt;RetVar/IF&gt; find station: resource &lt;Var/Ware&gt; with best price: min.price=&lt;Var/Number&gt;, amount=&lt;Var/Number&gt;, max.jumps=&lt;Var/Number&gt;, startsector=&lt;Var/Sector&gt;, trader=&lt;Var/String&gt;, exclude array=&lt;Value&gt; 
+&lt;RetVar/IF&gt;&lt;RefObj&gt; find station: resource &lt;Var/Ware&gt; with best price: min.price=&lt;Var/Number&gt;, amount=&lt;Var/Number&gt;, max.jumps=&lt;Var/Number&gt;, startsector=&lt;Var/Sector&gt;, trader=&lt;Var/String&gt;, exclude array=&lt;Value&gt; 
+&lt;RetVar/IF&gt; find station: resource &lt;Var/Ware&gt; with min. jumps: min.price=&lt;Var/Number&gt;, amount=&lt;Var/Number&gt;, max.jumps=&lt;Var/Number&gt;, startsector=&lt;Var/Sector&gt;, trader=&lt;Var/String&gt;, exclude array=&lt;Value&gt; 
+&lt;RetVar/IF&gt;&lt;RefObj&gt; find station: resource &lt;Var/Ware&gt; with min. jumps: min.price=&lt;Var/Number&gt;, amount=&lt;Var/Number&gt;, max.jumps=&lt;Var/Number&gt;, startsector=&lt;Var/Sector&gt;, trader=&lt;Var/String&gt;, exclude array=&lt;Value&gt; 
+&lt;RetVar/IF&gt; find station sells: resource &lt;Var/Ware&gt; with best price: max.price=&lt;Var/Number&gt;, amount=&lt;Var/Number&gt;, max.jumps=&lt;Var/Number&gt;, startsector=&lt;Var/Sector&gt;, trader=&lt;Var/String&gt;, exclude array=&lt;Value&gt; 
+&lt;RetVar/IF&gt;&lt;RefObj&gt; find station sells: resource &lt;Var/Ware&gt; with best price: max.price=&lt;Var/Number&gt;, amount=&lt;Var/Number&gt;, max.jumps=&lt;Var/Number&gt;, startsector=&lt;Var/Sector&gt;, trader=&lt;Var/String&gt;, exclude array=&lt;Value&gt; 
+&lt;RetVar/IF&gt;find station sells: resource &lt;Var/Ware&gt; with min. jumps: max.price=&lt;Var/Number&gt;, amount=&lt;Var/Number&gt;, max.jumps=&lt;Var/Number&gt;, startsector=&lt;Var/Sector&gt;, trader=&lt;Var/String&gt;, exclude array=&lt;Value&gt; 
+&lt;RetVar/IF&gt;&lt;RefObj&gt; find station sells: resource &lt;Var/Ware&gt; with min. jumps: max.price=&lt;Var/Number&gt;, amount=&lt;Var/Number&gt;, max.jumps=&lt;Var/Number&gt;, startsector=&lt;Var/Sector&gt;, trader=&lt;Var/String&gt;, exclude array=&lt;Value&gt; 
+&lt;RetVar/IF&gt; find station: product &lt;Var/Ware&gt; with best price depend on jumps: max.price=&lt;Var/Number&gt;, amount=&lt;Var/Number&gt;, max.jumps=&lt;Var/Number&gt;, startsector=&lt;Var/Sector&gt;, trader=&lt;Var/String&gt;, exclude array=&lt;Value&gt; 
+&lt;RetVar/IF&gt; find station: resource &lt;Var/Ware&gt; with best price depend on jumps: min.price=&lt;Var/Number&gt;, amount=&lt;Var/Number&gt;, max.jumps=&lt;Var/Number&gt;, startsector=&lt;Var/Sector&gt;, trader=&lt;Var/String&gt;, exclude array=&lt;Value&gt; 
+&lt;RetVar/IF&gt; find station sells: resource &lt;Var/Ware&gt; with best price depend on jumps: max.price=&lt;Var/Number&gt;, amount=&lt;Var/Number&gt;, max.jumps=&lt;Var/Number&gt;, startsector=&lt;Var/Sector&gt;, trader=&lt;Var/String&gt;, exclude array=&lt;Value&gt; 
+&lt;RetVar&gt; = get average price of ware &lt;Var/Ware&gt; 
+&lt;RetVar&gt; = get max price of ware &lt;Var/Ware&gt; 
+&lt;RetVar&gt; = get min price of ware &lt;Var/Ware&gt; 
+&lt;RetVar&gt; = get max price of ware &lt;Var/Ware&gt; as secondary resource 
+&lt;RetVar&gt; = get min price of ware &lt;Var/Ware&gt; as secondary resource 
+&lt;RetVar/IF&gt; is ware &lt;Var/Ware&gt; illegal in &lt;Var/Race&gt; sectors 
+&lt;RetVar&gt; = get maintype of ware &lt;Var/Ware&gt; 
+&lt;RetVar&gt; = get subtype of ware &lt;Var/Ware&gt; 
+&lt;RetVar&gt; = get ware from maintype &lt;Var/Number&gt; and subtype &lt;Var/Number&gt; 
+&lt;RetVar&gt; = get number of subtypes of maintype &lt;Var/Number&gt; 
+&lt;RetVar&gt; = &lt;RefObj&gt; get maintype 
+&lt;RetVar&gt; = &lt;RefObj&gt; get subtype 
+x &lt;RetVar&gt; = get relvalue of &lt;Var/Ware&gt; 
+&lt;RetVar&gt; = get notority required to buy ware: &lt;Var/Ware&gt; 
+&lt;RetVar/IF&gt; = is equipment: ware=&lt;Var/Ware&gt; 
+&lt;RetVar/IF&gt; = is upgrade: ware=&lt;Var/Ware&gt; 
+&lt;RetVar/IF&gt; = is inventory: ware=&lt;Var/Ware&gt; 
+复制代码</p></section>
+<section class="floor"><span class="fl">#6</span><p>»» General Object Commands 
+»» Weapon Information 
+x &lt;RetVar&gt; = get power generator of ship/station type &lt;Var/Ware&gt; 
+x &lt;RetVar&gt; = &lt;RefObj&gt; get power generator 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; fits laser &lt;Var/Ware&gt; into turret &lt;Var/Number&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get max. number of lasers in turret &lt;Var/Number&gt; 
+x &lt;RetVar&gt; = &lt;RefObj&gt; get laser type in turret &lt;Var/Number&gt; at slot &lt;Var/Number&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get laser type in bay &lt;Var/Number&gt; 
+x &lt;RetVar&gt; = &lt;RefObj&gt; get number of turrets 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; turret &lt;Var/Number&gt; can use &lt;Var/Ware&gt; 
+x &lt;RetVar&gt; = get range of laser &lt;Var/Ware&gt; 
+x &lt;RetVar&gt; = get shield damage of laser &lt;Var/Ware&gt; 
+x &lt;RetVar&gt; = get hull damage of laser &lt;Var/Ware&gt; 
+x &lt;RetVar/IF&gt; get ammunition of laser &lt;Var/Ware&gt; 
+x &lt;RetVar&gt; = get bullet speed of laser &lt;Var/Ware&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; can missile &lt;Var/Ware&gt; be installed 
+x &lt;RetVar&gt; = get range of missile type &lt;Var/Ware&gt; 
+x &lt;RetVar&gt; = get missile max damage of &lt;Var/Ware&gt; 
+x &lt;RetVar&gt; = get default launch time difference for missile type: &lt;Var/Ware&gt; 
+x &lt;RetVar&gt; = get missile flags of &lt;Var/Ware&gt; 
+x &lt;RefObj&gt; set laser energy to &lt;Var/Ware&gt; 
+x &lt;RetVar&gt; = &lt;RefObj&gt; get compatible laser array: turret=&lt;Var/Ware&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; can turret &lt;Var/Number&gt; fire missiles 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get compatible missile array 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get maximum laser range: turret &lt;Var/Number&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get minimum laser range: turret &lt;Var/Number&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get compatible missile array from cargobay </p>
+<p>»» Pilots 
+x &lt;RetVar&gt; = &lt;RefObj&gt; get pilot name 
+x &lt;RefObj&gt; set pilot name to &lt;Var/String&gt; 
+x &lt;RetVar&gt; = get random name: race=&lt;Var/Race&gt; 
+&lt;RetVar&gt; = get fight rank 
+&lt;RetVar&gt; = get trade rank 
+x &lt;RefObj&gt; set pilot speaker: voice=&lt;Value&gt;, face=&lt;Value&gt;, Pirate subrace=&lt;Value&gt;, Argon female=&lt;Value&gt; 
+x &lt;RetVar&gt; = &lt;RefObj&gt; get pilot fight skill 
+x &lt;RefObj&gt; set pilot fightskill to &lt;Var/Number&gt; 
+x &lt;RetVar&gt; = &lt;RefObj&gt; get pilot tradeskill 
+x &lt;RefObj&gt; set pilot tradeskill to &lt;Var/Number&gt; 
+x &lt;RetVar&gt; = &lt;RefObj&gt; get pilot morale 
+x &lt;RefObj&gt; set pilot morale: &lt;Var/Number&gt; 
+x &lt;RetVar&gt; = &lt;RefObj&gt; get pilot aggression 
+x &lt;RefObj&gt; set pilot aggression: &lt;Var/Number&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; pilot eject from ship 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; move pilot to ship &lt;Var/Ship&gt;: disable=&lt;Var/Boolean&gt; 
+x &lt;RetVar&gt; = get trade rank title: text=&lt;Var/Boolean&gt; 
+x &lt;RetVar&gt; = get fight rank title: text=&lt;Var/Boolean&gt; 
+x &lt;RetVar&gt; = get trade rank percentage 
+x &lt;RetVar&gt; = get fight rank percentage 
+x &lt;RetVar&gt; = &lt;RefObj&gt; get notoriety title to race &lt;Var/Race&gt;: text=&lt;Var/Boolean&gt; 
+x &lt;RetVar&gt; = &lt;RefObj&gt; get notoriety percentage to race &lt;Var/Race&gt; 
+x &lt;RetVar/IF&gt; get mission rank: name=&lt;Var/String&gt; 
+x set mission rank: name=&lt;Var/String&gt; rank=&lt;Var/Number&gt; </p>
+<p>»» Create Objects 
+&lt;RetVar&gt; = create ship: type=&lt;Var/Ship&gt; owner= &lt;Var/Race&gt; addto=&lt;Value&gt; x=&lt;Var/Number&gt; y=&lt;Var/Number&gt; z=&lt;Var/Number&gt; 
+x &lt;RetVar&gt; = create station: type=&lt;Var/Station Type&gt; owner=&lt;Var/Race&gt; addto=&lt;Var/Sector&gt; x=&lt;Var/Number&gt; y=&lt;Var/Number&gt; z=&lt;Var/Number&gt; 
+x &lt;RetVar&gt; = create gate: type=&lt;Var/Number&gt; addto=&lt;Var/Sector&gt; gateid=&lt;Var/Number&gt; dstsecx=&lt;Var/Number&gt; dstsecy=&lt;Var/Number&gt; dstgateid=&lt;Var/Number&gt; x=&lt;Var/Number&gt; y=&lt;Var/Number&gt; z=&lt;Var/Number&gt; 
+x &lt;RetVar&gt; = create asteroid: type=&lt;Var/Number&gt; addto=&lt;Var/Sector&gt; resource=&lt;Var/Number&gt; yield=&lt;Var/Number&gt; x=&lt;Var/Number&gt; y=&lt;Var/Number&gt; z=&lt;Var/Number&gt; 
+x &lt;RetVar&gt; = create debris: type=&lt;Var/Number&gt; addto=&lt;Var/Sector&gt; resource=&lt;Var/Number&gt; yield=&lt;Var/Number&gt; x=&lt;Var/Number&gt; y=&lt;Var/Number&gt; z=&lt;Var/Number&gt; 
+x &lt;RetVar&gt; = create nebula: type=&lt;Var/Number&gt; addto=&lt;Var/Sector&gt; x=&lt;Var/Number&gt; y=&lt;Var/Number&gt; z=&lt;Var/Number&gt; 
+x &lt;RetVar&gt; = create sun: subtype=&lt;Var/Number&gt; r=&lt;Var/Number&gt; g=&lt;Var/Number&gt; b=&lt;Var/Number&gt; addto=&lt;Var/Sector&gt; x=&lt;Var/Number&gt; y=&lt;Var/Number&gt; z=&lt;Var/Number&gt; 
+x &lt;RetVar&gt; = create planet: subtype=&lt;Var/Number&gt; addto=&lt;Var/Sector&gt; x=&lt;Var/Number&gt; y=&lt;Var/Number&gt; z=&lt;Var/Number&gt; 
+x &lt;RetVar&gt; = create special: type=&lt;Var/Number&gt; addto=&lt;Var/Sector&gt; x=&lt;Var/Number&gt; y=&lt;Var/Number&gt; z=&lt;Var/Number&gt; 
+x &lt;RetVar&gt; = create flying ware: maintype=&lt;Var/Number&gt; subtype=&lt;Var/Number&gt; count=&lt;Var/Number&gt; sector=&lt;Var/Sector&gt; x=&lt;Var/Number&gt; y=&lt;Var/Number&gt; z=&lt;Var/Number&gt; </p>
+<p>&lt;RetVar/IF&gt;&lt;RefObj&gt; get object class 
+&lt;RetVar/IF&gt;&lt;RefObj&gt; is of class &lt;Var/class&gt; 
+&lt;RetVar&gt; = &lt;RefObj&gt; get true owner 
+&lt;RetVar/IF&gt;&lt;RefObj&gt; get owner race 
+&lt;RefObj&gt; set owner race to &lt;Var/Race&gt; 
+WiP &lt;RetVar/IF&gt;&lt;RefObj&gt; get environment 
+&lt;RetVar/IF&gt;&lt;RefObj&gt; get sector 
+&lt;RetVar/IF&gt;&lt;RefObj&gt; get homebase 
+&lt;RefObj&gt; set homebase to &lt;Var/Ship/Station&gt; 
+&lt;RetVar/IF&gt;&lt;RefObj&gt; get homesector 
+&lt;RefObj&gt; set homesector to &lt;Var/Sector&gt; 
+&lt;RetVar/IF&gt;&lt;RefObj&gt; exists 
+&lt;RetVar/IF&gt;&lt;RefObj&gt; get ware type code of object 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; is of type &lt;Var/Ship Type/Station Type&gt; 
+x &lt;RetVar&gt; = &lt;RefObj&gt; get ID code 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get serial name of station 
+x &lt;RefObj&gt; set serial name of station to &lt;Var/Stations Serial&gt; 
+&lt;RetVar&gt; = &lt;RefObj&gt; get name 
+x &lt;RefObj&gt; set name to &lt;Var/String&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; is known 
+x &lt;RefObj&gt; set known status to &lt;Var/Number&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get current laser strength 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get maximum laser strength 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get max laser strength in turret &lt;Var/Number&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get max. shield type that can be installed 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get number of shield bays 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get number of laser bays 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get most destructive missle type that can be installed 
+&lt;RetVar/IF&gt;&lt;RefObj&gt; get relation to object &lt;Var/Ship/Station&gt; 
+x &lt;RefObj&gt; set relation against &lt;Value&gt; to &lt;Relation&gt; 
+x &lt;RefObj&gt; set relations from notoriety: include player as target and race &gt; teladi as owner=&lt;Var/Number&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get relation to race &lt;Var/Race&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; is &lt;Var/Ship/Station&gt; a enemy 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; is &lt;Var/Ship/Station&gt; a friend 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; is &lt;Var/Ship/Station&gt; neutral to me 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get notoriety to race &lt;Var/Race&gt; 
+x &lt;RetVar/IF&gt; get notoriety from race &lt;Var/Race&gt; to race &lt;Var/Race&gt; 
+x set notoriety of &lt;Var/Race&gt; -&gt; &lt;Var/Race&gt; to &lt;Var/Number&gt; points 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get shield type in bay &lt;Var/Number&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; has same environment as &lt;Var/Ship/Station&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; is in same sector as &lt;Var/Ship/Station&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; is landed 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; is docked 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; is docking possible of &lt;Value&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; is docking allowed at &lt;Var/Ship/Station&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; is in a sector 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get attacker 
+x &lt;RefObj&gt; set attacker to &lt;Var/Ship/Station&gt; 
+x &lt;RetVar&gt; = get distance between &lt;Var/Ship/Station&gt; and &lt;Var/Ship/Station&gt; 
+x &lt;RetVar&gt; = &lt;RefObj&gt; get distance to: x=&lt;Var/Number&gt; y=&lt;Var/Number&gt; z=&lt;Var/Number&gt; 
+WiP &lt;RetVar&gt; = &lt;RefObj&gt; get distance to: position array=&lt;Var/Array&gt; 
+WiP &lt;RetVar&gt; = get distance: position array1=&lt;Var/Array&gt; array2=&lt;Var/Array&gt; 
+WiP &lt;RetVar&gt; = &lt;RefObj&gt; get x position 
+&lt;RetVar&gt; = &lt;RefObj&gt; get y position 
+&lt;RetVar&gt; = &lt;RefObj&gt; get z position 
+WiP &lt;RetVar&gt; = &lt;RefObj&gt; get position as array 
+&lt;RetVar&gt; = get player ship 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; is disabled 
+x &lt;RefObj&gt; station trade and production tasks: on=&lt;Var/Number&gt; 
+&lt;RetVar/IF&gt;&lt;RefObj&gt; is in active sector 
+&lt;RefObj&gt; destruct: show no explosion=&lt;Var/Number&gt; 
+&lt;RefObj&gt; destroy object: killer=&lt;Value&gt;, show no explosion =&lt;Var/Number&gt; 
+WiP &lt;RefObj&gt; set position: x =&lt;Var/Number&gt; y =&lt;Var/Number&gt; z =&lt;Var/Number&gt; 
+&lt;RefObj&gt; force position: x =&lt;Var/Number&gt; y =&lt;Var/Number&gt; z =&lt;Var/Number&gt; 
+x &lt;RefObj&gt; set rotation: alpha=&lt;Var/Number&gt; beta=&lt;Var/Number&gt; gamma=&lt;Var/Number&gt; 
+WiP &lt;RetVar&gt; = &lt;RefObj&gt; get rot alpha 
+WiP &lt;RetVar&gt; = &lt;RefObj&gt; get rot beta 
+WiP &lt;RetVar&gt; = &lt;RefObj&gt; get rot gamma 
+x &lt;RetVar&gt; = &lt;RefObj&gt; get size of object 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get max upgrades for upgrade &lt;Var/Ware&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get max speed 
+&lt;RetVar&gt; = &lt;RefObj&gt; get current max speed 
+&lt;RetVar&gt; = &lt;RefObj&gt; get current speed 
+&lt;RefObj&gt; set ship speed to &lt;Var/Number&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get max hull 
+&lt;RetVar/IF&gt;&lt;RefObj&gt; get hull 
+x &lt;RefObj&gt; set hull to &lt;Var/Number&gt; 
+&lt;RetVar/IF&gt;&lt;RefObj&gt; get hull percent 
+&lt;RetVar/IF&gt;&lt;RefObj&gt; get maximum shield strength 
+&lt;RetVar/IF&gt;&lt;RefObj&gt; get current shield strength 
+x &lt;RefObj&gt; set current shield strength to &lt;Var/Number&gt; 
+&lt;RetVar/IF&gt;&lt;RefObj&gt; get shield percent 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get shield and hull percent 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get max upgraded speed 
+&lt;RetVar/IF&gt;&lt;RefObj&gt; get dock bay size 
+&lt;RetVar/IF&gt;&lt;RefObj&gt; get number of landed ships 
+x &lt;Var/Race&gt; add notoriety: race=&lt;Var/Race&gt; value=&lt;Var/Number&gt; 
+WiP &lt;RefObj&gt; set ship disabled to &lt;Var/Number&gt; 
+x &lt;RefObj&gt; put into environment &lt;RefObj&gt; 
+x &lt;RefObj&gt; station send defend squad againts ship &lt;Var/Ship/Station&gt; 
+WiP &lt;RetVar&gt; get Kha&#x27;ak aggression level 
+WiP set Kha&#x27;ak aggression level to &lt;Var/Number&gt; 
+x &lt;RetVar&gt; = &lt;RefObj&gt; is detectable 
+x &lt;RetVar&gt; = &lt;RefObj&gt; is hired 
+&lt;RetVar&gt; = get player name 
+WiP &lt;RefObj&gt; disable ship rebuild 
+x &lt;RetVar&gt; = order ship in next shipyard: owner=&lt;Var/Race&gt; sector=&lt;Var/Sector&gt; class=&lt;Var/Class&gt; optional: default shiptype for race:&lt;Var/Race&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; is hidden 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; is target visable &lt;Var/Ship/Station&gt; 
+x &lt;RetVar&gt; = &lt;RefObj&gt; get asteriod yield 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; is asteriod scanned 
+x &lt;RefObj&gt; set asteriod scanned to &lt;Var/Number&gt; 
+x &lt;RetVar&gt; = &lt;RefObj&gt; get resource waretype of asteriod 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; has collectible rocks 
+x &lt;RetVar&gt; = &lt;RefObj&gt; get flying ware count 
+WiP &lt;RefObj&gt; ignore collisions: &lt;Var/Number&gt; 
+x &lt;RetVar/IF&gt; player HQ has blueprints for: type=&lt;Var/Ship/Station&gt; 
+x add blueprints to player HQ: type=&lt;Var/Ship/Station&gt; 
+x remove blueprints from player HQ: type=&lt;Var/Ship/Station&gt; 
+x &lt;RetVar/IF&gt; move player to ship &lt;Var/Ship&gt;: Teleport=&lt;Var/Number&gt; 
+x &lt;RetVar&gt; = get maker race: shiptype=&lt;Value&gt; 
+x &lt;RetVar&gt; = &lt;RefObj&gt; get maker race 
+&lt;RefObj&gt; jump out of existance 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get flight wing 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; is civilian ship 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get number of decks on ship 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get ship boarding defence level 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get hacking security level 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; realign gate: gatenum=&lt;Value&gt; gate to link=&lt;Var/Warpgate&gt; force=&lt;Var/Boolean&gt; 
+x &lt;RetVar&gt; = &lt;RefObj&gt; get ship variation 
+x &lt;RetVar&gt; get ship variation: subtype=&lt;Var/Number&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; is missile boat 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; is military outpost 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get debris count 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; is invincible 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; find nearest military outpost 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get boarding shield threshold 
+复制代码</p></section>
+<section class="floor"><span class="fl">#7</span><p>»» Universe and Sector Commands 
+x &lt;RetVar/IF&gt; find ship: sector=&lt;Var/Sector&gt; class or type=&lt;Value&gt; race=&lt;Var/Race&gt; flags=&lt;Var/Number&gt; refobj=&lt;Value&gt; maxdist=&lt;Var/Number&gt; maxnum=&lt;Var/Number&gt; refpos=&lt;Var/Array&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; find ship: class or type=&lt;Value&gt; race=&lt;Var/Race&gt; flags=&lt;Var/Number&gt; refobj=&lt;Value&gt; maxnum=&lt;Var/Number&gt; with homebase=&lt;Var/Homebase&gt; 
+x &lt;RetVar/IF&gt; find asteroid: sector=&lt;Var/Sector&gt; resourcetype=&lt;Var/Ware&gt; min.yield=&lt;Var/Number&gt; flags=&lt;Var/Number&gt; refobj=&lt;Value&gt; maxdist=&lt;Var/Number&gt; maxnum=&lt;Var/Number&gt; refpos=&lt;Var/Array&gt; 
+x &lt;RetVar/IF&gt; find debris: sector=&lt;Var/Sector&gt; resource=&lt;Var/Ware&gt; min yield=&lt;Var/Number&gt; flags=&lt;Var/Number&gt; refobj=&lt;Value&gt; num=&lt;Var/Number&gt; max distance=&lt;Var/Number&gt; refpos=&lt;Var/Array&gt; 
+x &lt;RetVar/IF&gt; find nebula: sector=&lt;Var/Sector&gt; type=&lt;Var/Number&gt; effect=&lt;Var/Number&gt; flags=&lt;Var/Number&gt; refobj=&lt;Value&gt; maxdist=&lt;Var/Number&gt; maxnum=&lt;Var/Number&gt; refpos=&lt;Var/Array&gt; 
+x &lt;RetVar/IF&gt; find flying ware: sector=&lt;Var/Sector&gt; maintype=&lt;Var/Number&gt; subtype=&lt;Var/Number&gt; flags=&lt;Var/Number&gt; refobj=&lt;Value&gt; maxdist=&lt;Var/Number&gt; maxnum=&lt;Var/Number&gt;, refpos=&lt;Var/Array&gt; 
+x &lt;RetVar/IF&gt; find station: sector=&lt;Var/Sector&gt; class or type=&lt;Value&gt; race=&lt;Var/Race&gt; flags=&lt;Var/Number&gt; refobj=&lt;Value&gt; maxdist=&lt;Var/Number&gt; maxnum=&lt;Var/Number&gt; refpos=&lt;Var/Array&gt; 
+x &lt;RetVar/IF&gt; find station in galaxy: startsector=&lt;Var/Sector&gt; class or type=&lt;Value&gt; race=&lt;Var/Race&gt; flags=&lt;Var/Number&gt; refobj=&lt;Value&gt; serial=&lt;Var/Serial&gt; max.jumps=&lt;Var/Number&gt; 
+x &lt;RetVar/IF&gt; find station in galaxy: startsector=&lt;Var/Sector&gt; class or type=&lt;Var/Number&gt; race=&lt;Var/Race&gt; flags=&lt;Var/Number&gt; refobj=&lt;Value&gt; serial=&lt;Var/Serial&gt; max.jumps=&lt;Var/Number&gt; num=&lt;Var/Number&gt; 
+x &lt;RetVar/IF&gt; find gate: flags=&lt;Var/Number&gt;, refobj=&lt;Value&gt;, max dist=&lt;Var/Number&gt;, refpos=&lt;Var/Array&gt; 
+&lt;RetVar/IF&gt; get sector from universe index: x=&lt;Var/Number&gt;, y=&lt;Var/Number&gt; 
+x &lt;RetVar&gt; = get max sectors in x direction 
+x &lt;RetVar&gt; = get max sectors in y direction 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; is sector known by the player 
+x &lt;RetVar&gt; = &lt;RefObj&gt; get universe x index 
+x &lt;RetVar&gt; = &lt;RefObj&gt; get universe y index 
+x &lt;RetVar&gt; = &lt;RefObj&gt; get north warp gate 
+x &lt;RetVar&gt; = &lt;RefObj&gt; get south warp gate 
+x &lt;RetVar&gt; = &lt;RefObj&gt; get east warp gate 
+x &lt;RetVar&gt; = &lt;RefObj&gt; get west warp gate 
+x &lt;RetVar&gt; = &lt;RefObj&gt; get warp gate: id=&lt;Var/Number&gt; 
+x &lt;RetVar&gt; = &lt;Var/Warpgate&gt; get gate id 
+x &lt;RetVar/IF&gt; get next gate on route from &lt;Var/Sector&gt; to &lt;Var/Sector&gt; 
+x &lt;RetVar&gt; = &lt;Var/Warpgate&gt; get gate destination: return sector=&lt;Var/number&gt; 
+x &lt;RetVar/IF&gt; get jumps from sector &lt;Var/Sector&gt; to sector &lt;Var/Sector&gt; 
+x &lt;RetVar/IF&gt; get next sector on route from sector &lt;Var/Sector&gt; to sector &lt;Var/Sector&gt; 
+x &lt;RetVar&gt; = find a random sector: startsector=&lt;Var/Sector&gt;, jumps=&lt;Var/Number&gt;, owner=&lt;Var/Race&gt;
+x &lt;RetVar&gt; = find a random sector: startsector=&lt;Var/Sector&gt;, jumps=&lt;Var/Number&gt;, owner=&lt;Var/Race&gt;, security level=&lt;Var/Number&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; find all sector within &lt;Var/Number&gt; jumps: Only known sectors=&lt;Var/Number&gt; 
+x &lt;RetVar&gt; = &lt;RefObj&gt; get ship array from sector/ship/station 
+x &lt;RetVar&gt; = &lt;RefObj&gt; get station array from sector 
+x &lt;RetVar&gt; = &lt;RefObj&gt; get factory array from sector 
+x &lt;RetVar&gt; = &lt;RefObj&gt; get dock array from sector 
+x &lt;RetVar&gt; = &lt;RefObj&gt; get player owned ship array from sector 
+x &lt;RetVar&gt; = &lt;RefObj&gt; get player owned station array from sector 
+x &lt;RetVar&gt; = &lt;RefObj&gt; get asteriod array from sector 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get owned ships: class/type=&lt;Value&gt; 
+x &lt;RetVar&gt; = get ship array: of race &lt;Var/Race&gt; class/type=&lt;Value&gt; 
+x &lt;RetVar&gt; = get station array: of race &lt;Var/Race&gt; class/type=&lt;Value&gt; 
+x &lt;RetVar&gt; = get station array: product=&lt;Var/Ware&gt; include empty=&lt;Var/Boolean&gt; 
+x &lt;RetVar&gt; = get station array: resource=&lt;Var/Ware&gt; include empty=&lt;Var/Boolean&gt; 
+x &lt;RetVar/IF&gt; player has police licence for race &lt;Var/Race&gt; player loses police licence for race &lt;Var/Race&gt;
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; is core sector 
+x &lt;RefObj&gt; set sector to core security &lt;Var/Boolean&gt; 
+x &lt;RetVar&gt; = get ship type array: maker race=&lt;Var/Race&gt; class=&lt;Value&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get planet array 
+x set discovered status: type=&lt;Value&gt; status=&lt;Var/Boolean&gt; 
+x &lt;RetVar/IF&gt; has &lt;Value&gt; been discovered 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get all stationary objects: include asteriods=&lt;Var/Boolean&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get buyable wares in sector: include playerfacts=&lt;Var/Number&gt; include shipyards=&lt;Var/Number&gt; include docks=&lt;Var/Number&gt; 
+复制代码</p></section>
+<section class="floor"><span class="fl">#8</span><p>»» Other 
+»» NPCs 
+x &lt;RetVar&gt; = get random NPC 
+x &lt;RetVar&gt; = &lt;RefObj&gt; get NPC personal ship 
+x &lt;RefObj&gt; NPC send voice message: id =&lt;Var/Number&gt; 
+x &lt;RefObj&gt; release NPC personal ship 
+x &lt;RefObj&gt; release NPC 
+x &lt;RetVar&gt; = &lt;RefObj&gt; NPC wants to bail 
+x &lt;RetVar&gt; = &lt;RefObj&gt; NPC is aggressive 
+x &lt;RefObj&gt; spawn NPC personal ship: rank =&lt;Var/Number&gt; 
+x &lt;RefObj&gt; spawn NPC fleet: rank =&lt;Var/Number&gt; 
+x &lt;RetVar&gt; = &lt;RefObj&gt; get NPC fleet </p>
+<p>»» Events 
+x &lt;RetVar/IF&gt; display news article: page=&lt;Var/Number&gt; newsid=&lt;Var/Number&gt; occurrences=&lt;Var/Number&gt; maxoffertime=&lt;Var/Number&gt; maxtime=&lt;Var/Number&gt; placeholder: race1=&lt;Var/Race&gt; race2=&lt;Var/Race&gt; customarray=&lt;Var/Array&gt; 
+x change event news availibility: &lt;Var/Number&gt; race=&lt;Var/Race&gt; sector=&lt;Var/Sector&gt; jumps=&lt;Var/Number&gt; 
+x register god event: script=&lt;Script Name&gt; mask=&lt;Var/Number&gt; 
+x abort god event: &lt;Var/Quest&gt; 
+x finish god event: &lt;Var/Quest&gt; </p>
+<p>»» AL Engine 
+x al engine: register script =&lt;Script Name&gt; 
+x al engine: unregister script &lt;Script Name&gt; 
+x al engine: set plugin &lt;Var/String&gt; description to &lt;Var/String&gt; 
+x al engine: set plugin &lt;Var/String&gt; timer interval to &lt;Var/String&gt; s </p>
+<p>x &lt;RetVar/IF&gt;&lt;RefObj&gt; get user input: type=&lt;Script Reference Type&gt;, title=&lt;Var/String&gt; 
+WiP &lt;RetVar/IF&gt; open custom menu: title=&lt;Var/String&gt; description=&lt;Var/String&gt; option array=&lt;Var/Array&gt; 
+x &lt;RetVar/IF&gt; open custom info menu: title=&lt;Var/String&gt; description=&lt;Var/String&gt; option array=&lt;Var/Array&gt; maxoptions=&lt;Var/Number&gt; 
+x &lt;RetVar&gt; = create custom menu array 
+x &lt;RetVar&gt; = create custom menu array: heading=&lt;Var/String&gt; 
+x &lt;RetVar&gt; = create custom menu array: info lines=&lt;Var/String&gt;, &lt;Var/String&gt;, &lt;Var/String&gt;, &lt;Var/String&gt;, &lt;Var/String&gt; 
+x add custom menu item to array &lt;Value&gt;: text=&lt;Var/String&gt; returnvalue=&lt;Value&gt; 
+x add custom menu heading to array &lt;Value&gt;: text=&lt;Var/String&gt; 
+x add custom menu info line to array &lt;Value&gt;: text=&lt;Var/String&gt; 
+x capture screen 
+x set monitor mode and viewpoint: monitor=&lt;Var/Number&gt; cockpit=&lt;Var/Number&gt; mode=&lt;Var/Number&gt; alpha=&lt;Var/Number&gt; beta=&lt;Var/Number&gt; gamma=&lt;Var/Number&gt; range=&lt;Var/Number&gt; 
+x add section to custom menu: &lt;Var/Array&gt; 
+x &lt;RetVar&gt; = create text for custom menu, left=&lt;Var/String&gt;, right=&lt;Var/String&gt; 
+x add value selection to menu: &lt;Var/Array&gt;, text=&lt;Var/String&gt;, value array=&lt;Var/Array&gt;, default=&lt;Var/Number&gt;, return id=&lt;Var/String&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get user input without sector: type=&lt;Script Reference Type&gt;, title=&lt;Var/String&gt; 
+x &lt;RetVar/IF&gt;&lt;RefObj&gt; get user input type=&lt;Script Reference Type&gt;, title=&lt;Var/String&gt;, sector=&lt;Var/Sector&gt; 
+x add encyclopedia custom article: News, id=&lt;Var/String&gt;, title page=&lt;Var/Number&gt;, title id=&lt;Var/Number&gt;, text page=&lt;Var/Number&gt;, text id=&lt;Var/Number&gt;, timeout=&lt;Var/Number&gt; 
+x add encyclopedia custom article: Information, id=&lt;Var/String&gt;, title page=&lt;Var/Number&gt;, title id=&lt;Var/Number&gt;, text page=&lt;Var/Number&gt;, text id=&lt;Var/Number&gt;, timeout=&lt;Var/Number&gt; 
+x add encyclopedia custom article: History, id=&lt;Var/String&gt;, title page=&lt;Var/Number&gt;, title id=&lt;Var/Number&gt;, text page=&lt;Var/Number&gt;, text id=&lt;Var/Number&gt;, timeout=&lt;Var/Number&gt; 
+x add encyclopedia custom article: Stories, id=&lt;Var/String&gt;, title page=&lt;Var/Number&gt;, title id=&lt;Var/Number&gt;, text page=&lt;Var/Number&gt;, text id=&lt;Var/Number&gt;, timeout=&lt;Var/Number&gt; 
+x remove encyclopedia custom article: id=&lt;Var/String&gt; 
+x set encyclopedia custom article sectors: id=&lt;Var/String&gt;, sector array=&lt;Value&gt; </p>
+<p>复制代码</p></section>
+<section class="floor"><span class="fl">#9</span><p>有人看得懂么- -</p></section>
+<section class="floor"><span class="fl">#10</span><p>话说太长了----</p>
+<p>看懂应该不是问题，但是很需要耐心......</p>
+<p>我没这个耐心，所以看不懂</p></section>
+<aside class="related"><h2>同版块相关攻略</h2><ul>
+<li><a href="../t/2171209.html">X3:TC九大任务的开启条件和详细攻略&amp;X3TC全星图.(2024/2/27 再编辑)</a></li>
+<li><a href="../t/2109647.html">X³: TC · Bonus Material（XTC+奖励包+手册）</a></li>
+<li><a href="../t/2117811.html">《X3：阿尔比恩序曲》主线任务——全球最详尽中文新手攻略</a></li>
+<li><a href="../t/2138918.html">X3AP 3.0 主线任务详细攻略</a></li>
+<li><a href="../t/2140148.html">X3 TC-AP 游戏本体 + 推荐脚本 + XRM+XTC分享（包含个人修改）</a></li>
+<li><a href="../t/2126274.html">〓〓〓〓〓【X3系列资源总部，资源不定期更新】〓〓〓〓〓 - 第4页</a></li>
+<li><a href="../t/2108341.html">任务、建厂与组建舰队经验【SRM+CMOD4+IR】</a></li>
+<li><a href="../t/2109672.html">Lucikes Script Collection for X³: Terran Conflict [2011/1/23]</a></li>
+</ul></aside>
+</article>
+<footer class="site">
+<p><strong>关于本站</strong>：这是对已关站的太空游戏社区 <b>深度时空 bbs.deeptimes.net</b> 的非官方社区存档，
+内容取自 <a href="https://web.archive.org/web/*/bbs.deeptimes.net" rel="nofollow">Wayback Machine</a> 公开存档，
+<b>版权归各原作者所有</b>，帖内保留了原作者署名与发帖时间。仅供游戏玩家学习交流与资料保存之用。</p>
+<p>如您是原作者或原站长，希望某内容下架或补充署名，请提交 GitHub Issue，我们会尽快处理。</p>
+<p class="muted">Archive of the defunct Chinese space-game forum DeepTimes (bbs.deeptimes.net). Content © original authors. Preservation mirror.</p>
+</footer></body></html>

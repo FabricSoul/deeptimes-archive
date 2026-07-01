@@ -1,0 +1,180 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>妖王全部5个数据仓库位置最可靠获取方法（亲测有效）｜X4：基石攻略｜深度时空存档</title>
+<meta name="description" content="转自https://forum.egosoft.com/viewto ... 45929&amp;start=120，往下数第5楼 第一步，把在5.0+以及贪婪之潮DLC的存档复制一个出来，随便放一个地方，如果是压缩包就解压缩，直至看到一个xml文件，并记住这个路径； 第二步，在这个xml文件所在目录下，按">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://fabricsoul.github.io/deeptimes-archive/t/2158460.html">
+<meta property="og:type" content="website"><meta property="og:site_name" content="深度时空太空游戏攻略存档">
+<meta property="og:title" content="妖王全部5个数据仓库位置最可靠获取方法（亲测有效）｜X4：基石攻略｜深度时空存档"><meta property="og:description" content="转自https://forum.egosoft.com/viewto ... 45929&amp;start=120，往下数第5楼 第一步，把在5.0+以及贪婪之潮DLC的存档复制一个出来，随便放一个地方，如果是压缩包就解压缩，直至看到一个xml文件，并记住这个路径； 第二步，在这个xml文件所在目录下，按">
+<meta property="og:url" content="https://fabricsoul.github.io/deeptimes-archive/t/2158460.html"><meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "DiscussionForumPosting", "headline": "妖王全部5个数据仓库位置最可靠获取方法（亲测有效）", "articleBody": "本帖最后由 RAZORBACK 于 2022-3-26 20:23 编辑 \n\n转自https://forum.egosoft.com/viewto ... 45929&start=120，往下数第5楼\n\n第一步，把在5.0+以及贪婪之潮DLC的存档复制一个出来，随便放一个地方，如果是压缩包就解压缩，直至看到一个xml文件，并记住这个路径；\n\n第二步，在这个xml文件所在目录下，按住Shift并右键文件夹空白处，选择“在此处打开Powershell窗口”，如下图所示；\n\n第三部，在打开的powershell界面中，粘贴如下代码，注意，将第四行的括号中替换为你解包后存档的位置及存档名，比如我是$Xml.Load(\"G:\\models\\save_007.xml\\save_007.xml\")，则如下图所示，然后回车运行；\n #This uses a fair amount of memory - if you have limited ram exit X4 first...\n \n $Xml=New-Object Xml\n #unzip .gz file with 7-zip or gunzip first or use uncompressed saves\n $Xml.Load(\"存档解包路径\\存档文件名\")\n $components=Select-Xml -Xml $Xml -XPath \"/savegame/universe//component\"\n $erl=$components | ?{$_.Node.macro -and $_.Node.macro.Contains(\"erlking\")}\n $vaults = $erl | ?{$_.Node.macro -and $_.Node.macro.Contains(\"landmarks_erlking_vault\")}\n \n #From hatevampire at https://www.reddit.com/r/X4Foundations/comments/thjbik/how_to_read_save_file/\n #Not sure where the real source of friendlyname is..\n \n $locationtoname = @{\n     cluster_500_sector001_macro=\"Avarice I\"\n     cluster_500_sector002_macro=\"Avarice IV\"\n     cluster_500_sector003_macro=\"Avarice V\"\n     cluster_501_macro=\"Windfall I\"\n     cluster_502_macro=\"Windfall III\"\n     cluster_503_macro=\"Windfall IV\"\n }\n \n [email protected]{\n      \"Zone004_Cluster_503_Sector001_macro\"=\"139680,0,-3215.59\"\n      \"Zone003_Cluster_500_Sector003_macro\"=\"-115796.9,0,-96109.38\"\n      \"Zone002_Cluster_503_Sector001_macro\"=\"-2269.199,0,165758.4\"\n      \"Zone006_Cluster_500_Sector002_macro\"=\"-184409.83,0,-3343.0\"\n      \"Zone003_Cluster_501_Sector001_macro\"=\"-97898.44,0,-23632.81\"\n      \"Zone003_Cluster_500_Sector001_macro\"=\"-97898.44,0,-23632.81\"\n      \"Zone005_Cluster_501_Sector001_macro\"=\"-23023.44,0,-160132.8\"\n      \"Zone004_Cluster_504_Sector001_macro\"=\"157616.8,0,-84263.63\"\n      \"tzoneCluster_500_Sector002SHCon9_GateZone_macro\"=\"-39827.2,0,200000\"\n      \"tzoneCluster_500_Sector002SHCon5_GateZone_macro\"=\"-50000,0,200000\"\n      \"Zone001_Cluster_500_Sector003_macro\"=\"-117046.9,0,82593.75\"\n      \"Zone001_Cluster_501_Sector001_macro\"=\"-127062.5,0,133718.8\"\n      \"Zone005_Cluster_504_Sector001_macro\"=\"-23023.44,0,-160132.8\"\n      \"Zone004_Cluster_500_Sector001_macro\"=\"103164.1,0,-32492.19\"\n      \"Zone002_Cluster_500_Sector001_macro\"=\"-10960.94,0,112070.3\"\n      \"Zone003_Cluster_500_Sector002_macro\"=\"-7132.69,0,531.25\"\n      \"Zone002_Cluster_500_Sector002_macro\"=\"-118489.4,0,-131687.5\"\n      \"tzoneCluster_500_Sector003SHCon9_GateZone_macro\"=\"50000,0,200000\"\n      \"Zone005_Cluster_500_Sector002_macro\"=\"98694.83,0,-126406.3\"\n      \"tzoneCluster_500_Sector001SHCon2_GateZone_macro\"=\"66960.9,0,-207957\"\n      \"tzoneCluster_500_Sector003SHCon5_GateZone_macro\"=\"40054.7,0,200000\"\n      \"tzoneCluster_500_Sector001SHCon10_GateZone_macro\"=\"-45738.28,0,-200000\"\n      \"Zone005_Cluster_500_Sector003_macro\"=\"34671.88,0,-152515.6\"\n      \"Zone001_Cluster_504_Sector001_macro\"=\"-127062.5,0,133718.8\"\n      \"Zone003_Cluster_502_Sector001_macro\"=\"-97898.44,0,-23632.81\"\n      \"Zone002_Cluster_504_Sector001_macro\"=\"137904.1,0,135199.3\"\n      \"Zone005_Cluster_503_Sector001_macro\"=\"-23023.44,0,-160132.8\"\n      \"Zone001_Cluster_500_Sector001_macro\"=\"-127062.5,0,133718.8\"\n      \"Zone004_Cluster_501_Sector001_macro\"=\"103164.1,0,-32492.19\"\n      \"tzoneCluster_500_Sector001SHCon4_GateZone_macro\"=\"76886.7,0,-207957\"\n      \"Zone006_Cluster_502_Sector001_macro\"=\"47000.0,0,172000.0\"\n      \"Zone002_Cluster_500_Sector003_macro\"=\"44015.63,0,158125\"\n      \"tzoneCluster_500_Sector001SHCon6_GateZone_macro\"=\"-55785.2,0,-200000\"\n      \"Zone002_Cluster_501_Sector001_macro\"=\"-10960.94,0,112070.3\"\n      \"Zone001_Cluster_500_Sector002_macro\"=\"-78593.63,0,157937.5\"\n      \"Zone003_Cluster_503_Sector001_macro\"=\"-199365.3,0,-55454.45\"\n      \"Zone001_Cluster_502_Sector001_macro\"=\"-127062.5,0,133718.8\"\n      \"Zone003_Cluster_504_Sector001_macro\"=\"-226443.3,0,-97194.67\"\n      \"Zone005_Cluster_500_Sector001_macro\"=\"-23023.44,0,-160132.8\"\n      \"Zone004_Cluster_500_Sector003_macro\"=\"110359.4,0,7250\"\n      \"Zone001_Cluster_503_Sector001_macro\"=\"-190039.3,0,180073.9\"\n      \"Zone005_Cluster_502_Sector001_macro\"=\"-23023.44,0,-160132.8\"\n      \"Zone004_Cluster_500_Sector002_macro\"=\"101721.7,0,100656.3\"\n      \"Zone002_Cluster_502_Sector001_macro\"=\"108009.3,0,115933.7\"\n      \"Zone004_Cluster_502_Sector001_macro\"=\"103164.1,0,-32492.19\"\n }\n \n #Get offsets up the tree\n function Recurse-Offsets($node){\n     if($node.class -and $node.class -eq \"galaxy\"){\n         return @()\n     }\n     if($node.offset -ne $null){\n         if($node.offset.position){\n             $x=$node.offset.position.x\n             $y=$node.offset.position.y\n             $z=$node.offset.position.z\n         } else {\n             $x,$y,$z=0,0,0\n         }\n         if($node.offset.rotation){\n             if($node.offset.rotation.yaw){$yaw=$node.offset.rotation.yaw} else {$yaw=0}\n             if($node.offset.rotation.pitch){$pitch=$node.offset.rotation.pitch} else {$pitch=0}\n             if($node.offset.rotation.roll){$roll=$node.of", "author": {"@type": "Person", "name": "RAZORBACK"}, "url": "https://fabricsoul.github.io/deeptimes-archive/t/2158460.html", "inLanguage": "zh-CN", "about": "X4：基石（X4: Foundations）", "isPartOf": {"@type": "WebSite", "name": "深度时空太空游戏攻略存档", "url": "https://fabricsoul.github.io/deeptimes-archive/"}, "commentCount": 6, "datePublished": "2022-3-26"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "首页", "item": "https://fabricsoul.github.io/deeptimes-archive/"}, {"@type": "ListItem", "position": 2, "name": "X4：基石", "item": "https://fabricsoul.github.io/deeptimes-archive/s/x4-foundations.html"}, {"@type": "ListItem", "position": 3, "name": "妖王全部5个数据仓库位置最可靠获取方法（亲测有效）", "item": "https://fabricsoul.github.io/deeptimes-archive/t/2158460.html"}]}</script>
+</head><body>
+<header class="site"><a href="../index.html" class="brand">深度时空 · 太空游戏攻略存档</a>
+<span class="tag">DeepTimes Space Game Archive</span></header>
+<nav class="crumb"><a href="../index.html">首页</a> › <a href="../s/x4-foundations.html">X4：基石</a> › <span>妖王全部5个数据仓库位置最可靠获取方法（亲测有效）</span></nav>
+<article><h1>妖王全部5个数据仓库位置最可靠获取方法（亲测有效）</h1>
+<p class="src">原作者：RAZORBACK　发表：2022-3-26　来源：bbs.deeptimes.net（已关站）· <a href="https://web.archive.org/web/20220526151335/https://bbs.deeptimes.net/forum.php?mod=viewthread&tid=2158460" rel="nofollow">Wayback 存档</a></p>
+<section class="floor"><span class="fl">#1</span><p>本帖最后由 RAZORBACK 于 2022-3-26 20:23 编辑 </p>
+<p>转自https://forum.egosoft.com/viewto ... 45929&amp;start=120，往下数第5楼</p>
+<p>第一步，把在5.0+以及贪婪之潮DLC的存档复制一个出来，随便放一个地方，如果是压缩包就解压缩，直至看到一个xml文件，并记住这个路径；</p>
+<p>第二步，在这个xml文件所在目录下，按住Shift并右键文件夹空白处，选择“在此处打开Powershell窗口”，如下图所示；</p>
+<p>第三部，在打开的powershell界面中，粘贴如下代码，注意，将第四行的括号中替换为你解包后存档的位置及存档名，比如我是$Xml.Load(&quot;G:\models\save_007.xml\save_007.xml&quot;)，则如下图所示，然后回车运行；
+ #This uses a fair amount of memory - if you have limited ram exit X4 first...</p>
+<p> $Xml=New-Object Xml
+ #unzip .gz file with 7-zip or gunzip first or use uncompressed saves
+ $Xml.Load(&quot;存档解包路径\存档文件名&quot;)
+ $components=Select-Xml -Xml $Xml -XPath &quot;/savegame/universe//component&quot;
+ $erl=$components | ?{$_.Node.macro -and $_.Node.macro.Contains(&quot;erlking&quot;)}
+ $vaults = $erl | ?{$_.Node.macro -and $_.Node.macro.Contains(&quot;landmarks_erlking_vault&quot;)}</p>
+<p> #From hatevampire at https://www.reddit.com/r/X4Foundations/comments/thjbik/how_to_read_save_file/
+ #Not sure where the real source of friendlyname is..</p>
+<p> $locationtoname = @{
+     cluster_500_sector001_macro=&quot;Avarice I&quot;
+     cluster_500_sector002_macro=&quot;Avarice IV&quot;
+     cluster_500_sector003_macro=&quot;Avarice V&quot;
+     cluster_501_macro=&quot;Windfall I&quot;
+     cluster_502_macro=&quot;Windfall III&quot;
+     cluster_503_macro=&quot;Windfall IV&quot;
+ }</p>
+<p> [email protected]{
+      &quot;Zone004_Cluster_503_Sector001_macro&quot;=&quot;139680,0,-3215.59&quot;
+      &quot;Zone003_Cluster_500_Sector003_macro&quot;=&quot;-115796.9,0,-96109.38&quot;
+      &quot;Zone002_Cluster_503_Sector001_macro&quot;=&quot;-2269.199,0,165758.4&quot;
+      &quot;Zone006_Cluster_500_Sector002_macro&quot;=&quot;-184409.83,0,-3343.0&quot;
+      &quot;Zone003_Cluster_501_Sector001_macro&quot;=&quot;-97898.44,0,-23632.81&quot;
+      &quot;Zone003_Cluster_500_Sector001_macro&quot;=&quot;-97898.44,0,-23632.81&quot;
+      &quot;Zone005_Cluster_501_Sector001_macro&quot;=&quot;-23023.44,0,-160132.8&quot;
+      &quot;Zone004_Cluster_504_Sector001_macro&quot;=&quot;157616.8,0,-84263.63&quot;
+      &quot;tzoneCluster_500_Sector002SHCon9_GateZone_macro&quot;=&quot;-39827.2,0,200000&quot;
+      &quot;tzoneCluster_500_Sector002SHCon5_GateZone_macro&quot;=&quot;-50000,0,200000&quot;
+      &quot;Zone001_Cluster_500_Sector003_macro&quot;=&quot;-117046.9,0,82593.75&quot;
+      &quot;Zone001_Cluster_501_Sector001_macro&quot;=&quot;-127062.5,0,133718.8&quot;
+      &quot;Zone005_Cluster_504_Sector001_macro&quot;=&quot;-23023.44,0,-160132.8&quot;
+      &quot;Zone004_Cluster_500_Sector001_macro&quot;=&quot;103164.1,0,-32492.19&quot;
+      &quot;Zone002_Cluster_500_Sector001_macro&quot;=&quot;-10960.94,0,112070.3&quot;
+      &quot;Zone003_Cluster_500_Sector002_macro&quot;=&quot;-7132.69,0,531.25&quot;
+      &quot;Zone002_Cluster_500_Sector002_macro&quot;=&quot;-118489.4,0,-131687.5&quot;
+      &quot;tzoneCluster_500_Sector003SHCon9_GateZone_macro&quot;=&quot;50000,0,200000&quot;
+      &quot;Zone005_Cluster_500_Sector002_macro&quot;=&quot;98694.83,0,-126406.3&quot;
+      &quot;tzoneCluster_500_Sector001SHCon2_GateZone_macro&quot;=&quot;66960.9,0,-207957&quot;
+      &quot;tzoneCluster_500_Sector003SHCon5_GateZone_macro&quot;=&quot;40054.7,0,200000&quot;
+      &quot;tzoneCluster_500_Sector001SHCon10_GateZone_macro&quot;=&quot;-45738.28,0,-200000&quot;
+      &quot;Zone005_Cluster_500_Sector003_macro&quot;=&quot;34671.88,0,-152515.6&quot;
+      &quot;Zone001_Cluster_504_Sector001_macro&quot;=&quot;-127062.5,0,133718.8&quot;
+      &quot;Zone003_Cluster_502_Sector001_macro&quot;=&quot;-97898.44,0,-23632.81&quot;
+      &quot;Zone002_Cluster_504_Sector001_macro&quot;=&quot;137904.1,0,135199.3&quot;
+      &quot;Zone005_Cluster_503_Sector001_macro&quot;=&quot;-23023.44,0,-160132.8&quot;
+      &quot;Zone001_Cluster_500_Sector001_macro&quot;=&quot;-127062.5,0,133718.8&quot;
+      &quot;Zone004_Cluster_501_Sector001_macro&quot;=&quot;103164.1,0,-32492.19&quot;
+      &quot;tzoneCluster_500_Sector001SHCon4_GateZone_macro&quot;=&quot;76886.7,0,-207957&quot;
+      &quot;Zone006_Cluster_502_Sector001_macro&quot;=&quot;47000.0,0,172000.0&quot;
+      &quot;Zone002_Cluster_500_Sector003_macro&quot;=&quot;44015.63,0,158125&quot;
+      &quot;tzoneCluster_500_Sector001SHCon6_GateZone_macro&quot;=&quot;-55785.2,0,-200000&quot;
+      &quot;Zone002_Cluster_501_Sector001_macro&quot;=&quot;-10960.94,0,112070.3&quot;
+      &quot;Zone001_Cluster_500_Sector002_macro&quot;=&quot;-78593.63,0,157937.5&quot;
+      &quot;Zone003_Cluster_503_Sector001_macro&quot;=&quot;-199365.3,0,-55454.45&quot;
+      &quot;Zone001_Cluster_502_Sector001_macro&quot;=&quot;-127062.5,0,133718.8&quot;
+      &quot;Zone003_Cluster_504_Sector001_macro&quot;=&quot;-226443.3,0,-97194.67&quot;
+      &quot;Zone005_Cluster_500_Sector001_macro&quot;=&quot;-23023.44,0,-160132.8&quot;
+      &quot;Zone004_Cluster_500_Sector003_macro&quot;=&quot;110359.4,0,7250&quot;
+      &quot;Zone001_Cluster_503_Sector001_macro&quot;=&quot;-190039.3,0,180073.9&quot;
+      &quot;Zone005_Cluster_502_Sector001_macro&quot;=&quot;-23023.44,0,-160132.8&quot;
+      &quot;Zone004_Cluster_500_Sector002_macro&quot;=&quot;101721.7,0,100656.3&quot;
+      &quot;Zone002_Cluster_502_Sector001_macro&quot;=&quot;108009.3,0,115933.7&quot;
+      &quot;Zone004_Cluster_502_Sector001_macro&quot;=&quot;103164.1,0,-32492.19&quot;
+ }</p>
+<p> #Get offsets up the tree
+ function Recurse-Offsets($node){
+     if($node.class -and $node.class -eq &quot;galaxy&quot;){
+         return @()
+     }
+     if($node.offset -ne $null){
+         if($node.offset.position){
+             $x=$node.offset.position.x
+             $y=$node.offset.position.y
+             $z=$node.offset.position.z
+         } else {
+             $x,$y,$z=0,0,0
+         }
+         if($node.offset.rotation){
+             if($node.offset.rotation.yaw){$yaw=$node.offset.rotation.yaw} else {$yaw=0}
+             if($node.offset.rotation.pitch){$pitch=$node.offset.rotation.pitch} else {$pitch=0}
+             if($node.offset.rotation.roll){$roll=$node.offset.rotation.roll} else {$roll=0}
+         } else {
+             $pitch,$roll,$yaw=0,0,0
+         }
+         if($macrotocoords[$node.macro]){
+             $x,$y,$z=$macrotocoords[$node.macro].Split(&quot;,&quot;)
+         }
+         $obj = [pscustomobject]@{
+             x=$x
+             y=$y
+             z=$z
+             pitch=$pitch
+             roll=$roll
+             yaw=$yaw
+             code=$node.code
+             macro=$node.macro
+             class=$node.class
+         }
+         return @($obj) + (Recurse-Offsets -node $node.ParentNode)
+     } else {
+         return Recurse-Offsets -node $node.ParentNode
+     }
+ }</p>
+<p> . {
+     foreach($vault in $vaults){
+         $data=Recurse-Offsets $vault.Node
+         $sums = $data | Measure-Object -Sum -Property x,y,z
+         $location = $data |?{$_.class -eq &quot;sector&quot;} | select -ExpandProperty macro
+         if([string]::IsNullOrWhiteSpace($location)){
+             $location = $data |?{$_.class -eq &quot;cluster&quot;} | select -ExpandProperty macro
+         }
+         [pscustomobject]@{
+             location=$locationtoname[$location]
+             Xkm=($sums |?{$_.property -eq &quot;x&quot;}).sum/1000
+             Ykm=($sums |?{$_.property -eq &quot;y&quot;}).sum/1000
+             Zkm=($sums |?{$_.property -eq &quot;z&quot;}).sum/1000
+             blueprint=$vault.Node.connections.connection.component.blueprints |?{$_ -ne $null}
+             vault=$vault.Node.macro
+             code=$vault.Node.code
+         }
+     }
+ } | ft -AutoSize
+复制代码</p>
+<p>第四步，安心等待，注意，可能运行时间稍长，而且比较吃内存；</p>
+<p>第五步，运行完毕，在Powershell界面中出现如下信息，即表明这5个数据仓库所在星区和大致位置，然后就可以派一艘高速的飞船结合高级人造卫星来找到，注意，这里面x坐标向右为正，y坐标向屏幕外为正，z坐标向上为正，单位是km，关于星区的原点位置，我推测应该是默认情况下六边形的中央，但坐标数值在游戏中没有显示，那么可以参考高级人造卫星探测半径是75km、飞船自身雷达搜索半径40km，后面具体去找应该就不难了。</p></section>
+<section class="floor"><span class="fl">#2</span><p>可怕，你游玩家太过硬核</p></section>
+<section class="floor"><span class="fl">#3</span><p>别问，问就是德国蠢驴脑袋被同类踢了</p></section>
+<section class="floor"><span class="fl">#4</span><p>这代码能不能转成极坐标啊，感觉找东西是不是极坐标好找点。三维坐标看不懂。。</p></section>
+<section class="floor"><span class="fl">#5</span><p>本帖最后由 xiaoht 于 2022-3-26 23:51 编辑 </p>
+<p>这边再提供一个官方论坛上看到的方法</p>
+<p>1.前两步同楼主</p>
+<p>2.搜索：landmarks_erlking_vault_01_macro，把owner=&quot;ownerless&quot;这行改成owner=&quot;player&quot;，如果没有就自己添加</p>
+<p>3.同样处理其他几个：landmarks_erlking_vault_02_macro，landmarks_erlking_vault_03_macro，landmarks_erlking_vault_04_macro，landmarks_erlking_vault_05_macro</p>
+<p>4.保存，去游戏里打开地图，搜索data vault就会高亮显示这5个数据库</p>
+<p>5.这样操作会使存档变成modded，如果不想可以截图去原存档找</p>
+<p>就像这样</p></section>
+<section class="floor"><span class="fl">#6</span><p>这几个是随机的吗？</p></section>
+<section class="floor"><span class="fl">#7</span><p>随机的，不过只刷在新的星区里</p></section>
+<aside class="related"><h2>同版块相关攻略</h2><ul>
+<li><a href="../t/2150760.html">2.5bate 开始了～</a></li>
+<li><a href="../t/2151090.html">给一脸懵逼的新人们写的攻略</a></li>
+<li><a href="../t/2154713.html">X4 3.0测试版出来了</a></li>
+<li><a href="../t/2155524.html">看到X4可以选择4.00 beta1的测试版本</a></li>
+<li><a href="../t/2154709.html">X重生船包（XR ShipPack)汉化问题讨论</a></li>
+<li><a href="../t/2149981.html">新人入门指引+X扫盲（持续更新）</a></li>
+<li><a href="../t/2155372.html">P\S族任务就是个大坑啊</a></li>
+<li><a href="../t/2149316.html">Bernd在2018年gamescom上关于《X4奠基》的访谈内容中文翻译</a></li>
+</ul></aside>
+</article>
+<footer class="site">
+<p><strong>关于本站</strong>：这是对已关站的太空游戏社区 <b>深度时空 bbs.deeptimes.net</b> 的非官方社区存档，
+内容取自 <a href="https://web.archive.org/web/*/bbs.deeptimes.net" rel="nofollow">Wayback Machine</a> 公开存档，
+<b>版权归各原作者所有</b>，帖内保留了原作者署名与发帖时间。仅供游戏玩家学习交流与资料保存之用。</p>
+<p>如您是原作者或原站长，希望某内容下架或补充署名，请提交 GitHub Issue，我们会尽快处理。</p>
+<p class="muted">Archive of the defunct Chinese space-game forum DeepTimes (bbs.deeptimes.net). Content © original authors. Preservation mirror.</p>
+</footer></body></html>

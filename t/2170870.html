@@ -1,0 +1,57 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>X4帧数暴跌问题排查一则｜X4：基石攻略｜深度时空存档</title>
+<meta name="description" content="TLDR太长不看版：帧数低到与硬件不匹配的程度，请排查N卡电源管理选项 上午闲着没事打开翻译工具，同时打开X4，校对修改几个文本问题 进游戏核对某个文本的时候，突然发现60帧变成了12帧。习惯性alt+tab切出去，切回来，心想这下帧数正常了吧，一看还是12帧。调出任务管理器，看了一眼显卡占用率10">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://fabricsoul.github.io/deeptimes-archive/t/2170870.html">
+<meta property="og:type" content="website"><meta property="og:site_name" content="深度时空太空游戏攻略存档">
+<meta property="og:title" content="X4帧数暴跌问题排查一则｜X4：基石攻略｜深度时空存档"><meta property="og:description" content="TLDR太长不看版：帧数低到与硬件不匹配的程度，请排查N卡电源管理选项 上午闲着没事打开翻译工具，同时打开X4，校对修改几个文本问题 进游戏核对某个文本的时候，突然发现60帧变成了12帧。习惯性alt+tab切出去，切回来，心想这下帧数正常了吧，一看还是12帧。调出任务管理器，看了一眼显卡占用率10">
+<meta property="og:url" content="https://fabricsoul.github.io/deeptimes-archive/t/2170870.html"><meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "DiscussionForumPosting", "headline": "X4帧数暴跌问题排查一则", "articleBody": "TLDR太长不看版：帧数低到与硬件不匹配的程度，请排查N卡电源管理选项\n\n上午闲着没事打开翻译工具，同时打开X4，校对修改几个文本问题\n\n        进游戏核对某个文本的时候，突然发现60帧变成了12帧。习惯性alt+tab切出去，切回来，心想这下帧数正常了吧，一看还是12帧。调出任务管理器，看了一眼显卡占用率100%，双击强制切换到前台，发现帧数还是12帧。心里咯噔一声，什么鬼！\n\n        快速回想了一下，开了一个firefox浏览器，一个傲游浏览器，一个游戏，别的没了，那就在这几个里面找吧。因为现代的浏览器都有GPU加速，浏览器会调用显卡进行绘制，解码之类的工作，所以这个推论比较有道理。关掉firefox关掉傲游，切一下前后台，帧数回归60。打开firefox/chrome/edge中的任意若干排列组合，帧数都没变化。只要开了傲游，不管最小化还是前台，切回游戏都会导致帧数疯狂暴跌，而且显卡占用率为100%。这下确定了就是你了傲游。\n\n        刚开始以为会不会是MSAA对win11新的窗口调度机制识别有问题，抗锯齿时候把不同层的窗口混一起了。感觉可能性很小，因为这约等于认为微软整个儿都是白痴，但转念一想又不是不可能，毕竟阿三曾经令那一位“三天三夜没想明白”。打开傲游放后面，切换了一下无抗锯齿/FXAA/MSAA/SSAA，又附带把FSR搓了一遍排列组合，倒腾了10分钟帧数还是上不去。看了一眼显存占用几乎满了，关掉抗锯齿，材质拉到最低，显存占用率50%了，帧数还是20来帧，且显卡占用率100%。\n\n        掏出AIDA64，切到功耗，发现以十几帧跑游戏的时候虽然显卡占用率显示为100%，但功耗只有30多瓦。关闭傲游功耗立马升至140W，帧数也正常了。掏出HWiNFO64查了一下GPU核心/显存频率，发现打开傲游的情况下，核心频率只有0.7GHz，显存频率0.4GHz；关闭浏览器后频率立马恢复正常。好家伙原来被浏览器强制切到省电挡位了，把游戏强制切为全屏/窗口化/无边框窗口都无法以最大性能运行。打开N卡控制面板，电源管理，切为最高性能优先后，帧数正常。\n\n        \n\n        试了一下N卡驱动中的电源管理模式改为最佳功率或者自适应，都能复现出降频这个问题。其他3D游戏倒是没发生这种情况，可能是X4压根没进老黄的白名单吧。改为最高性能优先频率是正常了，但显卡节能也嗝屁了，待机就是40W，然而浏览器又不能轻易换掉，只能说鱼和熊掌不能兼得吧。贴吧和QQ群经常看到有用3080—4090这个档次显卡的小伙伴帧数上不去，我觉得可以从这方面排查一下，希望这次排查过程对你有参考作用╮(╯▽╰)╭", "author": {"@type": "Person", "name": "Catuzki"}, "url": "https://fabricsoul.github.io/deeptimes-archive/t/2170870.html", "inLanguage": "zh-CN", "about": "X4：基石（X4: Foundations）", "isPartOf": {"@type": "WebSite", "name": "深度时空太空游戏攻略存档", "url": "https://fabricsoul.github.io/deeptimes-archive/"}, "commentCount": 5, "datePublished": "2023-5-19"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "首页", "item": "https://fabricsoul.github.io/deeptimes-archive/"}, {"@type": "ListItem", "position": 2, "name": "X4：基石", "item": "https://fabricsoul.github.io/deeptimes-archive/s/x4-foundations.html"}, {"@type": "ListItem", "position": 3, "name": "X4帧数暴跌问题排查一则", "item": "https://fabricsoul.github.io/deeptimes-archive/t/2170870.html"}]}</script>
+</head><body>
+<header class="site"><a href="../index.html" class="brand">深度时空 · 太空游戏攻略存档</a>
+<span class="tag">DeepTimes Space Game Archive</span></header>
+<nav class="crumb"><a href="../index.html">首页</a> › <a href="../s/x4-foundations.html">X4：基石</a> › <span>X4帧数暴跌问题排查一则</span></nav>
+<article><h1>X4帧数暴跌问题排查一则</h1>
+<p class="src">原作者：Catuzki　发表：2023-5-19　来源：bbs.deeptimes.net（已关站）· <a href="https://web.archive.org/web/20231002073427/https://bbs.deeptimes.net/forum.php?mod=viewthread&tid=2170870" rel="nofollow">Wayback 存档</a></p>
+<section class="floor"><span class="fl">#1</span><p>TLDR太长不看版：帧数低到与硬件不匹配的程度，请排查N卡电源管理选项</p>
+<p>上午闲着没事打开翻译工具，同时打开X4，校对修改几个文本问题</p>
+<p>        进游戏核对某个文本的时候，突然发现60帧变成了12帧。习惯性alt+tab切出去，切回来，心想这下帧数正常了吧，一看还是12帧。调出任务管理器，看了一眼显卡占用率100%，双击强制切换到前台，发现帧数还是12帧。心里咯噔一声，什么鬼！</p>
+<p>        快速回想了一下，开了一个firefox浏览器，一个傲游浏览器，一个游戏，别的没了，那就在这几个里面找吧。因为现代的浏览器都有GPU加速，浏览器会调用显卡进行绘制，解码之类的工作，所以这个推论比较有道理。关掉firefox关掉傲游，切一下前后台，帧数回归60。打开firefox/chrome/edge中的任意若干排列组合，帧数都没变化。只要开了傲游，不管最小化还是前台，切回游戏都会导致帧数疯狂暴跌，而且显卡占用率为100%。这下确定了就是你了傲游。</p>
+<p>        刚开始以为会不会是MSAA对win11新的窗口调度机制识别有问题，抗锯齿时候把不同层的窗口混一起了。感觉可能性很小，因为这约等于认为微软整个儿都是白痴，但转念一想又不是不可能，毕竟阿三曾经令那一位“三天三夜没想明白”。打开傲游放后面，切换了一下无抗锯齿/FXAA/MSAA/SSAA，又附带把FSR搓了一遍排列组合，倒腾了10分钟帧数还是上不去。看了一眼显存占用几乎满了，关掉抗锯齿，材质拉到最低，显存占用率50%了，帧数还是20来帧，且显卡占用率100%。</p>
+<p>        掏出AIDA64，切到功耗，发现以十几帧跑游戏的时候虽然显卡占用率显示为100%，但功耗只有30多瓦。关闭傲游功耗立马升至140W，帧数也正常了。掏出HWiNFO64查了一下GPU核心/显存频率，发现打开傲游的情况下，核心频率只有0.7GHz，显存频率0.4GHz；关闭浏览器后频率立马恢复正常。好家伙原来被浏览器强制切到省电挡位了，把游戏强制切为全屏/窗口化/无边框窗口都无法以最大性能运行。打开N卡控制面板，电源管理，切为最高性能优先后，帧数正常。</p>
+<p>        试了一下N卡驱动中的电源管理模式改为最佳功率或者自适应，都能复现出降频这个问题。其他3D游戏倒是没发生这种情况，可能是X4压根没进老黄的白名单吧。改为最高性能优先频率是正常了，但显卡节能也嗝屁了，待机就是40W，然而浏览器又不能轻易换掉，只能说鱼和熊掌不能兼得吧。贴吧和QQ群经常看到有用3080—4090这个档次显卡的小伙伴帧数上不去，我觉得可以从这方面排查一下，希望这次排查过程对你有参考作用╮(╯▽╰)╭</p></section>
+<section class="floor"><span class="fl">#2</span><p>有参考意义但不大，众所周知X系列整体上吃CPU，且吃单核频率，GPU只要型号不是太低，且设置得当倒是不是特别容易出瓶颈。官网论坛和reddit上对游戏帧率也是经常吵架（真的是吵，开发人员和玩家，玩家和玩家，铁粉和路转粉。。。。。），过不多久就会有一个帖子上来吐槽帧率这事。</p>
+<p>关注久了之后我现在总结如下：</p>
+<p>因为X系列的游戏机制决定了对CPU的单一核心频率非常敏感，同时也很难甚至没可能做多核优化（论坛有开发人员多次做出这种表态）。比如玩家下属船只自动贸易搜索合约，用到核心A，npc空间站响应搜索给出贸易合约，用到核心B，这在游戏开发和核心调度上就很难做到并行同步。只能是绝大部分的数据处理集中在单一核心，排队，一个一个的执行。</p>
+<p>并且E社对X4的愿景过大，摊子铺的太广，未必是没技术或技术不够，奈何开发人员有限，能够解决特定技术问题的程序员也就有限，虽然他们也有优化，但效果和力度远远不够，最终造成X4版本号已经是6.0，但游戏优化和帧数还是一坨屎。</p>
+<p>硬件层面上的解决办法也只有升级CPU，官网论坛上已经有帖子专门征集各型号CPU的帧数，其中有一个玩家用5800X3D测试X4帧数非常的吸引我的注意，这个玩家说效果极为明显，在游戏内特定场景下，帧数暴涨达到翻倍还多的效果（十几帧，涨到几十帧），他老cpu用的是8700K还是什么型号我忘了。</p>
+<p>他说5800X3D的L3大缓存确实对游戏帧数提升很明显，我也正研究这U，实在不行咱也上5800X3D</p></section>
+<section class="floor"><span class="fl">#3</span><p>http://forum.egosoft.com/viewtopic.php?f=146&amp;t=427248</p>
+<p>你说的问题在上面这个帖子有各种测试，属于大家都知道的多核优化不行的问题，我讲的不是这个。</p>
+<p>我讲的是最近看到的案例，12900这个档次的CPU配4090，2K画面低特效，在主界面只有十来帧，这绝对不是什么东西瓶颈了，就是单纯没正确运行起来而已。有些人对硬件其实不太熟悉，可能跑在核显或者显卡跑节能模式上了而自己完全不知道，我这个帖子主要讲的便是这样一种情况</p></section>
+<section class="floor"><span class="fl">#4</span><p>这个帧数肯定不正常了，即使X4的优化。但是X4这一块倒是不常见到这种情况，本来游戏优化就渣，但凡帧数上不去的肯定是各种原因排查了，到最后才发现想要有不错的优化基本不可能，只能靠硬件硬生生的拉升帧率</p></section>
+<section class="floor"><span class="fl">#5</span><p>本帖最后由 KinzerX 于 2023-5-27 12:57 编辑 </p>
+<p>egosoft那个帖子截了几个近期的，看起来X3d并没有什么神油，虽然压力低的空旷地图确实帧数高，但大量工厂流水线的图就和常规ryzen相比区别不大了，估计这个时候已经爆三缓了</p></section>
+<section class="floor"><span class="fl">#6</span><p>X4是不是工厂超过10个就开始卡了？40帧也没有吗</p></section>
+<aside class="related"><h2>同版块相关攻略</h2><ul>
+<li><a href="../t/2150760.html">2.5bate 开始了～</a></li>
+<li><a href="../t/2151090.html">给一脸懵逼的新人们写的攻略</a></li>
+<li><a href="../t/2154713.html">X4 3.0测试版出来了</a></li>
+<li><a href="../t/2155524.html">看到X4可以选择4.00 beta1的测试版本</a></li>
+<li><a href="../t/2154709.html">X重生船包（XR ShipPack)汉化问题讨论</a></li>
+<li><a href="../t/2158460.html">妖王全部5个数据仓库位置最可靠获取方法（亲测有效）</a></li>
+<li><a href="../t/2149981.html">新人入门指引+X扫盲（持续更新）</a></li>
+<li><a href="../t/2155372.html">P\S族任务就是个大坑啊</a></li>
+</ul></aside>
+</article>
+<footer class="site">
+<p><strong>关于本站</strong>：这是对已关站的太空游戏社区 <b>深度时空 bbs.deeptimes.net</b> 的非官方社区存档，
+内容取自 <a href="https://web.archive.org/web/*/bbs.deeptimes.net" rel="nofollow">Wayback Machine</a> 公开存档，
+<b>版权归各原作者所有</b>，帖内保留了原作者署名与发帖时间。仅供游戏玩家学习交流与资料保存之用。</p>
+<p>如您是原作者或原站长，希望某内容下架或补充署名，请提交 GitHub Issue，我们会尽快处理。</p>
+<p class="muted">Archive of the defunct Chinese space-game forum DeepTimes (bbs.deeptimes.net). Content © original authors. Preservation mirror.</p>
+</footer></body></html>

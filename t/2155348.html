@@ -1,0 +1,160 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>x4空间站计算工具v1.0.4更新｜X4：基石攻略｜深度时空存档</title>
+<meta name="description" content="更新变动比较大，另开新帖。 本来过年的时候就开工了，结果工作上事比较多一直拖到现在。最近趁着调休抓紧赶工弄完了。 理论上自动支持以后的X4的版本更新和DLC, 因为所有数据都是从游戏里面解析的. 如果有啥好的想法提个issue X4空间站计算工具，支持Windows/Linux/Mac(window">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://fabricsoul.github.io/deeptimes-archive/t/2155348.html">
+<meta property="og:type" content="website"><meta property="og:site_name" content="深度时空太空游戏攻略存档">
+<meta property="og:title" content="x4空间站计算工具v1.0.4更新｜X4：基石攻略｜深度时空存档"><meta property="og:description" content="更新变动比较大，另开新帖。 本来过年的时候就开工了，结果工作上事比较多一直拖到现在。最近趁着调休抓紧赶工弄完了。 理论上自动支持以后的X4的版本更新和DLC, 因为所有数据都是从游戏里面解析的. 如果有啥好的想法提个issue X4空间站计算工具，支持Windows/Linux/Mac(window">
+<meta property="og:url" content="https://fabricsoul.github.io/deeptimes-archive/t/2155348.html"><meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "DiscussionForumPosting", "headline": "x4空间站计算工具v1.0.4更新", "articleBody": "本帖最后由 暗夜幽灵 于 2021-2-21 15:18 编辑 \n\n更新变动比较大，另开新帖。\n\r\n本来过年的时候就开工了，结果工作上事比较多一直拖到现在。最近趁着调休抓紧赶工弄完了。\n\r\n理论上自动支持以后的X4的版本更新和DLC, 因为所有数据都是从游戏里面解析的.\n\r\n如果有啥好的想法提个issue\n\r\n\n\r\n\n\r\nX4空间站计算工具，支持Windows/Linux/Mac(windows，linux测试过，Mac理论上，手上没苹果设备)。使用C++/Qt5开发\n\r\n运行要求：Win10以上，os随便。\n\r\n语言：简体中文，English(American）\n\r\n\n\r\n预览：\n\r\n\n\r\n\n\r\n\n\r\n\n\r\n传送门:https://github.com/darknightghost/x4-station-calc 有bug提issue, 另外吐槽一句, 为啥会有人跑源代码里面找可执行文件.\n\r\n另外提示一下，所有的空间站模块，产品，种族双击会在下面显示详细信息。\n\r\n打包好的 Win10 x64编译：\n\r\n游客，如果您要查看本帖隐藏内容请回复\n\n\r\n\n\r\ngithub上有账号的麻烦star一下.\n\r\n解包后运行x4-station-calc.exe， 另外一个可执行程序vc_redist.x64.exe是vc++2019运行库的安装包，编辑器运行不了的话安装它。\n\r\n\n\r\n如果有崩溃等bug最好在回复的时候提交一个core dump以便于分析问题产生的原因。\n\r\n还有求star，求转载。\n\r\n\n\r\n更新日志：\n\r\nv1.0.4\n\r\n    修改了下检查更新的行为.\n\r\n\n\r\n\n\r\nv1.0.3\n\r\n    优化了启动速度.\n\r\n    在帮助菜单里添加了打开GitHub上项目页面的选项.\n\r\n\n\r\nv1.0.2\n\r\n    修正了粘贴空间站模块的时候的数量错误.\n\r\n    添加了将空间站模块列表导出为HTML格式的功能.\n\r\n\n\r\nv1.0.1\n\r\n    修正了当移动空间站模块顺序后该模块无法正确改变数量的bug.\n\r\n    启动时后台自动检查更新.\n\r\n\n\r\nv1.0.0\n\r\n    用C++重写全部模块.\n\r\n    所有数据从游戏里直接读取,  理论上自动支持下几个DLC.\n\r\n\n\r\nv0.0.6\n\r\n    修正了无人机产线的数据中的错误.\n\r\n\n\r\nv0.0.5\n\r\n    修正了logger无法记录QT异常的bug。\n\r\n    修正了智能芯片产线的数据错误。\n\r\n    添加检查更新功能.\n\r\n    在统计数据中添加了\"过滤模块\"按钮以便于查找生产模块.\n\r\n\n\r\nv0.0.4\n\r\n    修正了原料受效率影响的错误。\n\r\n\n\r\n\n\r\nv0.0.3\n\r\n    修正了同一分组内同一空间站数量加不到100以上的bug。\n\r\n    修正了小麦产线的数据错误。\n\r\n    添加了工具栏(图标是gnome里面的换下颜色)。\n\r\n    为建造模块添加了劳动力信息。\n\r\n\n\r\nv0.0.2\n\r\n    添加了X4:Foundnations中引入的建造模块的信息。\n\r\n    在统计中添加了关于劳动力相关的统计项。\n\r\n\n\r\nv0.0.1\n\r\n    创建第一个版本。\n\r\n\n\r\n求精\n\r\n@Macaulish\n\r\n@96321a \n\r\n@roro", "author": {"@type": "Person", "name": "暗夜幽灵"}, "url": "https://fabricsoul.github.io/deeptimes-archive/t/2155348.html", "inLanguage": "zh-CN", "about": "X4：基石（X4: Foundations）", "isPartOf": {"@type": "WebSite", "name": "深度时空太空游戏攻略存档", "url": "https://fabricsoul.github.io/deeptimes-archive/"}, "commentCount": 50, "datePublished": "2020-9-11"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "首页", "item": "https://fabricsoul.github.io/deeptimes-archive/"}, {"@type": "ListItem", "position": 2, "name": "X4：基石", "item": "https://fabricsoul.github.io/deeptimes-archive/s/x4-foundations.html"}, {"@type": "ListItem", "position": 3, "name": "x4空间站计算工具v1.0.4更新", "item": "https://fabricsoul.github.io/deeptimes-archive/t/2155348.html"}]}</script>
+</head><body>
+<header class="site"><a href="../index.html" class="brand">深度时空 · 太空游戏攻略存档</a>
+<span class="tag">DeepTimes Space Game Archive</span></header>
+<nav class="crumb"><a href="../index.html">首页</a> › <a href="../s/x4-foundations.html">X4：基石</a> › <span>x4空间站计算工具v1.0.4更新</span></nav>
+<article><h1>x4空间站计算工具v1.0.4更新</h1>
+<p class="src">原作者：暗夜幽灵　发表：2020-9-11　来源：bbs.deeptimes.net（已关站）· <a href="https://web.archive.org/web/20210728114339/https://bbs.deeptimes.net/forum.php?mod=viewthread&tid=2155348" rel="nofollow">Wayback 存档</a></p>
+<section class="floor"><span class="fl">#1</span><p>本帖最后由 暗夜幽灵 于 2021-2-21 15:18 编辑 </p>
+<p>更新变动比较大，另开新帖。</p>
+<p>本来过年的时候就开工了，结果工作上事比较多一直拖到现在。最近趁着调休抓紧赶工弄完了。</p>
+<p>理论上自动支持以后的X4的版本更新和DLC, 因为所有数据都是从游戏里面解析的.</p>
+<p>如果有啥好的想法提个issue</p>
+<p>X4空间站计算工具，支持Windows/Linux/Mac(windows，linux测试过，Mac理论上，手上没苹果设备)。使用C++/Qt5开发</p>
+<p>运行要求：Win10以上，os随便。</p>
+<p>语言：简体中文，English(American）</p>
+<p>预览：</p>
+<p>传送门:https://github.com/darknightghost/x4-station-calc 有bug提issue, 另外吐槽一句, 为啥会有人跑源代码里面找可执行文件.</p>
+<p>另外提示一下，所有的空间站模块，产品，种族双击会在下面显示详细信息。</p>
+<p>打包好的 Win10 x64编译：</p>
+<p>游客，如果您要查看本帖隐藏内容请回复</p>
+<p>github上有账号的麻烦star一下.</p>
+<p>解包后运行x4-station-calc.exe， 另外一个可执行程序vc_redist.x64.exe是vc++2019运行库的安装包，编辑器运行不了的话安装它。</p>
+<p>如果有崩溃等bug最好在回复的时候提交一个core dump以便于分析问题产生的原因。</p>
+<p>还有求star，求转载。</p>
+<p>更新日志：</p>
+<p>v1.0.4</p>
+<p>    修改了下检查更新的行为.</p>
+<p>v1.0.3</p>
+<p>    优化了启动速度.</p>
+<p>    在帮助菜单里添加了打开GitHub上项目页面的选项.</p>
+<p>v1.0.2</p>
+<p>    修正了粘贴空间站模块的时候的数量错误.</p>
+<p>    添加了将空间站模块列表导出为HTML格式的功能.</p>
+<p>v1.0.1</p>
+<p>    修正了当移动空间站模块顺序后该模块无法正确改变数量的bug.</p>
+<p>    启动时后台自动检查更新.</p>
+<p>v1.0.0</p>
+<p>    用C++重写全部模块.</p>
+<p>    所有数据从游戏里直接读取,  理论上自动支持下几个DLC.</p>
+<p>v0.0.6</p>
+<p>    修正了无人机产线的数据中的错误.</p>
+<p>v0.0.5</p>
+<p>    修正了logger无法记录QT异常的bug。</p>
+<p>    修正了智能芯片产线的数据错误。</p>
+<p>    添加检查更新功能.</p>
+<p>    在统计数据中添加了&quot;过滤模块&quot;按钮以便于查找生产模块.</p>
+<p>v0.0.4</p>
+<p>    修正了原料受效率影响的错误。</p>
+<p>v0.0.3</p>
+<p>    修正了同一分组内同一空间站数量加不到100以上的bug。</p>
+<p>    修正了小麦产线的数据错误。</p>
+<p>    添加了工具栏(图标是gnome里面的换下颜色)。</p>
+<p>    为建造模块添加了劳动力信息。</p>
+<p>v0.0.2</p>
+<p>    添加了X4:Foundnations中引入的建造模块的信息。</p>
+<p>    在统计中添加了关于劳动力相关的统计项。</p>
+<p>v0.0.1</p>
+<p>    创建第一个版本。</p>
+<p>求精</p>
+<p>@Macaulish</p>
+<p>@96321a </p>
+<p>@roro</p></section>
+<section class="floor"><span class="fl">#2</span><p>本帖最后由 暗夜幽灵 于 2020-9-11 15:30 编辑 </p>
+<p>首次启动：</p>
+<p>1.首次启动先选择语言，默认语言根据当前系统环境自动探测</p>
+<p>2.许可协议</p>
+<p>3.选择游戏路径</p>
+<p>接下来加载游戏数据并进入主界面</p></section>
+<section class="floor"><span class="fl">#3</span><p>本帖最后由 暗夜幽灵 于 2020-9-12 21:07 编辑 </p>
+<p>使用方法</p>
+<p>新建/打开一个存档</p>
+<p>添加若干个分组，双击组名可以重命名</p>
+<p>根据目标产品，产量添加生产模块</p>
+<p>根据原材料添加生产模块</p>
+<p>重复上述步骤并根据统计信息平衡中间产物，直到形成满意的产业链</p>
+<p>添加居住区，仓库，港口等</p>
+<p>保存，收工</p>
+<p>关于如何关联存档文件</p>
+<p>找到一个保存好的文件,右键-&gt;打开方式-&gt;选择其他应用,把下面始终使用此应用打开.x4station文件打勾，然后点击更多应用，拉到最底下点在这台电脑上查找其他应用，然后在打开的文件对话框中找到该程序的目录然后选择x4-station-calc.exe。</p></section>
+<section class="floor"><span class="fl">#4</span><p>本帖最后由 hxsgame 于 2020-9-11 20:33 编辑 </p>
+<p>感谢楼主 </p>
+<p>我怎么反应这么快～</p></section>
+<section class="floor"><span class="fl">#5</span><p>感谢LZ，辛苦了</p></section>
+<section class="floor"><span class="fl">#6</span><p>感谢感谢感谢</p></section>
+<section class="floor"><span class="fl">#7</span><p>感谢up主分享 编程真牛</p></section>
+<section class="floor"><span class="fl">#8</span><p>哒哒哒哒哒哒</p></section>
+<section class="floor"><span class="fl">#9</span><p>感谢up主分享</p></section>
+<section class="floor"><span class="fl">#10</span><p>413512.132143132</p></section>
+<section class="floor"><span class="fl">#11</span><p>感觉这个X4玩好了，在现实中搞规划优化都是一把好手</p></section>
+<section class="floor"><span class="fl">#12</span><p>[O:015:] [O:015:]</p></section>
+<section class="floor"><span class="fl">#13</span><p>支持，太实用了</p></section>
+<section class="floor"><span class="fl">#14</span><p>感谢楼主分享，一直都在用</p></section>
+<section class="floor"><span class="fl">#15</span><p>????????????????????????????????????ganxie fengxian</p></section>
+<section class="floor"><span class="fl">#16</span><p>感谢大佬分享</p></section>
+<section class="floor"><span class="fl">#17</span><p>3.141592654</p></section>
+<section class="floor"><span class="fl">#18</span><p>不知道有没有3.0的版本哈</p></section>
+<section class="floor"><span class="fl">#19</span><p>???......i</p></section>
+<section class="floor"><span class="fl">#20</span><p>支持！！！！！！！</p></section>
+<section class="floor"><span class="fl">#21</span><p>下下来试试哈 谢谢大佬</p></section>
+<section class="floor"><span class="fl">#22</span><p>感谢 之前用的0.0.6版的 很好用</p></section>
+<section class="floor"><span class="fl">#23</span><p>谢谢大佬，小众硬核，2018年刚出操作懵圈了，各种不爽，慢慢等更新完善，3.3总算顺了点，看蒸汽说更新要延后，入正还要等等。</p></section>
+<section class="floor"><span class="fl">#24</span><p>感謝大大分享</p></section>
+<section class="floor"><span class="fl">#25</span><p>非常感谢！！！！</p></section>
+<section class="floor"><span class="fl">#26</span><p>在win7 的系统，测试过没有？</p></section>
+<section class="floor"><span class="fl">#27</span><p>楼主你太牛了</p></section>
+<section class="floor"><span class="fl">#28</span><p>感谢感谢1！！</p></section>
+<section class="floor"><span class="fl">#29</span><p>#在这里快速回复#感谢up主分享 编程真牛</p></section>
+<section class="floor"><span class="fl">#30</span><p>真是个好东西啊，帮大忙了！</p></section>
+<section class="floor"><span class="fl">#31</span><p>闪退···</p></section>
+<section class="floor"><span class="fl">#32</span><p>感谢，，下来看看</p></section>
+<section class="floor"><span class="fl">#33</span><p>更新蛮多的</p></section>
+<section class="floor"><span class="fl">#34</span><p>感谢大佬分享</p></section>
+<section class="floor"><span class="fl">#35</span><p>感谢up主分享</p></section>
+<section class="floor"><span class="fl">#36</span><p>不错，试试看</p></section>
+<section class="floor"><span class="fl">#37</span><p>康康 字数补丁字数补丁字数补丁字数补丁</p></section>
+<section class="floor"><span class="fl">#38</span><p>打不开链接</p></section>
+<section class="floor"><span class="fl">#39</span><p>参照https://www.cnblogs.com/sochishun/p/14505669.html改hosts或者挂代理.</p></section>
+<section class="floor"><span class="fl">#40</span><p>非常感谢分享!</p></section>
+<section class="floor"><span class="fl">#41</span><p>太好了。。最近刚入X4可以搞搞空间站了</p></section>
+<section class="floor"><span class="fl">#42</span><p>支持支持，强烈支持</p></section>
+<section class="floor"><span class="fl">#43</span><p>这个必须要有！谢谢。</p>
+<p>如果能优化成为按最终产品自动匹配中间工厂就好了，以前X3系列有这样的工具。</p></section>
+<section class="floor"><span class="fl">#44</span><p>感谢楼主。。</p></section>
+<section class="floor"><span class="fl">#45</span><p>感谢up主分享</p></section>
+<section class="floor"><span class="fl">#46</span><p>回复回复123456</p></section>
+<section class="floor"><span class="fl">#47</span><p>谢谢分享！！！</p></section>
+<section class="floor"><span class="fl">#48</span><p>什么都是好东西</p></section>
+<section class="floor"><span class="fl">#49</span><p>有个建议，算空间站时把模块的无人机容量也算上···</p></section>
+<section class="floor"><span class="fl">#50</span><p>X4真是个复杂的游戏，这玩意非常有用，虽然有网页版，但是那个是个英文的，网页翻译有的是对不上的</p></section>
+<section class="floor"><span class="fl">#51</span><p>感谢大佬分享</p></section>
+<aside class="related"><h2>同版块相关攻略</h2><ul>
+<li><a href="../t/2150760.html">2.5bate 开始了～</a></li>
+<li><a href="../t/2151090.html">给一脸懵逼的新人们写的攻略</a></li>
+<li><a href="../t/2154713.html">X4 3.0测试版出来了</a></li>
+<li><a href="../t/2155524.html">看到X4可以选择4.00 beta1的测试版本</a></li>
+<li><a href="../t/2154709.html">X重生船包（XR ShipPack)汉化问题讨论</a></li>
+<li><a href="../t/2158460.html">妖王全部5个数据仓库位置最可靠获取方法（亲测有效）</a></li>
+<li><a href="../t/2149981.html">新人入门指引+X扫盲（持续更新）</a></li>
+<li><a href="../t/2155372.html">P\S族任务就是个大坑啊</a></li>
+</ul></aside>
+</article>
+<footer class="site">
+<p><strong>关于本站</strong>：这是对已关站的太空游戏社区 <b>深度时空 bbs.deeptimes.net</b> 的非官方社区存档，
+内容取自 <a href="https://web.archive.org/web/*/bbs.deeptimes.net" rel="nofollow">Wayback Machine</a> 公开存档，
+<b>版权归各原作者所有</b>，帖内保留了原作者署名与发帖时间。仅供游戏玩家学习交流与资料保存之用。</p>
+<p>如您是原作者或原站长，希望某内容下架或补充署名，请提交 GitHub Issue，我们会尽快处理。</p>
+<p class="muted">Archive of the defunct Chinese space-game forum DeepTimes (bbs.deeptimes.net). Content © original authors. Preservation mirror.</p>
+</footer></body></html>

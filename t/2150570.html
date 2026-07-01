@@ -1,0 +1,335 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>space engine教程14：创建行星城市夜景纹理教程，彩色和凹凸...｜太空引擎攻略｜深度时空存档</title>
+<meta name="description" content="space engine教程14：创建行星城市夜景纹理教程（辉光纹理），彩色纹理和凹凸纹理教程 导航： 1.创建行星脚本和创建纹理文件夹 2.使用space engine已经有的行星的彩色纹理制作行星凹凸纹理和行星城市夜景纹理 3.使用其他柱形纹理制作彩色纹理（地图）和凹凸纹理（地图），叠加图片到纹">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://fabricsoul.github.io/deeptimes-archive/t/2150570.html">
+<meta property="og:type" content="website"><meta property="og:site_name" content="深度时空太空游戏攻略存档">
+<meta property="og:title" content="space engine教程14：创建行星城市夜景纹理教程，彩色和凹凸...｜太空引擎攻略｜深度时空存档"><meta property="og:description" content="space engine教程14：创建行星城市夜景纹理教程（辉光纹理），彩色纹理和凹凸纹理教程 导航： 1.创建行星脚本和创建纹理文件夹 2.使用space engine已经有的行星的彩色纹理制作行星凹凸纹理和行星城市夜景纹理 3.使用其他柱形纹理制作彩色纹理（地图）和凹凸纹理（地图），叠加图片到纹">
+<meta property="og:url" content="https://fabricsoul.github.io/deeptimes-archive/t/2150570.html"><meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "DiscussionForumPosting", "headline": "space engine教程14：创建行星城市夜景纹理教程，彩色和凹凸...", "articleBody": "本帖最后由 星际体验 于 2019-3-18 20:34 编辑 \n\nspace engine教程14：创建行星城市夜景纹理教程（辉光纹理），彩色纹理和凹凸纹理教程\n\r\n导航：\n\r\n1.创建行星脚本和创建纹理文件夹\n\r\n2.使用space engine已经有的行星的彩色纹理制作行星凹凸纹理和行星城市夜景纹理\n\r\n3.使用其他柱形纹理制作彩色纹理（地图）和凹凸纹理（地图），叠加图片到纹理上\n\r\n4.使用其他行星纹理制作行星城市夜景纹理（地图）\n\r\n5.一些行星柱形投影纹理(行星地图)下载网站\n\r\n在space engine可以自定义以下4种纹理，下面前3个参数是在Surface（地表）标签里面的参数里面设置，行星和卫星的是一样的设置。\n\r\nDiffMap 彩色纹理的参数，后面跟Surface(地形纹理)，就是我们看到的行星或者卫星的地表的颜色，通常是彩色的。\n\r\nBumpMap 凹凸纹理的参数，后面跟BumpMap(凹凸纹理)，通常是灰色的。\n\r\nGlowMap 辉光纹理的参数，后面跟Lights（夜景纹理），也就是行星城市灯光夜景纹理，通常是黑白色的。\n\r\nClouds 这是云的标签，可以设置云的DiffMap(彩色纹理)和云的BumpMap（凹凸纹理），在Clouds标签里面设置。\n\r\nSurface标签里面的纹理路径写法和Clouds标签里面的纹理路径写法是一样的，但是要注意，在前期创建Surface纹理和Clouds纹理的时候，注意文件夹的命名，不能命名一样。\n\r\n\n\r\n把链接复制到浏览器地址栏上，按回车键就可以看了\n\r\n1.创建行星脚本和创建纹理文件夹。\n\r\n先按照我教程里面讲的操作，熟悉在什么文件夹应该创建什么文件，等熟悉了后，可以按照规则创建文件夹。\n\r\n把链接复制到浏览器地址栏上，按回车键就可以看了\n\r\n关于宇宙模拟器Space Engine的天体（星球，星系，星云，星团等）脚本参数，如何创建天体（星球，星系，星云，星团等）的脚本，请看这些教程\n\r\nspace engine打包创建好的SE脚本成pak文件（MOD），分享和使用pak文件（MOD）的方法\n\r\nhttps://www.jianshu.com/p/ed94a412444e\n\r\nspace engine文件夹和pak文件（MOD），脚本组成和脚本创建详解\n\r\nhttps://www.jianshu.com/p/a46cb42b46a0\n\r\nspace engine质心，恒星参数详解\n\r\nhttps://www.jianshu.com/p/9945d3bbee7e\n\r\nspace engine行星主要参数详解\n\r\nhttps://www.jianshu.com/p/1788f6181078\n\r\nspace engine行星的地表，海洋，云，熔岩，极光参数详解\n\r\nhttps://www.jianshu.com/p/59bd9ddef6f3\n\r\nspace engine生命，吸积盘，彗尾，行星环，日冕，大气参数详解\n\r\nhttps://www.jianshu.com/p/5da156edc306\n\r\nspace engine星系，星团，星云参数详解\n\r\nhttps://www.jianshu.com/p/82691a8d6174\n\r\nspace engine自定义行星纹理(CubeMap软件)详解\n\r\nhttps://www.jianshu.com/p/fd919f94db5c\n\r\n\n\r\n(2)使用space engine现有的行星脚本\n\r\n我们也可以找到一个space engine就有的类地行星导出脚本后编辑，这次示范我们就选择一个在space engine存在的行星，这个行星的坐标是也可以自己导出space engine里面的行星脚本进行修改，比如我们选择一个，这个行星的坐标是这个行星的坐标是RS 0-0-0-733-14626-7-543583-292 A4\n\r\n在space engine 0.980版本搜到这个行星后，选中这个行星，按shift+F2,打开编辑器，点“导出脚本”，弹出“导出星球”对话框，点“导出”按钮，就导出了这个行星的脚本了，打开space engine安装目录里面的export文件夹，里面就看到了一个名字叫RS 0-0-0-733-14626-7-543583-292 A4的文件，把这个文件移动到addons文件夹里面的catalogs文件夹里面的planets文件夹里。\n\r\n\n\r\n如果没有创建这个文件夹，就按照以下方法创建在spce engine安装里面里面创建一个名字叫catalogs的文件夹（如果没有addons文件夹就新建一个名字叫addons的文件夹），在catalogs文件夹里面创建一个名字叫planets的文件夹，用来存放行星脚本。把刚才移动到planets文件夹里的行星脚本重新改名叫xyj,然后打开，进行以下修改，编辑脚本文件不要用word类的软件编辑，需要用TXT文本文件类的编辑器编辑\n\r\n修改Planet后面的\"\"里的名字为xyj\n\r\n修改ParentBody后面的\"\"里的名字为sun\n\r\n修改SemiMajorAxis后面数值大于0.8\n\r\n如果脚本中有TidalLocked true这一句代码，就把这一句代码删除，防止被恒星潮汐锁定，如果删除这一句代码后，还是被潮汐锁定，那就把SemiMajorAxis后面的数值修改大一些，继续远离恒星。\n\r\n把修改ParentBody后面修改成sun,就是让这个行星到太阳系，太阳就成了这个行星的母星了，省去了创建质心和恒星的脚本。\n\r\n以后有什么行星也可以这样创建和修改，但是要注意的就是，定期删除自己创建的不用的添加到了太阳系的行星。\n\r\n修改后的脚本对照：\n\r\n\n\r\n(3)修改行星脚本里面Surface标签里面的参数\n\r\n打开Space Engine的安装目录，在addons文件夹里面新建一个名字叫textures文件夹（如果没有addons文件夹就新建一个名字叫addons的文件夹），在textures文件夹里面再新建一个名字叫planets的文件夹，在planets的文件夹里新建一个以行星为名字的文件夹，就以需要自定义纹理的行星名字命名，名字只能用英文或者英文和数字的组合，这里，文件夹我们起名叫xyj\n\r\n\n\r\n打开xyj文件夹，在里面分别按照下面的名字，创建好3个文件夹，注意大小写\n\r\n创建第1个文件夹，起名叫Surface\n\r\n创建第2个文件夹，起名叫Bumap\n\r\n创建第3个文件夹，起名叫Lights\n\r\n这样起名是为了好辨认，Surface文件夹是存放彩色纹理(地图)的文件夹，Bumap文件夹是存放凹凸纹理(地图)的文件夹，Lights文件夹是存放城市夜景纹理(地图)的文件夹\n\r\n\n\r\n创建好相关文件夹后，打开前面创建好的行星脚本，删除原来的Surface标签里面的全部参数，复制输入以下参数代码，然后保存\n\r\nDiffMap \"xyj/Surface\"\n\r\nDiffTileSize 258\n\r\nDiffTileBorder 1\n\r\nBumpMap \"xyj/Bumap\"\n\r\nBumpTileSize 258\n\r\nBumpTileBorder 1\n\r\nGlowMap \"xyj/Lights\"\n\r\nGlowMode \"Night\"\n\r\nGlowColor (0.988, 0.964, 0.250)\n\r\nGlowTileSize 258\n\r\nGlowTileBorder 1\n\r\nBumpHeight 17\n\r\nBumpOffset 10\n\r\nGlowBright 1\n\r\nDiffMapAlpha \"Water\"\n\r\nSpecBrightWater 0.35\n\r\nSpecBrightIce 0\n\r\nSpecularPower 55\n\r\nHapke 0\n\r\nSpotBright 4\n\r\nSpotWidth 0.05\n\r\nDayAmbient 0.07\n\r\n修改后的脚本对照：\n\r\n\n\r\n注意：\n\r\nDiffMap是彩色纹理，BumpMap是凹凸纹理，GlowMap是辉光纹理，也就是行星城市夜景纹理。\n\r\n要注意大小写，以这些代码做示范，以后创建了什么行星就以什么行星命名文件夹，具体就按照上面说的操作。\n\r\nDiffMap，BumpMap，GlowMap后面输入的是相关纹理的路径，要输入是要在\"\"里面输入，要创建\"\"符号，需要在英文状态下，连续按shift+\"2次。\n\r\nDiffMap，BumpMap，GlowMap后面的路径就是行星文件夹+相关的纹理子文件夹，加入你创建的行星纹理的文件夹叫a,在文件夹里面\n\r\n创建的彩色纹理文件夹叫Surface，那在\"\"里面输入的就是a/Surface\n\r\n具体就按照上面的操作。\n\r\nGlowColor 后面的括号里面的是辉光纹理的颜色，也就是城市夜景颜色，改变这个数值就改变了城市夜景的颜色。\n\r\n点下面的链接进去，可以看到一个颜色拾取器，选中一个颜色后，在RGB Normalized decimal下面的对话框就是当前颜色的openGL颜色数值，把这个数值复制到GlowColor后面的括号里面就能改变城市灯光夜景(辉光纹理)的颜色，\n\r\nhttp://doc.instantreality.org/tools/color_calculator/\n\r\n\n\r\n2.使用space engine已经有的行星的彩色纹理制作行星凹凸纹理和行星城市夜景纹理，卫星的自定义纹理和行星是一样的。\n\r\n(1)导出space engine现有的行星的纹理\n\r\n搜到这个行星后，选中这个行星，按shift+F2,打开编辑器，选“导出纹理”，因为0.980版本的目前导出的最大纹理就是2048的，所以在分辨率输入框里输入2048就可以了，图像格式那儿选择png,其他的默认，点“导出”按钮，当代一会儿，上面会提示完成文字，就导出了。\n\r\n\n\r\n(2)space engine现有的行星导出的纹理代表什么类型的纹理\n\r\n打开space engine安装目录里面的export文件夹，就能看到很多导出的图片，它们分别代表的如下：\n\r\nclouds bump 是云的凹凸纹理\n\r\nclouds0 diff 是云的彩色纹理\n\r\nclouds0 glow 是云的辉光纹理\n\r\nclouds0 norm 是云的法线纹理\n\r\nsurface bump 是地表（地形）的凹凸纹理，这个纹理不需要，我们要用彩色纹理制作凹凸纹理\n\r\nsurface diff 是地表（地形）的彩色纹理，这个是我需要的彩色纹理\n\r\nsurface glow 是地表（地形）的辉光纹理，这儿的辉光纹理不是行星城市夜景纹理\n\r\nsurface norm 是地表（地形）的法线纹理\n\r\nsurface spec 是地表（地形）的结构纹理\n\r\n后面跟着数字0.1什么的，这是表示层数，以后讲到的纹理名字会忽略这些数字，如果遇到导出的行星没有相关的surface bump和和surface diff纹理，可以按照后面讲的教程，重新制作凹凸纹理或者彩色纹理\n\r\n这次的示范，我们只用到surface diff纹理，其他都用这个行星的程序生成的，所以把surface diff纹理图片移动到一个位置。\n\r\n\n\r\n(3)制作存放彩色纹理，凹凸纹理，城市夜景的相关文件夹\n\r\n我们用最简单的方法制作。\n\r\n首先按照如下创建相关的4个文件夹，直接在盘的根目录创建最好，比如打开G盘，就开始创建\n\r\n创建一个名字叫a的文件夹，用来存放制作好的彩色纹理，凹凸纹理，城市灯光夜景的RAW文件的文件夹\n\r\n创建一个名字名字叫b1的文件夹，用来存放用CubeMap软件转换后的彩色纹理的文件夹\n\r\n创建一个名字名字叫b2的文件夹，用来存放用CubeMap软件转换后的凹凸纹理的文件夹\n\r\n创建一个名字名字叫b3的文件夹，用来存放用CubeMap软件转换后的城市夜景纹理（辉光纹理）的文件夹\n\r\n\n\r\n(4)制作行星彩色纹理\n\r\n打开Photoshop，", "author": {"@type": "Person", "name": "星际体验"}, "url": "https://fabricsoul.github.io/deeptimes-archive/t/2150570.html", "inLanguage": "zh-CN", "about": "太空引擎（Space Engine）", "isPartOf": {"@type": "WebSite", "name": "深度时空太空游戏攻略存档", "url": "https://fabricsoul.github.io/deeptimes-archive/"}, "commentCount": 1, "datePublished": "2019-1-22"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "首页", "item": "https://fabricsoul.github.io/deeptimes-archive/"}, {"@type": "ListItem", "position": 2, "name": "太空引擎", "item": "https://fabricsoul.github.io/deeptimes-archive/s/space-engine.html"}, {"@type": "ListItem", "position": 3, "name": "space engine教程14：创建行星城市夜景纹理教程，彩色和凹凸...", "item": "https://fabricsoul.github.io/deeptimes-archive/t/2150570.html"}]}</script>
+</head><body>
+<header class="site"><a href="../index.html" class="brand">深度时空 · 太空游戏攻略存档</a>
+<span class="tag">DeepTimes Space Game Archive</span></header>
+<nav class="crumb"><a href="../index.html">首页</a> › <a href="../s/space-engine.html">太空引擎</a> › <span>space engine教程14：创建行星城市夜景纹理教程，彩色和凹凸...</span></nav>
+<article><h1>space engine教程14：创建行星城市夜景纹理教程，彩色和凹凸...</h1>
+<p class="src">原作者：星际体验　发表：2019-1-22　来源：bbs.deeptimes.net（已关站）· <a href="https://web.archive.org/web/20191121005105/https://bbs.deeptimes.net/forum.php?mod=viewthread&tid=2150570" rel="nofollow">Wayback 存档</a></p>
+<section class="floor"><span class="fl">#1</span><p>本帖最后由 星际体验 于 2019-3-18 20:34 编辑 </p>
+<p>space engine教程14：创建行星城市夜景纹理教程（辉光纹理），彩色纹理和凹凸纹理教程</p>
+<p>导航：</p>
+<p>1.创建行星脚本和创建纹理文件夹</p>
+<p>2.使用space engine已经有的行星的彩色纹理制作行星凹凸纹理和行星城市夜景纹理</p>
+<p>3.使用其他柱形纹理制作彩色纹理（地图）和凹凸纹理（地图），叠加图片到纹理上</p>
+<p>4.使用其他行星纹理制作行星城市夜景纹理（地图）</p>
+<p>5.一些行星柱形投影纹理(行星地图)下载网站</p>
+<p>在space engine可以自定义以下4种纹理，下面前3个参数是在Surface（地表）标签里面的参数里面设置，行星和卫星的是一样的设置。</p>
+<p>DiffMap 彩色纹理的参数，后面跟Surface(地形纹理)，就是我们看到的行星或者卫星的地表的颜色，通常是彩色的。</p>
+<p>BumpMap 凹凸纹理的参数，后面跟BumpMap(凹凸纹理)，通常是灰色的。</p>
+<p>GlowMap 辉光纹理的参数，后面跟Lights（夜景纹理），也就是行星城市灯光夜景纹理，通常是黑白色的。</p>
+<p>Clouds 这是云的标签，可以设置云的DiffMap(彩色纹理)和云的BumpMap（凹凸纹理），在Clouds标签里面设置。</p>
+<p>Surface标签里面的纹理路径写法和Clouds标签里面的纹理路径写法是一样的，但是要注意，在前期创建Surface纹理和Clouds纹理的时候，注意文件夹的命名，不能命名一样。</p>
+<p>把链接复制到浏览器地址栏上，按回车键就可以看了</p>
+<p>1.创建行星脚本和创建纹理文件夹。</p>
+<p>先按照我教程里面讲的操作，熟悉在什么文件夹应该创建什么文件，等熟悉了后，可以按照规则创建文件夹。</p>
+<p>把链接复制到浏览器地址栏上，按回车键就可以看了</p>
+<p>关于宇宙模拟器Space Engine的天体（星球，星系，星云，星团等）脚本参数，如何创建天体（星球，星系，星云，星团等）的脚本，请看这些教程</p>
+<p>space engine打包创建好的SE脚本成pak文件（MOD），分享和使用pak文件（MOD）的方法</p>
+<p>https://www.jianshu.com/p/ed94a412444e</p>
+<p>space engine文件夹和pak文件（MOD），脚本组成和脚本创建详解</p>
+<p>https://www.jianshu.com/p/a46cb42b46a0</p>
+<p>space engine质心，恒星参数详解</p>
+<p>https://www.jianshu.com/p/9945d3bbee7e</p>
+<p>space engine行星主要参数详解</p>
+<p>https://www.jianshu.com/p/1788f6181078</p>
+<p>space engine行星的地表，海洋，云，熔岩，极光参数详解</p>
+<p>https://www.jianshu.com/p/59bd9ddef6f3</p>
+<p>space engine生命，吸积盘，彗尾，行星环，日冕，大气参数详解</p>
+<p>https://www.jianshu.com/p/5da156edc306</p>
+<p>space engine星系，星团，星云参数详解</p>
+<p>https://www.jianshu.com/p/82691a8d6174</p>
+<p>space engine自定义行星纹理(CubeMap软件)详解</p>
+<p>https://www.jianshu.com/p/fd919f94db5c</p>
+<p>(2)使用space engine现有的行星脚本</p>
+<p>我们也可以找到一个space engine就有的类地行星导出脚本后编辑，这次示范我们就选择一个在space engine存在的行星，这个行星的坐标是也可以自己导出space engine里面的行星脚本进行修改，比如我们选择一个，这个行星的坐标是这个行星的坐标是RS 0-0-0-733-14626-7-543583-292 A4</p>
+<p>在space engine 0.980版本搜到这个行星后，选中这个行星，按shift+F2,打开编辑器，点“导出脚本”，弹出“导出星球”对话框，点“导出”按钮，就导出了这个行星的脚本了，打开space engine安装目录里面的export文件夹，里面就看到了一个名字叫RS 0-0-0-733-14626-7-543583-292 A4的文件，把这个文件移动到addons文件夹里面的catalogs文件夹里面的planets文件夹里。</p>
+<p>如果没有创建这个文件夹，就按照以下方法创建在spce engine安装里面里面创建一个名字叫catalogs的文件夹（如果没有addons文件夹就新建一个名字叫addons的文件夹），在catalogs文件夹里面创建一个名字叫planets的文件夹，用来存放行星脚本。把刚才移动到planets文件夹里的行星脚本重新改名叫xyj,然后打开，进行以下修改，编辑脚本文件不要用word类的软件编辑，需要用TXT文本文件类的编辑器编辑</p>
+<p>修改Planet后面的&quot;&quot;里的名字为xyj</p>
+<p>修改ParentBody后面的&quot;&quot;里的名字为sun</p>
+<p>修改SemiMajorAxis后面数值大于0.8</p>
+<p>如果脚本中有TidalLocked true这一句代码，就把这一句代码删除，防止被恒星潮汐锁定，如果删除这一句代码后，还是被潮汐锁定，那就把SemiMajorAxis后面的数值修改大一些，继续远离恒星。</p>
+<p>把修改ParentBody后面修改成sun,就是让这个行星到太阳系，太阳就成了这个行星的母星了，省去了创建质心和恒星的脚本。</p>
+<p>以后有什么行星也可以这样创建和修改，但是要注意的就是，定期删除自己创建的不用的添加到了太阳系的行星。</p>
+<p>修改后的脚本对照：</p>
+<p>(3)修改行星脚本里面Surface标签里面的参数</p>
+<p>打开Space Engine的安装目录，在addons文件夹里面新建一个名字叫textures文件夹（如果没有addons文件夹就新建一个名字叫addons的文件夹），在textures文件夹里面再新建一个名字叫planets的文件夹，在planets的文件夹里新建一个以行星为名字的文件夹，就以需要自定义纹理的行星名字命名，名字只能用英文或者英文和数字的组合，这里，文件夹我们起名叫xyj</p>
+<p>打开xyj文件夹，在里面分别按照下面的名字，创建好3个文件夹，注意大小写</p>
+<p>创建第1个文件夹，起名叫Surface</p>
+<p>创建第2个文件夹，起名叫Bumap</p>
+<p>创建第3个文件夹，起名叫Lights</p>
+<p>这样起名是为了好辨认，Surface文件夹是存放彩色纹理(地图)的文件夹，Bumap文件夹是存放凹凸纹理(地图)的文件夹，Lights文件夹是存放城市夜景纹理(地图)的文件夹</p>
+<p>创建好相关文件夹后，打开前面创建好的行星脚本，删除原来的Surface标签里面的全部参数，复制输入以下参数代码，然后保存</p>
+<p>DiffMap &quot;xyj/Surface&quot;</p>
+<p>DiffTileSize 258</p>
+<p>DiffTileBorder 1</p>
+<p>BumpMap &quot;xyj/Bumap&quot;</p>
+<p>BumpTileSize 258</p>
+<p>BumpTileBorder 1</p>
+<p>GlowMap &quot;xyj/Lights&quot;</p>
+<p>GlowMode &quot;Night&quot;</p>
+<p>GlowColor (0.988, 0.964, 0.250)</p>
+<p>GlowTileSize 258</p>
+<p>GlowTileBorder 1</p>
+<p>BumpHeight 17</p>
+<p>BumpOffset 10</p>
+<p>GlowBright 1</p>
+<p>DiffMapAlpha &quot;Water&quot;</p>
+<p>SpecBrightWater 0.35</p>
+<p>SpecBrightIce 0</p>
+<p>SpecularPower 55</p>
+<p>Hapke 0</p>
+<p>SpotBright 4</p>
+<p>SpotWidth 0.05</p>
+<p>DayAmbient 0.07</p>
+<p>修改后的脚本对照：</p>
+<p>注意：</p>
+<p>DiffMap是彩色纹理，BumpMap是凹凸纹理，GlowMap是辉光纹理，也就是行星城市夜景纹理。</p>
+<p>要注意大小写，以这些代码做示范，以后创建了什么行星就以什么行星命名文件夹，具体就按照上面说的操作。</p>
+<p>DiffMap，BumpMap，GlowMap后面输入的是相关纹理的路径，要输入是要在&quot;&quot;里面输入，要创建&quot;&quot;符号，需要在英文状态下，连续按shift+&quot;2次。</p>
+<p>DiffMap，BumpMap，GlowMap后面的路径就是行星文件夹+相关的纹理子文件夹，加入你创建的行星纹理的文件夹叫a,在文件夹里面</p>
+<p>创建的彩色纹理文件夹叫Surface，那在&quot;&quot;里面输入的就是a/Surface</p>
+<p>具体就按照上面的操作。</p>
+<p>GlowColor 后面的括号里面的是辉光纹理的颜色，也就是城市夜景颜色，改变这个数值就改变了城市夜景的颜色。</p>
+<p>点下面的链接进去，可以看到一个颜色拾取器，选中一个颜色后，在RGB Normalized decimal下面的对话框就是当前颜色的openGL颜色数值，把这个数值复制到GlowColor后面的括号里面就能改变城市灯光夜景(辉光纹理)的颜色，</p>
+<p>http://doc.instantreality.org/tools/color_calculator/</p>
+<p>2.使用space engine已经有的行星的彩色纹理制作行星凹凸纹理和行星城市夜景纹理，卫星的自定义纹理和行星是一样的。</p>
+<p>(1)导出space engine现有的行星的纹理</p>
+<p>搜到这个行星后，选中这个行星，按shift+F2,打开编辑器，选“导出纹理”，因为0.980版本的目前导出的最大纹理就是2048的，所以在分辨率输入框里输入2048就可以了，图像格式那儿选择png,其他的默认，点“导出”按钮，当代一会儿，上面会提示完成文字，就导出了。</p>
+<p>(2)space engine现有的行星导出的纹理代表什么类型的纹理</p>
+<p>打开space engine安装目录里面的export文件夹，就能看到很多导出的图片，它们分别代表的如下：</p>
+<p>clouds bump 是云的凹凸纹理</p>
+<p>clouds0 diff 是云的彩色纹理</p>
+<p>clouds0 glow 是云的辉光纹理</p>
+<p>clouds0 norm 是云的法线纹理</p>
+<p>surface bump 是地表（地形）的凹凸纹理，这个纹理不需要，我们要用彩色纹理制作凹凸纹理</p>
+<p>surface diff 是地表（地形）的彩色纹理，这个是我需要的彩色纹理</p>
+<p>surface glow 是地表（地形）的辉光纹理，这儿的辉光纹理不是行星城市夜景纹理</p>
+<p>surface norm 是地表（地形）的法线纹理</p>
+<p>surface spec 是地表（地形）的结构纹理</p>
+<p>后面跟着数字0.1什么的，这是表示层数，以后讲到的纹理名字会忽略这些数字，如果遇到导出的行星没有相关的surface bump和和surface diff纹理，可以按照后面讲的教程，重新制作凹凸纹理或者彩色纹理</p>
+<p>这次的示范，我们只用到surface diff纹理，其他都用这个行星的程序生成的，所以把surface diff纹理图片移动到一个位置。</p>
+<p>(3)制作存放彩色纹理，凹凸纹理，城市夜景的相关文件夹</p>
+<p>我们用最简单的方法制作。</p>
+<p>首先按照如下创建相关的4个文件夹，直接在盘的根目录创建最好，比如打开G盘，就开始创建</p>
+<p>创建一个名字叫a的文件夹，用来存放制作好的彩色纹理，凹凸纹理，城市灯光夜景的RAW文件的文件夹</p>
+<p>创建一个名字名字叫b1的文件夹，用来存放用CubeMap软件转换后的彩色纹理的文件夹</p>
+<p>创建一个名字名字叫b2的文件夹，用来存放用CubeMap软件转换后的凹凸纹理的文件夹</p>
+<p>创建一个名字名字叫b3的文件夹，用来存放用CubeMap软件转换后的城市夜景纹理（辉光纹理）的文件夹</p>
+<p>(4)制作行星彩色纹理</p>
+<p>打开Photoshop，打开surface diff图片后，点“文件”菜单的“另存为选项”，把文件名改为a1</p>
+<p>把“保存类型”改成RAW,保存位置选前面创建好的名字叫a的文件夹里，在弹出的菜单里面选“确定”，这是制作好的彩色纹理RAW文件</p>
+<p>(5)制作行星凹凸纹理</p>
+<p>继续在这个彩色纹理文件上操作，点“图像”菜单里面的“调整”选项里面的“黑白”命令，这时候会弹出“黑白”对话框，直接点“确定”按钮就可以了，这样凹凸纹理就制作好了。接着点“文件”菜单的“另存为选项”，把文件名改为a2</p>
+<p>把“保存类型”改成RAW,保存位置选前面创建好的名字叫a的文件夹里，在弹出的菜单里面选“确定”，这是制作好的凹凸纹理RAW文件。</p>
+<p>(6)制作行星城市夜景纹理</p>
+<p>为了方便，我们使用City Lights Brushes笔刷绘制城市夜景，点下面的链接进去，点“Download”下载好名字叫City-Lights-Brushes的压缩包，解压这个压缩包，解压后会看到2个文件，一个是图片文件，另一个文件就是笔刷，笔刷文件的扩展名是.abr</p>
+<p>在文件上鼠标右击，点“属性”，在文件类型那儿就可以看到文件类型。</p>
+<p>城市灯光夜景笔刷City Lights Brushes链接</p>
+<p>https://fbrushes.com/city-lights-brushes/</p>
+<p>打开Photoshop，打开surface diff图片，城市夜景要在彩色纹理上绘制。</p>
+<p>首先，我们要新建一个图层，在新的图层上绘制城市灯光夜景，在英文状态下按Shift+Ctrl+N,弹出“新建图层”对话框，点“确定”就可以了，这样就创建了一个透明的图层，在软件右边的“图层”面板就看到了。</p>
+<p>接着开始导入笔刷，点“图层”菜单里面的“画笔”选项，就打开了画笔面板。</p>
+<p>点画笔面板右上角的4个横线的图标，点“导入画笔”选项，找到前面解压好的城市灯光夜景笔刷文件，选中，点“载入”，就把城市夜景笔刷导入了，在画笔面板上看到的名字叫citybrushes_by_1wyrmshadow1-d9syjoq的就是城市夜景笔刷。</p>
+<p>如果还是不知道笔刷怎么安装，就请百度上搜索Photoshop怎么安装笔刷，照着安装。</p>
+<p>点名字叫citybrushes_by_1wyrmshadow1-d9syjoq的像文件夹图标前面的向左的单箭头，就展开了该笔刷，会看到笔刷列表，拖动右边的滑动条，可以查看全部的笔刷。</p>
+<p>因为要发光的城市夜景部分需要在前期制作成白色或者灰色的，所以我们要把行星城市发光的部分涂成白色的，但是，为了制作方面，我们先别用白色的笔刷绘制城市夜景，先用黑色的笔刷绘制黑色夜景，这样在图上我们好辨认绘制后的部分，绘制完成后，再把黑色的城市夜景部分填充黑色的就可以了。</p>
+<p>先设置前景色为海色，点Photoshop左边菜单下面的2个相互嵌套的小方块中上面的那个方块，弹出“拾色器（前景色）”对话框，把颜色方框上的滑轮拖到最下角，看到颜色变黑，点“确定”。</p>
+<p>现在选中图层1，一定要记得选中这个图层1，就是图层透明的那个，我们是要在这个图层上绘制城市夜景。然后选中城市灯光夜景笔刷列表里面的名字叫Midwest1或者Midwest的笔刷，拖动笔刷列表上面的大小滑动条，设置好笔刷大小，然后在surface diff图片上大陆上鼠标点击，点击一下，就添加一次城市灯光，按照自己的需求点击，绘制城市灯光。如果想撤回，就点“编辑”菜单里面的“后退一步”，每点一次这个选项，就后退一步。</p>
+<p>其他的笔刷，也可以自己尝试下，如果途中遇到濡染没法绘制，就查看自己是不是没有选中图层1</p>
+<p>切换到箭头图标，就在英文状态下，按A键</p>
+<p>城市夜景纹理绘制完后，就点Photoshop左边菜单下面的2个相互嵌套的小方块中下面的那个方块，弹出“拾色器（背景色）”对话框，把颜色方框上的滑轮拖到最下角，看到颜色变黑，点“确定”。</p>
+<p>按住Ctrl键，鼠标左键在图层1上点击下，这时候图层1上绘制的城市灯光夜景部分就选中了，按Ctrl+Delete，就可以填充背景色了，绘制好的城市夜景部分就会成为白色。按Ctrl+D取消图层1的选择，然后鼠标左击选择背景层，就是有彩色纹理的那一层，按Alt+Delete，填充前景色，这样背景就是黑色的了。</p>
+<p>这样行星的城市夜景纹理就制作好，鼠标在图层1上右击，选择“合并可见图层”，在该图层右边的灰色部分右击，进行图层合并后，点“文件”菜单的“另存为选项”，把文件名改为a3</p>
+<p>把“保存类型”改成RAW,保存位置选前面创建好的名字叫a的文件夹里，在弹出的菜单里面选“确定”，这是制作好的夜景城市纹理RAW文件，关闭文件。</p>
+<p>(8)下载CubeMap</p>
+<p>我们前面制作的是圆柱形投影的纹理，在space engine里面需要的纹理是立方体投影纹理（skybox）,所以我们要下载spaceengine官网提供的一个纹理转换软件CubeMap进行转换，点下面的链接进去，点有CubeMap 1.06文字那儿下载，下载CubeMap软件。</p>
+<p>http://spaceengine.org/manual/making-addons/planet-textures/</p>
+<p>或者直接点下载文件的链接下载</p>
+<p>http://spaceengine.org/media/2016/11/13_CubeMap-1.06.zip</p>
+<p>下载完后，解压到一个文件夹里。</p>
+<p>(9)转换彩色纹理，移动到相关文件夹</p>
+<p>打开里面的名字叫default_cub文件，开始转换纹理</p>
+<p>进行以下操作：</p>
+<p>InputFile 后面修改成 G:\a\a1.raw 输入创建的纹理的彩色纹理RAW文件在什么盘的什么文件夹，就修改成这个路径，最后写的RAW文件要加上.raw</p>
+<p>OutFolder 后面修改成 G:\b1 输入要把转换后的彩色纹理png文件到什么盘什么文件夹的路径</p>
+<p>删除有TempFolder 这一条的代码，不仅要删除OutFolder这个参数，还包括这个参数后面跟着的路径都要删除</p>
+<p>InputWidth 后面的设置修改成2048，这儿是设置彩色纹理，凹凸纹理，城市灯光夜景纹理的RAW文件的宽度的像素</p>
+<p>InputHeight 后面的设置修改成1024，这儿是设置彩色纹理，凹凸纹理，城市灯光夜景纹理的RAW文件的高度的像素</p>
+<p>OutFormat 后面修改成png 注意大小写</p>
+<p>BaseTexFormat 后面修改成png 注意大小写</p>
+<p>按照这样修改，其他参数默认，</p>
+<p>彩色纹理相关参数设置后的对照：</p>
+<p>修改完后，保存，双击名字叫CubeMap的图标，就会弹出一个黑白对话框，并且上面的文字和数字会滚动，这就表示开始转换了，转换完后，在底部会提示All done in 1.2 seconds. Press any key...这就表示纹理转换完成。</p>
+<p>现在打开b1文件夹，就看到我们转换成立方投影的彩色纹理，删除那个名字叫raw的文件夹，然后把其他文件夹和文件一起剪切，移动到space engine安装目录的addons文件夹里面的textures文件夹里面的planets文件夹里面的xyj文件夹里面的Surface文件夹里。</p>
+<p>(10)转换凹凸纹理，移动到相关文件夹</p>
+<p>因为前面的相关参数设置好了，这次不用再重复操作了，直接修改成凹凸纹理RAW文件的录制就可以了。</p>
+<p>InputFile 后面修改成 G:\a\a2.raw 入创建的纹理的凹凸纹理RAW文件在什么盘的什么文件夹，就修改成这个路径，最后写的RAW文件要加上.raw</p>
+<p>OutFolder 后面修改成 G:\b2 输入要把转换后的凹凸纹理png文件到什么盘什么文件夹的路径</p>
+<p>凹凸纹理相关参数设置后的对照：</p>
+<p>修改完后，保存，双击名字叫CubeMap的图标，就会弹出一个黑白对话框，并且上面的文字和数字会滚动，这就表示开始转换了，转换完后，在底部会提示All done in 1.2 seconds. Press any key...这就表示纹理转换完成。</p>
+<p>现在打开b2文件夹，就看到我们转换成立方投影的凹凸纹理，删除那个名字叫raw的文件夹，然后把其他文件夹和文件一起剪切，移动到space engine安装目录的addons文件夹里面的textures文件夹里面的planets文件夹里面的xyj文件夹里面的Bumap文件夹里。</p>
+<p>(11)转换城市夜景纹理，移动到相关文件夹</p>
+<p>因为前面的相关参数设置好了，这次不用再重复操作了，直接修改成城市夜景RAW文件的录制就可以了InputFile 后面修改成 G:\a\a3.raw 入创建的纹理的城市夜景纹理RAW文件在什么盘的什么文件夹，就修改成这个路径，最后写的RAW文件要加上.raw</p>
+<p>OutFolder 后面修改成 G:\b3 输入要把转换后的城市夜景纹理png文件到什么盘什么文件夹的路径</p>
+<p>城市夜景纹理相关参数设置后的对照：</p>
+<p>修改完后，保存，双击名字叫CubeMap的图标，就会弹出一个黑白对话框，并且上面的文字和数字会滚动，这就表示开始转换了，转换完后，在底部会提示All done in 1.2 seconds. Press any key...这就表示纹理转换完成。</p>
+<p>现在打开b3文件夹，就看到我们转换成立方投影的城市夜景纹理，删除那个名字叫raw的文件夹，然后把其他文件夹和文件一起剪切，移动到space engine安装目录的addons文件夹里面的textures文件夹里面的planets文件夹里面的xyj文件夹里面的Lights文件夹里。</p>
+<p>3种纹理全部移动到相关文件夹的图示：</p>
+<p>(12)关于space engine灯光的设置</p>
+<p>3种纹理全部移动到相关文件夹后，打开space engine，搜素xyj ，搜到这个行星后，点space engine左下角的2个向右的双箭头，点击几下，开启加速，就可以看到行星运动了，在背对着太阳的位置就可以看到城市夜景了。按2个向左的双箭头是减速，中间的单个的向右的单箭头是暂停，也是开始。</p>
+<p>鼠标右键选中行星向左或者向右拖动可以旋转行星</p>
+<p>点space engine左边的齿轮图标，打开“图像”对话框，设置“泛光”和“夜半球灯光”选项，可以控制城市夜景灯光的效果。</p>
+<p>3.使用其他柱形纹理制作彩色纹理（地图）和凹凸纹理（地图），叠加图片到纹理上。</p>
+<p>这次的示范我们选择叠加滑稽表情，可以把其他图案加到柱形纹理的中间。</p>
+<p>(1)下载其他柱形投影纹理，你也可以自己找。</p>
+<p>点下面的链接进去，在图标上鼠标右击，选“图片另存为”保存到一个位置，起名叫彩色纹理素材</p>
+<p>(2)下载滑稽表情，你也可以自己找其他表情或者素材</p>
+<p>点下面的链接进去，在图标上鼠标右击，选“图片另存为”保存到一个位置，起名叫滑稽表情</p>
+<p>?imageView2/2/w/1320/q/80/format/jpg/interlace/1/ignore-error/1</p>
+<p>(3)创建叠加了滑稽表情的彩色纹理</p>
+<p>先删除原来在a文件夹里面保存的名字叫a1,a2,a3的3个RAW文件。</p>
+<p>这次创建新纹理还是用上面用过的文件夹和文件名，转换成立方图的方法也跟上面是一样的</p>
+<p>打开space engine，打开彩色纹理图片和滑稽表情图片，先抠出滑稽表情，在滑稽表情上操作</p>
+<p>先选择“裁剪工具”，裁剪滑稽表情上部分，不要裁剪到底部的文字水印，调节好裁切位置，按回车键。</p>
+<p>然后选择“魔棒工具”，在滑稽表情图片上的变色部分点击，这时候就能看到白色部分选中了，接着点“选择”菜单里面的“反选”这样，滑稽表情主体就被选中了，按Ctrl+J就抠出了滑稽表情，这时候滑稽表情就在图1，周边是透明的然后把扣出来的滑稽表情的图1选中。</p>
+<p>拖到彩色纹理素材上。</p>
+<p>选中拖到彩色纹理素材上的滑稽表情图层1，按Ctrl+Alt+T 可以打开变换，按住Shift+Alt键后，拖动变换上的4个小框框中的任何一个小方框，可以等比例缩放和放大滑稽表情。</p>
+<p>选中滑稽表情图层1，按Alt键后，鼠标左键拖动，就可以复制出一个滑稽表情，拖动多少次，就复制多少个。</p>
+<p>按照上面的制作好后，在图层1上右击选择“合并可见图层”，在该图层右边的灰色部分右击，合并图层。</p>
+<p>点“文件”菜单的“另存为选项”，把文件名改为a1</p>
+<p>把“保存类型”改成RAW,保存位置选前面创建好的名字叫a的文件夹里，在弹出的菜单里面选“确定”，这是制作好的叠加滑稽表情的彩色纹理RAW文件。</p>
+<p>(4)创建叠加了滑稽表情的凹凸纹理</p>
+<p>继续在这个彩色纹理文件上操作，点“图像”菜单里面的“调整”选项里面的“黑白”命令，这时候会弹出“黑白”对话框，直接点“确定”按钮就可以了，这样凹凸纹理就制作好了。接着点“文件”菜单的“另存为选项”，把文件名改为a2</p>
+<p>把“保存类型”改成RAW,保存位置选前面创建好的名字叫a的文件夹里，在弹出的菜单里面选“确定”，这是制作好的凹凸纹理RAW文件。</p>
+<p>(5)创建行星脚本，行星起名叫hjx</p>
+<p>按照上面说的创建xyj行星相关纹理文件夹的方法，创建hjx的相关纹理文件夹。</p>
+<p>在这个hjx行星脚本的Surface标签里面输入以下代码，其他的参数修改可以参考上面说的教程</p>
+<p>DiffMap &quot;hjx/Surface&quot;</p>
+<p>DiffTileSize 258</p>
+<p>DiffTileBorder 1</p>
+<p>BumpMap &quot;hjx/Bumap&quot;</p>
+<p>BumpTileSize 258</p>
+<p>BumpTileBorder 1</p>
+<p>BumpHeight 17</p>
+<p>BumpOffset 10</p>
+<p>DiffMapAlpha &quot;Water&quot;</p>
+<p>SpecBrightWater 0.35</p>
+<p>SpecBrightIce 0</p>
+<p>SpecularPower 55</p>
+<p>Hapke 0</p>
+<p>SpotBright 4</p>
+<p>SpotWidth 0.05</p>
+<p>DayAmbient 0.07</p>
+<p>输入后的脚本对照：</p>
+<p>(6)把叠加了滑稽表情的彩色纹理和凹凸纹理转换成立方体投影纹理</p>
+<p>转换方法跟上面讲过的是一样的，要注意default_cub里面设置的InputFile和OutFolder参数后面的录制，InputWidth和InputHeight参数后面RAW源文件的宽度和高度的像素大小，这些设置很重要的。</p>
+<p>比如我们这次制作的叠加后的彩色纹理和凹凸纹理的宽度和高度是4096X2048,所以，在InputWidth后面输入的是4096，InputHeight后面的是2048，</p>
+<p>以后输入其他制作的RAW文件都是要这样输入制作好后的RAW文件宽度和高度。因为凹凸纹理是在彩色纹理的文件上制作的，所以凹凸纹理和彩色纹理是一样的分辨率，的辉光纹理（城市夜景纹理）也是在彩色纹理上制作的，所以凹凸纹理，彩色纹理，辉光纹理都是一样的分辨率。</p>
+<p>你也可以把柱形纹理颜色在space engine里面编辑，或者叠加其他图案，只要不改变原来柱形投影的形状。</p>
+<p>制作好的滑稽表情行星的彩色纹理和凹凸纹理</p>
+<p>示范成果：</p>
+<p>4.使用其他柱形纹理制作城市夜景纹理。</p>
+<p>制作方法参考上面，是一样的做法，要注意的就是，凹凸纹理和彩色纹理是一样的，辉光纹理(夜景城市纹理)是在才是纹理上制作，而且制作的辉光纹理(夜景城市纹理)部分，最后保存到辉光纹理，不能在凹凸纹理和彩色纹理里保存辉光纹理(夜景城市纹理)部分。</p>
+<p>5.一些行星柱形投影纹理(行星地图)下载网站</p>
+<p>https://www.solarsystemscope.com/textures/</p>
+<p>https://visibleearth.nasa.gov/view_cat.php?categoryID=1484</p>
+<p>http://www.shadedrelief.com/natural3/pages/textures.html</p>
+<p>http://www.celestiamotherlode.net/catalog/show_creator_details.php?creator_id=10</p>
+<p>http://users.evtek.fi/~sampsara/3D/sphere_template_autodesk_3dsmax8/?C=M;O=A</p>
+<p>http://planetpixelemporium.com/earth.html</p>
+<p>http://stevealbers.net/albers/sos/sos.html</p>
+<p>​</p>
+<p>把链接复制到浏览器地址栏上，按回车键就可以看了</p>
+<p>宇宙模拟器space engine基础教程和高级教程+坐标等链接合集（附带0.980版本下载，汉化，基础使用教程）</p>
+<p>https://teakki.com/p/5c27525ac70db4ac4f2eb9ab</p>
+<p>1.宇宙模拟器Space Engine基础教程</p>
+<p>Space Engine创建天体（星球，星系，星云，星团等）和天体系统教程1：打包创建好的SE脚本成pak文件（MOD），分享和使用pak文件（MOD）的方法</p>
+<p>https://www.jianshu.com/p/ed94a412444e</p>
+<p>Space Engine创建天体（星球，星系，星云，星团等）和天体系统教程2: space engine文件夹和pak文件(MOD)，脚本组成和脚本创建详解</p>
+<p>https://www.jianshu.com/p/a46cb42b46a0</p>
+<p>Space Engine创建天体（星球，星系，星云，星团等）和天体系统教程3: 质心，恒星参数详解</p>
+<p>https://www.jianshu.com/p/9945d3bbee7e</p>
+<p>Space Engine创建天体（星球，星系，星云，星团等）和天体系统教程4：行星主要参数详解</p>
+<p>https://www.jianshu.com/p/1788f6181078</p>
+<p>Space Engine创建天体（星球，星系，星云，星团等）和天体系统教程5：行星的地表，海洋，云，熔岩，极光参数详解</p>
+<p>https://www.jianshu.com/p/59bd9ddef6f3</p>
+<p>Space Engine创建天体（星球，星系，星云，星团等）和天体系统教程6：生命，吸积盘，彗尾，行星环，日冕，大气参数详解</p>
+<p>https://www.jianshu.com/p/5da156edc306</p>
+<p>Space Engine创建天体（星球，星系，星云，星团等）和天体系统教程7：星系，星团，星云参数详解</p>
+<p>https://www.jianshu.com/p/82691a8d6174</p>
+<p>Space Engine创建天体（星球，星系，星云，星团等）和天体系统教程8: Space Engine自定义行星纹理(CubeMap软件)详解</p>
+<p>https://www.jianshu.com/p/fd919f94db5c</p>
+<p>2.宇宙模拟器Space Engine高级教程</p>
+<p>space engine教程1：把太阳换成其他类型的恒星</p>
+<p>https://www.jianshu.com/p/30a62fd99605</p>
+<p>space engine教程2：创建自定义太阳系系统，包括创建恒星，行星，卫星，小行星，彗星等（上）</p>
+<p>https://www.jianshu.com/p/eb332671ef35</p>
+<p>space engine教程2：创建自定义太阳系系统，包括创建恒星，行星，卫星，小行星，彗星等（下）</p>
+<p>https://www.jianshu.com/p/7177d2d892c9</p>
+<p>space engine教程3:创建多星系统，黑洞，流浪行星等</p>
+<p>https://www.jianshu.com/p/57c5dc8ea633</p>
+<p>space engine教程4:创建星系，星云，星团，以及中子星和白矮星</p>
+<p>https://www.jianshu.com/p/2b1598d771b4</p>
+<p>space engine教程5:创建碰撞星系，碰撞星云以及碰撞恒星和碰撞行星</p>
+<p>https://www.jianshu.com/p/cfdc79795c8c</p>
+<p>space engine教程6:创建虫洞和制作SE的VR视频和VR图片</p>
+<p>https://www.jianshu.com/p/293f7e9498a9</p>
+<p>space engine教程7:编辑行星和彗尾的颜色，改造星球和快速创建星球详解</p>
+<p>https://www.jianshu.com/p/5b8317ac524c</p>
+<p>space engine教程8:替换行星纹理和制作行星纹理</p>
+<p>https://www.jianshu.com/p/ecca7619e974</p>
+<p>space engine教程9:如何模拟地球附近的超新星爆炸和自定义星云模型等</p>
+<p>https://www.jianshu.com/p/a4319cb14723</p>
+<p>宇宙模拟器space engine教程10：  0.980下载,中文化,基础教程,高级教程</p>
+<p>https://www.jianshu.com/p/24384bb50db3</p>
+<p>space engine教程11:制作一键切换4K和8K分辨率的工具，在没有4K分辨率的电脑上，用于space engine里4K截图和4K录制视频以及8K截图，也可以用于space engine的4K VR/360度全景截图和录制4K VR/360度全景视频</p>
+<p>https://www.jianshu.com/p/46bcb2cb8101</p>
+<p>space engine教程12：spaceengine的发现和技巧总结第1期</p>
+<p>https://www.jianshu.com/p/5c25a4096976</p>
+<p>space engine教程13：space engine里面用到的轨道和坐标总结</p>
+<p>https://www.jianshu.com/p/3f29c0c96ed1</p>
+<p>宇宙模拟器Space Engine番外1：Space Engine0.980好看的星球，星系，星云等，奇特的天体等坐标分享</p>
+<p>https://www.jianshu.com/p/9505dd69ebf5</p>
+<p>space engine教程14：创建行星城市夜景纹理教程（辉光纹理），彩色纹理和凹凸纹理教程</p>
+<p>https://www.jianshu.com/p/dd0749b3feec</p>
+<p>请关注这个简书，后续会出更多关于space engine的教程</p>
+<p>​</p>
+<p>space engine百科介绍</p>
+<p>https://baike.baidu.com/item/Space%20Engine/12009594?fr=aladdin</p>
+<p>宇宙模拟器space engine官网</p>
+<p>http://spaceengine.org/</p>
+<p>space engineTODO，介绍了目前space engine已经实现的天文功能和未来计划开发的天文功能</p>
+<p>http://forum.spaceengine.org/viewtopic.php?f=6&amp;t=72</p>
+<p>宇宙模拟器space engine 0.990新增功能，新增天体，改进和优化功能和总结</p>
+<p>https://teakki.com/p/5c2da19bc70db4ac4f306f20​​​​</p></section>
+<section class="floor"><span class="fl">#2</span><p>打破0回复。。。 ls 一定是疯了。。</p></section>
+<aside class="related"><h2>同版块相关攻略</h2><ul>
+<li><a href="../t/2150536.html">Space Engine创建天体8: Space Engine自定义行星纹理(CubeMap软件)...</a></li>
+<li><a href="../t/2150505.html">宇宙模拟器Space Engine创建天体和天体系统教程7：星系，星...</a></li>
+<li><a href="../t/2150504.html">Space Engine创建天体和天体系统教程6：吸积盘，彗尾，行星...</a></li>
+<li><a href="../t/2150601.html">space engine教程15：地球化月球，火星等行星和卫星的教程</a></li>
+<li><a href="../t/2151577.html">宇宙模拟器Space Engine 0.990教程2：基本设置，浏览观光，天...</a></li>
+<li><a href="../t/2150514.html">宇宙模拟器space engine基础教程和高级教程+坐标等链接合集...</a></li>
+<li><a href="../t/2150678.html">space engine教程16：创建新的行星环纹理（模型）</a></li>
+<li><a href="../t/2151578.html">宇宙模拟器Space Engine 0.990教程3:截图和视频录制，VR截图和...</a></li>
+</ul></aside>
+</article>
+<footer class="site">
+<p><strong>关于本站</strong>：这是对已关站的太空游戏社区 <b>深度时空 bbs.deeptimes.net</b> 的非官方社区存档，
+内容取自 <a href="https://web.archive.org/web/*/bbs.deeptimes.net" rel="nofollow">Wayback Machine</a> 公开存档，
+<b>版权归各原作者所有</b>，帖内保留了原作者署名与发帖时间。仅供游戏玩家学习交流与资料保存之用。</p>
+<p>如您是原作者或原站长，希望某内容下架或补充署名，请提交 GitHub Issue，我们会尽快处理。</p>
+<p class="muted">Archive of the defunct Chinese space-game forum DeepTimes (bbs.deeptimes.net). Content © original authors. Preservation mirror.</p>
+</footer></body></html>

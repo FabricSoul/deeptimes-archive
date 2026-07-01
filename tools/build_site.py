@@ -28,7 +28,16 @@ SECTIONS = {
  "星际之狼/3(Star Wolves)": ("star-wolves","星际之狼 3（Star Wolves）"),
  "自由枪骑兵 Freelancer Online": ("freelancer","自由枪骑兵（Freelancer）"),
  "自由枪骑兵(FreeLancer)区": ("freelancer","自由枪骑兵（Freelancer）"),
+ "太空游戏综合区": ("space-games-general","太空游戏综合区（Space Games General）"),
+ "其他科幻游戏综合区": ("other-scifi-games","其他科幻游戏综合区（Other Sci-Fi Games）"),
+ "太空/科幻游戏 前沿科学 新闻发布": ("space-scifi-news","太空/科幻游戏 · 前沿科学新闻（News）"),
+ "综合讨论区": ("general-discussion","综合讨论区（General Discussion）"),
+ "X3: 地球人模组脚本区(TC/AP MOD&Scripts)": ("x3-tc-ap-mods","X3：地球人冲突/阿尔比恩序曲 模组脚本（TC/AP MOD & Scripts）"),
+ "X3: 重聚模组脚本区(Reunion MOD&Scripts)": ("x3-reunion-mods","X3：重聚 模组脚本（Reunion MOD & Scripts）"),
+ "X: 重生模组脚本(X: Rebirth MOD&Scripts)": ("x-rebirth-mods","X：重生 模组脚本（X: Rebirth MOD & Scripts）"),
+ "深度时空官方游戏正版游戏店": ("official-store","深度时空官方正版游戏店（Official Store）"),
 }
+SKIP_SECTIONS = {"提示信息", "Discuz! Board", ""}  # Discuz 系统/错误页，非内容
 def slugify(s):
     s=re.sub(r"[^A-Za-z0-9]+","-",s).strip("-").lower()
     return s or "x"
@@ -57,9 +66,13 @@ def parse_file(path):
     raw=open(path,"rb").read().decode("utf-8","replace")
     mt=re.search(r"<title>(.*?)</title>",raw,re.S)
     if not mt: return None
-    parts=[p.strip() for p in html.unescape(mt.group(1)).split(" - ")]
-    title=parts[0] if parts else ""
-    section=parts[1] if len(parts)>2 else "综合"
+    parts=[p.strip() for p in html.unescape(mt.group(1)).split(" - ") if p.strip()]
+    # 结构固定为: 标题 - 版块 - 深度时空宇宙/太空游戏社区 - Powered by Discuz!
+    # 版块永远是倒数第三段；标题可能自身含 " - "，故取前面全部
+    if len(parts)>=3:
+        section=parts[-3]; title=" - ".join(parts[:-3]) or parts[0]
+    else:
+        title=parts[0] if parts else ""; section="综合"
     posts=re.findall(r'id="postmessage_\d+"[^>]*>(.*?)</td>',raw,re.S)
     floors=[t for t in (strip_tags(p) for p in posts) if len(t)>4]
     # 作者/日期(尽力)
@@ -94,6 +107,7 @@ for tid,d in threads.items():
         author=author or a; date=date or dt
         floors+=fl
     if not title or not floors: continue
+    if (section or "").strip() in SKIP_SECTIONS: continue
     body_chars=sum(len(re.sub(r"\s","",f)) for f in floors)
     docs.append({"tid":tid,"title":title,"section":section or "综合","floors":floors,
                  "author":author,"date":date,"chars":body_chars,"ts":d["ts"]})
@@ -322,6 +336,6 @@ open(f"{ROOT}/llms.txt","w",encoding="utf-8").write("\n".join(ll))
 open(f"{ROOT}/.nojekyll","w").write("")
 open(f"{ROOT}/404.html","w",encoding="utf-8").write(head("页面未找到｜深度时空存档","404","/",  "")+ '<h1>页面未找到</h1><p><a href="/deeptimes-archive/">返回首页</a></p>'+FOOTER)
 
-print(f"生成完成：{len(docs)} 帖 / {len(by_sec)} 版块 / sitemap {len(sitemap)+1} 条 / noindex {len(docs)-len(sitemap)} 篇薄内容")
-print("版块分布:")
-for slug in sec_order: print(f"  {slug}: {len(by_sec[slug])}")
+print(f"生成完成：{len(docs)} 帖 / {len(by_sec)} 版块 / sitemap 条目 {len(sitemap)+1}")
+print("版块分布(slug : 数量 [原始中文版块名]):")
+for slug in sec_order: print(f"  {slug}: {len(by_sec[slug])}  [{by_sec[slug][0]['section']}]")

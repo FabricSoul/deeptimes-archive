@@ -1,0 +1,367 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>宇宙模拟器Space Engine创建天体和天体系统教程7：星系，星...｜太空引擎攻略｜深度时空存档</title>
+<meta name="description" content="宇宙模拟器Space Engine创建天体（星球，星系，星云，星团等）和天体系统教程7：星系，星团，星云参数详解 本篇教程主要来自space engine 官方手册的翻译和一些参考资料，在教程结尾我会附上相关的教程和资料链接 把链接复制到浏览器地址栏上，按回车键就可以看了 关于宇宙模拟器Space ">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://fabricsoul.github.io/deeptimes-archive/t/2150505.html">
+<meta property="og:type" content="website"><meta property="og:site_name" content="深度时空太空游戏攻略存档">
+<meta property="og:title" content="宇宙模拟器Space Engine创建天体和天体系统教程7：星系，星...｜太空引擎攻略｜深度时空存档"><meta property="og:description" content="宇宙模拟器Space Engine创建天体（星球，星系，星云，星团等）和天体系统教程7：星系，星团，星云参数详解 本篇教程主要来自space engine 官方手册的翻译和一些参考资料，在教程结尾我会附上相关的教程和资料链接 把链接复制到浏览器地址栏上，按回车键就可以看了 关于宇宙模拟器Space ">
+<meta property="og:url" content="https://fabricsoul.github.io/deeptimes-archive/t/2150505.html"><meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "DiscussionForumPosting", "headline": "宇宙模拟器Space Engine创建天体和天体系统教程7：星系，星...", "articleBody": "本帖最后由 星际体验 于 2019-3-12 21:41 编辑 \n\n宇宙模拟器Space Engine创建天体（星球，星系，星云，星团等）和天体系统教程7：星系，星团，星云参数详解\n\r\n\n\r\n本篇教程主要来自space engine 官方手册的翻译和一些参考资料，在教程结尾我会附上相关的教程和资料链接\n\r\n\n\r\n把链接复制到浏览器地址栏上，按回车键就可以看了\n\r\n关于宇宙模拟器Space Engine的天体（星球，星系，星云，星团等）脚本参数，如何创建天体（星球，星系，星云，星团等）的脚本，请看这些教程\n\r\nspace engine打包创建好的SE脚本成pak文件（MOD），分享和使用pak文件（MOD）的方法\n\r\nhttps://weibo.com/ttarticle/p/show?id=2309404323664098104088\n\r\nspace engine文件夹和pak（MOD）文件，脚本组成和脚本创建详解\n\r\nhttps://weibo.com/ttarticle/p/sh ... 6&mod=zwenzhang\n\r\nspace engine 质心，恒星参数详解\n\r\nhttps://weibo.com/ttarticle/p/sh ... 0&mod=zwenzhang\n\r\nspace engine 行星主要参数详解\n\r\nhttps://weibo.com/ttarticle/p/sh ... 1&mod=zwenzhang\n\r\nspace engine 行星的地表，海洋，云，熔岩，极光参数详解\n\r\nhttps://weibo.com/ttarticle/p/sh ... 2&mod=zwenzhang\n\r\nspace engine 生命，吸积盘，彗尾，行星环，日冕，大气参数详解\n\r\nhttps://weibo.com/ttarticle/p/sh ... 5&mod=zwenzhang\n\r\nspace engine星系，星团，星云参数详解\n\r\nhttps://weibo.com/ttarticle/p/sh ... 2&mod=zwenzhang\n\r\nspace engine自定义行星纹理(CubeMap软件)详解\n\r\nhttps://weibo.com/ttarticle/p/show?id=2309404327985812526871\n\r\n\n\r\n星系、星团和星云都有类似的目录文件格式。它们分别存储在虚拟文件夹catalogs/galaxy ，\n\r\ncatalogs/clusterscata，ogs/nebuale/中。要添加新对象，请在addons文件夹中所需的\n\r\n子文件夹中创建sc文件，并在其中键入脚本(参见下面)。可以在sc文件中添加多个对象脚本。\n\r\n\n\r\n还可以为星系或星云创建自定义3D模型。否则Space Engine将使用标准模型之一，根据对象的\n\r\n类型将其分配给对象。你可以制作一个自定义的模型，并将其分配给一个特定的星系/星云，\n\r\n或者告诉SE以程序的方式分配给所有具有特定类型的星系/星云(例如，“Sa”星系)\n\r\n还可以修改标准模型。\n\r\n\n\r\n注意:在0.980版本的Space Engine不支持星系和星云的程序生成，因此所有星系/星云都使用标准模型之一。\n\r\n如果你为星系/星云的类型添加新的模型，Space Engine中这些对象的一部分将使用您的模型。\n\r\n0.990版本的Space Engine支持3D体积星云的程序生成，可以选择模型。\n\r\n\n\r\n默认太空引擎安装中的大多数星系都存储在csv文件data/catalogs/Catalogs0980.pak/ galaxy \n\r\n/NGC-IC.csv中。这是NGC/IC星系目录大约有10000个星系。其他一些星系存储在同一个系统pak文件中\n\r\n的少数sc文件中。不应该以任何方式修改或更改这些默认文件。如果您想要更新一个星系，删除它，\n\r\n或者添加一个新的星系，请在addons/catalogs/ galaxy /文件夹中创建您自己的sc或csv文件。\n\r\nSpace Engine有脚本选项，可以修改和删除默认目录中的对象，或者添加新的对象\n\r\n\n\r\n目录的csv格式旨在创建具有类似数据的大型对象列表。它比sc更紧凑，加载速度更快，但是对可以\n\r\n在其中指定的数据类型有限制。它只是一个用逗号分隔值的表。sc格式旨在指定SE可以用来描述对象\n\r\n的任何可能的数据。它是一种类似脚本的文本，带有用于描述对象及其各种参数的“标记”。\n\r\n首先，我们将描述sc文件格式。\n\r\n\n\r\n1.星系,星团,星云 共同通用的参数\n\r\nRA  赤经，以小时为单位，十进制格式表示为HH MM SS.SSS\n\r\nDec 赤纬，以度数为单位，十进制格式表示为DD MM SS.SSS\n\r\nDist 离太阳的距离\n\r\n参数RA、Dec、Dist可以在SE编辑模式下进行调整\n\r\nYaw, Pitch, Roll 偏航，俯仰，滚转，物体的欧拉方向角\n\r\nAxis 轴，物体在轴角格式中的方向\n\r\nQuat 四元数，对象的方向四元数\n\r\nT可以在编辑模式下在SE中调整方向参数，如果未指定它们，则会在程序上生成它们。\n\r\nLum, Luminosity 光度，以太阳光度为单位的物体的光度\n\r\nAppMagn 视星等\n\r\nAbsMagn 绝对星等\n\r\nRadius  以秒差距作为单位的物体的半径\n\r\n\n\r\n2.星系,星团,星云脚本细节\n\r\n在此之前，我们将描述所有可用于描述星系、星团和星云的参数。它们非常相似，尽管某些参数仅允许用于\n\r\n特定类型的对象。还要记住，你必须在星系目录中描述一个星系，在星云或星团目录中是不允许的。对于\n\r\n星云和星团也是如此。在SE脚本的介绍中已经注意到这一点:\n\r\nGalaxy catalogs */catalogs/galaxies/*.sc   只能有Galaxy和Quasar标签\n\r\nStar cluster catalogs */catalogs/clusters/*.sc  只能有Cluster标签\n\r\nNebula catalogs */catalogs/nebuale/*.sc   只能有Nebula标签\n\r\n\n\r\n3.Galaxy 星系，参数详解\n\r\n星系、星团和星云都有很多种目录文件格式。它们的区别仅在于磁盘上的位置、主标记名称和仅针对某些\n\r\n类型的对象的一些特定参数。\n\r\n\n\r\n假设您想创建一个名为“MyGalaxy”的新星系。转到addons/catalogs\n\r\n/ galaxy / directory(如果不存在就创建它)并在那里创建一个新的文本文档。重命名为mygalaxy。\n\r\nsc(文件名不重要，但要确保它不匹配某些现有文件，否则您的文件将覆盖它)。\n\r\n\n\r\n在galaxy目录中，您只能使用这两个标记来添加新对象或修改旧对象：\n\r\nGalaxy  \"name\"{ }   添加/修改星系，\n\r\nQuasar  \"name\"{ }   添加/修改类星体\n\r\n注意，在0.980版本的SpaceEngine类星体中，与常规星系没有区别（除了界面中的显示信息）。\n\r\n要添加新星系或修改目录中已经描述的星系，只需在星系脚本中定义具有相同名称的新对象(星系或类星体)。\n\r\nSpace Engine将使用新数据更新旧对象(也可以更改其类型- from)\n\r\n\n\r\nType  在星系脚本中指定星系的形态类型\n\r\n在星系目录中，它是哈勃星系的形态类型。允许的类型有:\n\r\n输入到Type后面的\"\"里面，注意大小写，输入\"\"符号，需要在英文状态下，按shift+\"键2次输入\n\r\n椭圆星系  \"E0\", \"E1\", \"E2\", \"E3\", \"E4\", \"E5\", \"E6\", \"E7\" \n\r\n透镜状星系 \"S0\" \n\r\n旋涡星系 \"Sa”, \"Sb\", \"Sc\", \"Sd\"\n\r\n棒旋星系 \"SBa\", \"SBb\", \"SBc\"\n\r\n不规则的星系 \"Irr\"\n\r\nModelBright  星系3D模型的整体亮度。默认值是1\n\r\nSolFade true 如果指定，在太阳附近产生的程序性物体(恒星、星团和星云)将被抑制。因此，从太阳系看去，\n\r\n没有比8.1级更亮的可见程序天体。这样做是为了防止从太阳系看时真实星座外观的变化。\n\r\n可以通过config/main-user.cfg文件中的参数starmaxappmagn、clustermaxappmagn和neblamaxappmagn来调整此限制大\n\r\n\n\r\n小\n\r\n\n\r\n星系目录的CSV格式, \n\r\nSpace Engine支持大质量恒星和星系目录的csv(“逗号分隔值”)格式。它是一种纯文本格式，每\n\r\n\n\r\n行描述\n\r\n一个星系，值以逗号分隔。默认的太空引擎安装有一个csv星系目录- data/catalogs/Catalogs0980.pak/ galaxy \n\r\n\n\r\n/NGC-IC.csv，\n\r\n有10896个星系，大小(未打包)只有1.3 MB。csv格式比sc更紧凑，但有一些限制:\n\r\n只能描述星系，不允许使用类星体\n\r\n仅允许这些参数：名称，类型，RA，Dec，Dist，AbsMagn，Radius，Quat\n\r\n文件格式很简单：第一行是带有参数名称的标题（用逗号分隔），其余行是带有数据的星系相应参数的值\n\r\n注意，星系名称和它的哈勃类型没有引号。允许某些参数缺少数据:只保留这些参数为空，但是仍然需要用逗号分隔它们\n\r\n\n\r\n。\n\r\n\n\r\ncsv目录比sc目录具有优先级，即首先加载它们。但是，恒星解算器接受文件/pak修改日期来执行星型数据合并或更新。\n\r\nconfig/main-user.cfg文件中的config file参数csvloglevel控制所有csv文件的star solver日志级别。\n\r\n\n\r\n4.Cluster 星团，参数详解\n\r\n可以通过相同的方式添加/修改星团。转到addons/catalogs/clusters/directory（如果不存在则创建它），\n\r\n然后在那里创建一个新的文本文档。将其重命名为mycluster.sc（文件名无关紧要）\n\r\nclusters \"name\" { } 添加/修改星团\n\r\nType  在星团脚本中指定星系的形态类型\n\r\n在星团目录中，允许的类型有:\n\r\n输入到Type后面的\"\"里面，注意大小写，输入\"\"符号，需要在英文状态下，按shift+\"键2次输入\n\r\n\"Globular\" 球状星团\n\r\n\"Open\" 疏散星团\n\r\n\"Kern\" 星系中心星团(特殊类型，用于表示星系中心)\n\r\n\"Part\" 星系的一部分(没有恒星的特殊类型，用来代表像m24这样的恒星云——人马座恒星云)\n\r\nGalaxy  这个星团所属星系的名称，比如一个位于银河系的星团，示范代码 Galaxy “Milky Way”\n\r\nAge  星团的年龄，以百万计年为单位。影响程序恒星的生成(年轻的星团有更多的蓝色恒星，年长的星团有更多的红巨星\n\r\n\n\r\n)\n\r\nCenPow 定义星团中心恒星“聚类”数量的参数。值越大（>1）聚类集中，值越小（<1）聚类模糊\n\r\nNStars  星团中的恒星数量，只能用于疏散星团。要禁用程序恒星，需要指定0:NStars 0(用于昂宿星和其他在恒星目录\n\r\n\n\r\n中已经\n\r\n有恒星的星团)。在生成一个疏散星团模型时，Space Engine对生成的恒星的光度进行累加，当累加到星团的光度时停止\n\r\n\n\r\n生成。所以实际的恒星数可能比NStars指定的要少。\n\r\nColor  粒子颜色的RGB向量，当相机远离时，渲染粒子而不是星团模型。要禁用此粒子，\n\r\n需要将其设置为black:color（0 0 0）（适用于大型或非常接近的星团）。如果未指定，将按程序生成。\n\r\n\n\r\n5.Nebula 星云，参数详解\n\r\n以通过相同的方式添加/修改星云。 转到addons / catalogs / nebulae /", "author": {"@type": "Person", "name": "星际体验"}, "url": "https://fabricsoul.github.io/deeptimes-archive/t/2150505.html", "inLanguage": "zh-CN", "about": "太空引擎（Space Engine）", "isPartOf": {"@type": "WebSite", "name": "深度时空太空游戏攻略存档", "url": "https://fabricsoul.github.io/deeptimes-archive/"}, "commentCount": 0, "datePublished": "2019-1-6"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "首页", "item": "https://fabricsoul.github.io/deeptimes-archive/"}, {"@type": "ListItem", "position": 2, "name": "太空引擎", "item": "https://fabricsoul.github.io/deeptimes-archive/s/space-engine.html"}, {"@type": "ListItem", "position": 3, "name": "宇宙模拟器Space Engine创建天体和天体系统教程7：星系，星...", "item": "https://fabricsoul.github.io/deeptimes-archive/t/2150505.html"}]}</script>
+</head><body>
+<header class="site"><a href="../index.html" class="brand">深度时空 · 太空游戏攻略存档</a>
+<span class="tag">DeepTimes Space Game Archive</span></header>
+<nav class="crumb"><a href="../index.html">首页</a> › <a href="../s/space-engine.html">太空引擎</a> › <span>宇宙模拟器Space Engine创建天体和天体系统教程7：星系，星...</span></nav>
+<article><h1>宇宙模拟器Space Engine创建天体和天体系统教程7：星系，星...</h1>
+<p class="src">原作者：星际体验　发表：2019-1-6　来源：bbs.deeptimes.net（已关站）· <a href="https://web.archive.org/web/20191121011953/https://bbs.deeptimes.net/forum.php?mod=viewthread&tid=2150505" rel="nofollow">Wayback 存档</a></p>
+<section class="floor"><span class="fl">#1</span><p>本帖最后由 星际体验 于 2019-3-12 21:41 编辑 </p>
+<p>宇宙模拟器Space Engine创建天体（星球，星系，星云，星团等）和天体系统教程7：星系，星团，星云参数详解</p>
+<p>本篇教程主要来自space engine 官方手册的翻译和一些参考资料，在教程结尾我会附上相关的教程和资料链接</p>
+<p>把链接复制到浏览器地址栏上，按回车键就可以看了</p>
+<p>关于宇宙模拟器Space Engine的天体（星球，星系，星云，星团等）脚本参数，如何创建天体（星球，星系，星云，星团等）的脚本，请看这些教程</p>
+<p>space engine打包创建好的SE脚本成pak文件（MOD），分享和使用pak文件（MOD）的方法</p>
+<p>https://weibo.com/ttarticle/p/show?id=2309404323664098104088</p>
+<p>space engine文件夹和pak（MOD）文件，脚本组成和脚本创建详解</p>
+<p>https://weibo.com/ttarticle/p/sh ... 6&amp;mod=zwenzhang</p>
+<p>space engine 质心，恒星参数详解</p>
+<p>https://weibo.com/ttarticle/p/sh ... 0&amp;mod=zwenzhang</p>
+<p>space engine 行星主要参数详解</p>
+<p>https://weibo.com/ttarticle/p/sh ... 1&amp;mod=zwenzhang</p>
+<p>space engine 行星的地表，海洋，云，熔岩，极光参数详解</p>
+<p>https://weibo.com/ttarticle/p/sh ... 2&amp;mod=zwenzhang</p>
+<p>space engine 生命，吸积盘，彗尾，行星环，日冕，大气参数详解</p>
+<p>https://weibo.com/ttarticle/p/sh ... 5&amp;mod=zwenzhang</p>
+<p>space engine星系，星团，星云参数详解</p>
+<p>https://weibo.com/ttarticle/p/sh ... 2&amp;mod=zwenzhang</p>
+<p>space engine自定义行星纹理(CubeMap软件)详解</p>
+<p>https://weibo.com/ttarticle/p/show?id=2309404327985812526871</p>
+<p>星系、星团和星云都有类似的目录文件格式。它们分别存储在虚拟文件夹catalogs/galaxy ，</p>
+<p>catalogs/clusterscata，ogs/nebuale/中。要添加新对象，请在addons文件夹中所需的</p>
+<p>子文件夹中创建sc文件，并在其中键入脚本(参见下面)。可以在sc文件中添加多个对象脚本。</p>
+<p>还可以为星系或星云创建自定义3D模型。否则Space Engine将使用标准模型之一，根据对象的</p>
+<p>类型将其分配给对象。你可以制作一个自定义的模型，并将其分配给一个特定的星系/星云，</p>
+<p>或者告诉SE以程序的方式分配给所有具有特定类型的星系/星云(例如，“Sa”星系)</p>
+<p>还可以修改标准模型。</p>
+<p>注意:在0.980版本的Space Engine不支持星系和星云的程序生成，因此所有星系/星云都使用标准模型之一。</p>
+<p>如果你为星系/星云的类型添加新的模型，Space Engine中这些对象的一部分将使用您的模型。</p>
+<p>0.990版本的Space Engine支持3D体积星云的程序生成，可以选择模型。</p>
+<p>默认太空引擎安装中的大多数星系都存储在csv文件data/catalogs/Catalogs0980.pak/ galaxy </p>
+<p>/NGC-IC.csv中。这是NGC/IC星系目录大约有10000个星系。其他一些星系存储在同一个系统pak文件中</p>
+<p>的少数sc文件中。不应该以任何方式修改或更改这些默认文件。如果您想要更新一个星系，删除它，</p>
+<p>或者添加一个新的星系，请在addons/catalogs/ galaxy /文件夹中创建您自己的sc或csv文件。</p>
+<p>Space Engine有脚本选项，可以修改和删除默认目录中的对象，或者添加新的对象</p>
+<p>目录的csv格式旨在创建具有类似数据的大型对象列表。它比sc更紧凑，加载速度更快，但是对可以</p>
+<p>在其中指定的数据类型有限制。它只是一个用逗号分隔值的表。sc格式旨在指定SE可以用来描述对象</p>
+<p>的任何可能的数据。它是一种类似脚本的文本，带有用于描述对象及其各种参数的“标记”。</p>
+<p>首先，我们将描述sc文件格式。</p>
+<p>1.星系,星团,星云 共同通用的参数</p>
+<p>RA  赤经，以小时为单位，十进制格式表示为HH MM SS.SSS</p>
+<p>Dec 赤纬，以度数为单位，十进制格式表示为DD MM SS.SSS</p>
+<p>Dist 离太阳的距离</p>
+<p>参数RA、Dec、Dist可以在SE编辑模式下进行调整</p>
+<p>Yaw, Pitch, Roll 偏航，俯仰，滚转，物体的欧拉方向角</p>
+<p>Axis 轴，物体在轴角格式中的方向</p>
+<p>Quat 四元数，对象的方向四元数</p>
+<p>T可以在编辑模式下在SE中调整方向参数，如果未指定它们，则会在程序上生成它们。</p>
+<p>Lum, Luminosity 光度，以太阳光度为单位的物体的光度</p>
+<p>AppMagn 视星等</p>
+<p>AbsMagn 绝对星等</p>
+<p>Radius  以秒差距作为单位的物体的半径</p>
+<p>2.星系,星团,星云脚本细节</p>
+<p>在此之前，我们将描述所有可用于描述星系、星团和星云的参数。它们非常相似，尽管某些参数仅允许用于</p>
+<p>特定类型的对象。还要记住，你必须在星系目录中描述一个星系，在星云或星团目录中是不允许的。对于</p>
+<p>星云和星团也是如此。在SE脚本的介绍中已经注意到这一点:</p>
+<p>Galaxy catalogs */catalogs/galaxies/*.sc   只能有Galaxy和Quasar标签</p>
+<p>Star cluster catalogs */catalogs/clusters/*.sc  只能有Cluster标签</p>
+<p>Nebula catalogs */catalogs/nebuale/*.sc   只能有Nebula标签</p>
+<p>3.Galaxy 星系，参数详解</p>
+<p>星系、星团和星云都有很多种目录文件格式。它们的区别仅在于磁盘上的位置、主标记名称和仅针对某些</p>
+<p>类型的对象的一些特定参数。</p>
+<p>假设您想创建一个名为“MyGalaxy”的新星系。转到addons/catalogs</p>
+<p>/ galaxy / directory(如果不存在就创建它)并在那里创建一个新的文本文档。重命名为mygalaxy。</p>
+<p>sc(文件名不重要，但要确保它不匹配某些现有文件，否则您的文件将覆盖它)。</p>
+<p>在galaxy目录中，您只能使用这两个标记来添加新对象或修改旧对象：</p>
+<p>Galaxy  &quot;name&quot;{ }   添加/修改星系，</p>
+<p>Quasar  &quot;name&quot;{ }   添加/修改类星体</p>
+<p>注意，在0.980版本的SpaceEngine类星体中，与常规星系没有区别（除了界面中的显示信息）。</p>
+<p>要添加新星系或修改目录中已经描述的星系，只需在星系脚本中定义具有相同名称的新对象(星系或类星体)。</p>
+<p>Space Engine将使用新数据更新旧对象(也可以更改其类型- from)</p>
+<p>Type  在星系脚本中指定星系的形态类型</p>
+<p>在星系目录中，它是哈勃星系的形态类型。允许的类型有:</p>
+<p>输入到Type后面的&quot;&quot;里面，注意大小写，输入&quot;&quot;符号，需要在英文状态下，按shift+&quot;键2次输入</p>
+<p>椭圆星系  &quot;E0&quot;, &quot;E1&quot;, &quot;E2&quot;, &quot;E3&quot;, &quot;E4&quot;, &quot;E5&quot;, &quot;E6&quot;, &quot;E7&quot; </p>
+<p>透镜状星系 &quot;S0&quot; </p>
+<p>旋涡星系 &quot;Sa”, &quot;Sb&quot;, &quot;Sc&quot;, &quot;Sd&quot;</p>
+<p>棒旋星系 &quot;SBa&quot;, &quot;SBb&quot;, &quot;SBc&quot;</p>
+<p>不规则的星系 &quot;Irr&quot;</p>
+<p>ModelBright  星系3D模型的整体亮度。默认值是1</p>
+<p>SolFade true 如果指定，在太阳附近产生的程序性物体(恒星、星团和星云)将被抑制。因此，从太阳系看去，</p>
+<p>没有比8.1级更亮的可见程序天体。这样做是为了防止从太阳系看时真实星座外观的变化。</p>
+<p>可以通过config/main-user.cfg文件中的参数starmaxappmagn、clustermaxappmagn和neblamaxappmagn来调整此限制大</p>
+<p>小</p>
+<p>星系目录的CSV格式, </p>
+<p>Space Engine支持大质量恒星和星系目录的csv(“逗号分隔值”)格式。它是一种纯文本格式，每</p>
+<p>行描述</p>
+<p>一个星系，值以逗号分隔。默认的太空引擎安装有一个csv星系目录- data/catalogs/Catalogs0980.pak/ galaxy </p>
+<p>/NGC-IC.csv，</p>
+<p>有10896个星系，大小(未打包)只有1.3 MB。csv格式比sc更紧凑，但有一些限制:</p>
+<p>只能描述星系，不允许使用类星体</p>
+<p>仅允许这些参数：名称，类型，RA，Dec，Dist，AbsMagn，Radius，Quat</p>
+<p>文件格式很简单：第一行是带有参数名称的标题（用逗号分隔），其余行是带有数据的星系相应参数的值</p>
+<p>注意，星系名称和它的哈勃类型没有引号。允许某些参数缺少数据:只保留这些参数为空，但是仍然需要用逗号分隔它们</p>
+<p>。</p>
+<p>csv目录比sc目录具有优先级，即首先加载它们。但是，恒星解算器接受文件/pak修改日期来执行星型数据合并或更新。</p>
+<p>config/main-user.cfg文件中的config file参数csvloglevel控制所有csv文件的star solver日志级别。</p>
+<p>4.Cluster 星团，参数详解</p>
+<p>可以通过相同的方式添加/修改星团。转到addons/catalogs/clusters/directory（如果不存在则创建它），</p>
+<p>然后在那里创建一个新的文本文档。将其重命名为mycluster.sc（文件名无关紧要）</p>
+<p>clusters &quot;name&quot; { } 添加/修改星团</p>
+<p>Type  在星团脚本中指定星系的形态类型</p>
+<p>在星团目录中，允许的类型有:</p>
+<p>输入到Type后面的&quot;&quot;里面，注意大小写，输入&quot;&quot;符号，需要在英文状态下，按shift+&quot;键2次输入</p>
+<p>&quot;Globular&quot; 球状星团</p>
+<p>&quot;Open&quot; 疏散星团</p>
+<p>&quot;Kern&quot; 星系中心星团(特殊类型，用于表示星系中心)</p>
+<p>&quot;Part&quot; 星系的一部分(没有恒星的特殊类型，用来代表像m24这样的恒星云——人马座恒星云)</p>
+<p>Galaxy  这个星团所属星系的名称，比如一个位于银河系的星团，示范代码 Galaxy “Milky Way”</p>
+<p>Age  星团的年龄，以百万计年为单位。影响程序恒星的生成(年轻的星团有更多的蓝色恒星，年长的星团有更多的红巨星</p>
+<p>)</p>
+<p>CenPow 定义星团中心恒星“聚类”数量的参数。值越大（&gt;1）聚类集中，值越小（&lt;1）聚类模糊</p>
+<p>NStars  星团中的恒星数量，只能用于疏散星团。要禁用程序恒星，需要指定0:NStars 0(用于昂宿星和其他在恒星目录</p>
+<p>中已经</p>
+<p>有恒星的星团)。在生成一个疏散星团模型时，Space Engine对生成的恒星的光度进行累加，当累加到星团的光度时停止</p>
+<p>生成。所以实际的恒星数可能比NStars指定的要少。</p>
+<p>Color  粒子颜色的RGB向量，当相机远离时，渲染粒子而不是星团模型。要禁用此粒子，</p>
+<p>需要将其设置为black:color（0 0 0）（适用于大型或非常接近的星团）。如果未指定，将按程序生成。</p>
+<p>5.Nebula 星云，参数详解</p>
+<p>以通过相同的方式添加/修改星云。 转到addons / catalogs / nebulae /目录（如果它不存在则创建它）</p>
+<p>并在那里创建一个新的文本文档。 将其重命名为mynebula.sc（文件名无关紧要）</p>
+<p>nebulae &quot;name&quot; { } 添加/修改星云</p>
+<p>还可以删除先前定义的galaxy / quasar / cluster / nebula（即某些旧目录文件中定义的对象）。</p>
+<p>在相应的sc文件中使用此参数（即在galaxy目录中删除星系，依此类推）：</p>
+<p>Remove &quot;name” 删除先前定义的对象</p>
+<p>Type  在星云脚本中指定星系的形态类型</p>
+<p>在星云目录中，允许的类型有:</p>
+<p>输入到Type后面的&quot;&quot;里面，注意大小写，输入&quot;&quot;符号，需要在英文状态下，按shift+&quot;键2次输入</p>
+<p>&quot;Diffuse&quot; 弥漫星云</p>
+<p>&quot;Planetary&quot; 行星状星云</p>
+<p>&quot;SNR&quot; 超新星遗迹</p>
+<p>Galaxy  这个星云所属星系的名称，比如一个位于银河系的星团，示范代码 Nebula “Milky Way”</p>
+<p>6.使用编辑模式</p>
+<p>在Space Engine中，可以使用编辑模式调整对象的坐标、方向和大小。要进入编辑模式，请按按钮两次。</p>
+<p>提示表将出现在屏幕的左下角。使用其中列出的击键，您可以调整所选对象的参数。</p>
+<p>RA, Dec, distance, radius and orientation (Axis and Quat)的值显示在屏幕左上角的对象信息表中</p>
+<p>(不要忘记在用户设置菜单中将长度单位切换到秒差距)。</p>
+<p>为了准确调整物体相对于真实恒星的视觉位置和方向(参考望远镜拍摄的真实照片)，在太阳系观测时进行调整。</p>
+<p>转到太阳，把相机的视角放在物体的中心，用望远镜(Shift +鼠标左键拖动)放大它。</p>
+<p>注意:更改不会保存到脚本文件中。</p>
+<p>您必须手动输入它们。</p>
+<p>7.为星系或星云创建自定义3D模型</p>
+<p>Space Engine 0.980版本使用精灵绘制星系和星云的3D模型。它们的格式非常相似，因此它们的脚本也非常相似。</p>
+<p>在SE中有很多创建模型的方法，但是它们都专注于创建具有不同大小和颜色的精灵的3D分布。用户可以通过提供纹理</p>
+<p>(图像文件)并指定如何使用它们来创建一个3D精灵模型来控制它的形状和颜色。旋涡星系也可以使用高分辨率的圆盘</p>
+<p>纹理来增强从顶部观察到的星系的渲染质量。</p>
+<p>SE提供的方法有:</p>
+<p>椭圆星系:使用一个特殊的光线追踪着色器，所以他们不需要三维模型。</p>
+<p>螺旋状和透镜状星系:星系法。需要一个高分辨率</p>
+<p>RGBA纹理磁盘与尘埃模式的alpha通道,降低版本(128×128),和一个高分辨率的RGB纹理地图的蓝色恒星分布、疏散星团</p>
+<p>和</p>
+<p>星云的磁盘。</p>
+<p>不规则星系和星云:各种纹理投影方法。需要1到6个RGBA纹理，它表示模型的视图从不同的侧面(前，上，左等)。</p>
+<p>各种应用方法是可能的(立方，圆柱等)。用于模拟不规则星系和任意类型星云的真实形状。</p>
+<p>不规则星系和星云:完全程序性的基于分形的精灵分布生成。用于程序不规则星系和任何类型的星云。</p>
+<p>为了描述星系/星云模型，需要这些正面/投影纹理和模型脚本。星系的纹理存储在虚拟文件夹* / textures / galaxies </p>
+<p>/中，</p>
+<p>并存储在* / textures / nebulae /中的星云中。模型脚本是一个扩展名为* .cfg的文件，分别位于* / models / </p>
+<p>galaxies /或* /</p>
+<p>models / nebulae /中，分别用于星系和星云。</p>
+<p>要添加新的星系模型，请转到addons / models / galaxies /文件夹并在那里创建一个新的文本文档。将其重命名为</p>
+<p>mymodel.sc</p>
+<p>（文件名无关紧要，但请确保它与某些现有文件不匹配，否则您的文件将覆盖它）。</p>
+<p>可以用相同的方式描述星云模型。 转到addons / models / nebulae /文件夹并在那里创建一个新的文本文档。 将其重</p>
+<p>命名为mymodel.sc（文件名无关紧要）</p>
+<p>注意，必须在cfg文件中描述位于* / models / galaxies /文件夹中的星系模型，以及位于* / models / nebulae /文</p>
+<p>件夹中的cfg文件中的星云模型。</p>
+<p> 相应的cfg文件中只允许使用这些标记：</p>
+<p>GalaxyModel“name”{ }  - 在galaxy模型脚本中添加/修改galaxy模型，</p>
+<p>NebulaModel“name”{ }  - 在星云模型脚本中添加/修改星云模型。</p>
+<p>单个cfg文件中允许使用多个模型标记，以及天文对象的SpaceEngine目录。 如果在cfg文件中找到相同模型的两个描述（</p>
+<p>具有相同名称的标签，</p>
+<p>示范代码 GalaxyModel  &quot;MilkyWay&quot;），则Space Engine将使用较新的脚本更新旧脚本。 因此，您可以通过使用该模型</p>
+<p>的描述创建新的cfg脚本来修改现有模型。</p>
+<p>注意:必须删除旧脚本</p>
+<p>8.星系，星云模型脚本细节</p>
+<p>在这里，我们将描述所有的参数，可以用于模型脚本的星系和星云。它们非常相似，尽管某些参数仅允许用于特定类型的</p>
+<p>对象。</p>
+<p>UseForObject—指定此模型必须与哪个特定对象一起使用。</p>
+<p>UseForType——指定此模型必须与哪些类型的对象(过程型或没有模型的目录型)一起使用。</p>
+<p>所以你可以从三种行为中选择</p>
+<p>一种:</p>
+<p>(1)模型仅用于在UseForObject参数中指定名称的星系/星云。UseForType参数不存在。这种方法适用于一些特殊的星系</p>
+<p>，</p>
+<p>如LMC或Hoag的天体，你不希望用它们的模型来描述其他的程序星系/星云。</p>
+<p>(2)模型是对没有自定义模型但有类型的星系/星云进行程序赋值的，类型在UseForType参数中指定。UseForObject参数</p>
+<p>不存在。</p>
+<p>例如，如果有很多UseForType“SBa”模型，那么所有“SBa”类型的星系都会随机使用这些模型中的一个。</p>
+<p>这种方法适用于由艺术纹理而非真实照片制作的“随机”模型。</p>
+<p>(3)模型用于在UseForObject参数中指定名称的星系/星云，也用于在UseForType参数中指定类型的星系/星云。</p>
+<p>必须指定两个参数中的至少一个:UseForObject和/或UseForType。</p>
+<p>Method 生成模型的精灵的三维分布的方法。有效值为：</p>
+<p>&quot;Cylindrical&quot;  圆柱形分布,侧纹理沿半径?和高度（Z）设置密度，前纹理在xy平面中提供密度。例子：LMC和SMC星系</p>
+<p>的模型。</p>
+<p>&quot;Spherical&quot;    球形分布,前纹理围绕Y轴旋转，从而设置精灵的密度。例子：猫头鹰星云的模型。</p>
+<p>&quot;Flat&quot;   是一个平坦的精灵，密度是由前面的纹理定义的。</p>
+<p>&quot;EllipticGalaxy&quot; 椭圆星系,不使用精灵和纹理的椭圆分布。请注意，SE中的椭圆星系使用自定义光线跟踪明暗器，因此</p>
+<p>它们不需要sprite模型。</p>
+<p>&quot;SpiralGalaxy&quot;   旋涡星系，圆盘采用圆柱形方法，凸起采用椭圆分布。例子：几乎所有螺旋状和透镜状星系的模型。</p>
+<p>&quot;CubeMap&quot;–密度分布由六种纹理cubepsx图像定义…</p>
+<p>CubePosZImage定义。这些纹理描述了模型在围绕模型的立方体的6个面上的投影。通过三次插值的方法得到了面部纹理间</p>
+<p>的精灵密度和颜色。如果没有提供一些pos/neg图像，将使用相应的neg/pos图像(因此必须提供至少3张图像)。例子:船底</p>
+<p>座星云，马头星云的模型。</p>
+<p>&quot;Diffuse&quot;  漫反射种程序化的云状分布，不需要纹理。示例:程序性扩散星云“Diff0”和“Diff1”的标准模型。</p>
+<p>&quot;Planetary&quot;  行星,一个程序的球形分布。示例:程序行星星云“Plan0”、“Plan1”的标准模型。</p>
+<p>&quot;SNR&quot;   信噪比， 一个程序上的球形分布与薄壁。示例:程序行星星云“SNR0”、“SNR1”的标准模型。</p>
+<p>Position, Radius, BulgeRadius   位置，半径，球半径-移动和缩放精灵模型及其部分</p>
+<p>floatLOD, LODbase  精灵模型LOD设置</p>
+<p>SysTexture 星系子系统的纹理，用于在星系中生成过程物体。R、G和B通道分别定义了星云、疏散星团和蓝色恒星的分布</p>
+<p>。</p>
+<p>FrontImage, SideImage  正面图像，侧面图像-正面和侧面投影中的星系/星云纹理，用于“圆柱形”和“螺旋星系”方</p>
+<p>法。</p>
+<p>对于星系，正面图像必须缩小到128×128的正面纹理副本，同时阿尔法通道中也有尘埃图案。</p>
+<p>侧像可以是以下默认侧像之一，也可以是自定义侧像：</p>
+<p>S0_side.png   Sa_side.png    Sb_side.png</p>
+<p>Sc_side.png  SBa_side.png    SBb_side.png</p>
+<p>RGB通道决定了发射精灵的分布和颜色，以及alpha通道 - 尘埃精灵的分布。</p>
+<p>从外接立方体的6个边看到的星系/星云的纹理。用于“CubeMap”方法。</p>
+<p> RGB通道决定了发射精灵的分布和颜色，以及alpha通道 - 尘埃精灵的分布:</p>
+<p>CubePosXImage CubePosYImage CubePosZImage CubeNegXImage CubeNegYImage CubeNegZImage</p>
+<p>sumColor，clipRadius  在创建或更新模型时，SpaceEngine会自动更新这些参数,用于星云。</p>
+<p>创建新模型时，必须将这些参数添加到脚本中，并将任何数字作为初始值，例如：</p>
+<p>sumColor（1 1 1） - 模型的整体颜色</p>
+<p>clipRadius 1  - 边界球体的半径</p>
+<p>注意：以下所有参数对于星系的星盘的精灵或星云的发射精灵（前缀em），尘埃精灵（前缀abs）</p>
+<p>和星系凸起精灵（前缀b）具有相同的含义。为简洁起见，我们仅描述发射精灵的参数。</p>
+<p>emParticleColor  精灵的颜色，调节纹理中像素的颜色。对于吸收（灰尘）精灵，值是给定通道中的光吸收量。</p>
+<p>良好的值为absParticleColor（0.0 0.3 0.5）。这意味着（大致）雪碧在蓝色通道中吸收50%的通过光，</p>
+<p>在绿色通道中吸收30%，在红色通道中吸收0%。</p>
+<p>emDetailR, emDetailZ  精灵模型沿半径和Z轴的细节级别:</p>
+<p>2.0   128 精灵，</p>
+<p>1.0   64 精灵</p>
+<p>0.5   32精灵等</p>
+<p>注意:设置一个大的数字可能会对渲染性能造成很大的影响!</p>
+<p>emParticleDispR, emParticleDispZ  在径向和Z轴方向上精灵从矩形网格中随机偏移的大小：</p>
+<p>1.0  单元格的宽度</p>
+<p>0.5  细胞宽度的一半</p>
+<p>0.0  无偏移</p>
+<p>无偏移，</p>
+<p>用于减少网格对精灵模型的影响。</p>
+<p>emParticleSizeCenter, emParticleSizeEdge 型中心和边缘的精灵尺寸:</p>
+<p>1.0  - 精灵直径等于细胞的宽度，</p>
+<p>2.0  - 精灵直径是细胞宽度的2倍等。</p>
+<p>精灵的大小从中心到边缘线性插值</p>
+<p>emParticleMinBrightCenter, emParticleMinBrightEdge  生成的精灵的最小亮度，将其包含在模型中</p>
+<p>（在模型的中心和边缘）。从中心到边缘线性插值。如果使用纹理或程序噪声构建的密度图中的值小于此值，</p>
+<p>则跳过此单元格中的精灵。用于优化模型 - 排除非常黑暗和黑色（不可见）的精灵。</p>
+<p>emParticleBrightnessCenter, emParticleBrightnessEdge 模型中心和边缘的精灵亮度。从中心到边缘线性插值。</p>
+<p>emNoiseRandomize ， emNoiseOffset 噪声函数(畸变fBm)的参数，用于产生(不规则星系和星云)的“漫反射”方法</p>
+<p>emNoiseRandomize  发电机的种子</p>
+<p>emNoiseFreq  噪音频率</p>
+<p>emNoiseOctaves  噪声八度音程的数量</p>
+<p>emNoiseDistort  失真的幅度</p>
+<p>emNoiseLacunarity    空隙（异质性）</p>
+<p>emNoiseH   参数H</p>
+<p>emNoiseOffset 移位</p>
+<p>space engine官方手册：创建星系，星云，星团</p>
+<p>http://spaceengine.org/manual/making-addons/creating-a-dso/</p>
+<p>把链接复制到浏览器地址栏上，按回车键就可以看了。</p>
+<p>宇宙模拟器space engine基础教程和高级教程+坐标等链接合集（附带0.980版本下载，汉化，基础使用教程）</p>
+<p>https://teakki.com/p/5c27525ac70db4ac4f2eb9ab</p>
+<p>1.宇宙模拟器Space Engine基础教程</p>
+<p>Space Engine创建天体（星球，星系，星云，星团等）和天体系统教程1：打包创建好的SE脚本成pak文件（MOD），分享和使用pak文件（MOD）的方法</p>
+<p>https://weibo.com/ttarticle/p/show?id=2309404323664098104088</p>
+<p>Space Engine创建天体（星球，星系，星云，星团等）和天体系统教程2: space engine文件夹和pak文件(MOD)，脚本组成和脚本创建详解</p>
+<p>https://weibo.com/ttarticle/p/sh ... 6&amp;mod=zwenzhang</p>
+<p>Space Engine创建天体（星球，星系，星云，星团等）和天体系统教程3: 质心，恒星参数详解</p>
+<p>https://weibo.com/ttarticle/p/sh ... 0&amp;mod=zwenzhang</p>
+<p>Space Engine创建天体（星球，星系，星云，星团等）和天体系统教程4：行星主要参数详解</p>
+<p>https://weibo.com/ttarticle/p/sh ... 1&amp;mod=zwenzhang</p>
+<p>Space Engine创建天体（星球，星系，星云，星团等）和天体系统教程5：行星的地表，海洋，云，熔岩，极光参数详解</p>
+<p>https://weibo.com/ttarticle/p/sh ... 2&amp;mod=zwenzhang</p>
+<p>Space Engine创建天体（星球，星系，星云，星团等）和天体系统教程6：生命，吸积盘，彗尾，行星环，日冕，大气参数详解</p>
+<p>https://weibo.com/ttarticle/p/sh ... 5&amp;mod=zwenzhang</p>
+<p>Space Engine创建天体（星球，星系，星云，星团等）和天体系统教程7：星系，星团，星云参数详解</p>
+<p>https://weibo.com/ttarticle/p/sh ... 2&amp;mod=zwenzhang</p>
+<p>Space Engine创建天体（星球，星系，星云，星团等）和天体系统教程8: Space Engine自定义行星纹理(CubeMap软件)详解</p>
+<p>https://weibo.com/ttarticle/p/show?id=2309404327985812526871</p>
+<p>2.宇宙模拟器Space Engine高级教程</p>
+<p>宇宙模拟器space engine教程1：把太阳换成其他类型的恒星</p>
+<p>https://weibo.com/ttarticle/p/show?id=2309404294337323266120</p>
+<p>宇宙模拟器space engine教程2：创建自定义太阳系，包括创建恒星，行星,卫星，小行星，彗星等等(上)</p>
+<p>https://weibo.com/ttarticle/p/show?id=2309404295877832401748</p>
+<p>宇宙模拟器space engine教程2：创建自定义太阳系，包括创建恒星，行星，卫星，小行星，彗星等等(下)</p>
+<p>https://weibo.com/ttarticle/p/show?id=2309404295878113368869</p>
+<p>宇宙模拟器space engine教程3:创建多星系统，黑洞，流浪行星等</p>
+<p>https://weibo.com/ttarticle/p/show?id=2309404295881494017931</p>
+<p>宇宙模拟器space engine教程4:创建星系，星云，星团，以及中子星和白矮星</p>
+<p>https://weibo.com/ttarticle/p/show?id=2309404295881921802439</p>
+<p>宇宙模拟器space engine教程5:创建碰撞星系，碰撞星云以及碰撞恒星和碰撞行星</p>
+<p>https://weibo.com/ttarticle/p/show?id=2309404295888397850494</p>
+<p>宇宙模拟器space engine教程6:创建虫洞和制作SE的VR视频和VR图片</p>
+<p>https://weibo.com/ttarticle/p/show?id=2309404295888775336881</p>
+<p>宇宙模拟器space engine教程7:编辑行星和彗尾的颜色，改造星球和快速创建星球等</p>
+<p>https://weibo.com/ttarticle/p/show?id=2309404295889358298541</p>
+<p>宇宙模拟器space engine教程8:替换行星纹理和制作行星纹理</p>
+<p>https://weibo.com/ttarticle/p/show?id=2309404295889811316236</p>
+<p>宇宙模拟器space engine教程9:如何模拟地球附近的超新星爆炸和自定义星云模型以及在其他位置创建0.981自带的测试星云</p>
+<p>https://www.jianshu.com/p/a4319cb14723</p>
+<p>宇宙模拟器space engine教程10： 0.980免费下载,中文化,基础教程,高级教程</p>
+<p>https://weibo.com/ttarticle/p/sh ... 9&amp;mod=zwenzhang</p>
+<p>space engine教程11:制作一键切换4K和8K分辨率的工具，在没有4K分辨率的电脑上，用于space engine里4K截图和4K录制视频以及8K截图，也可以用于space engine的4K VR/360度全景截图和录制4K VR/360度全景视频</p>
+<p>https://www.jianshu.com/p/46bcb2cb8101</p>
+<p>space engine教程12：spaceengine的发现和技巧总结第1期</p>
+<p>https://weibo.com/ttarticle/p/show?id=2309404322850629646081</p>
+<p>space engine教程13：space engine里面用到的轨道和坐标总结</p>
+<p>https://weibo.com/ttarticle/p/show?id=2309404322860150721400#_0</p>
+<p>宇宙模拟器Space Engine番外1：Space Engine0.980好看的星球，星系，星云等，奇特的天体等坐标分享</p>
+<p>https://weibo.com/ttarticle/p/show?id=2309404322689761330015</p>
+<p>space engine教程14：创建行星城市夜景纹理教程（辉光纹理），彩色纹理和凹凸纹理教程</p>
+<p>https://weibo.com/ttarticle/p/show?id=2309404331046182228413</p>
+<p>宇宙模拟器space engine教程15：地球化月球，火星等行星和卫星的教程</p>
+<p>https://weibo.com/ttarticle/p/show?id=2309404335185528288677</p>
+<p>space engine教程16：创建新的行星环纹理（模型）</p>
+<p>https://weibo.com/ttarticle/p/show?id=2309404347999944875148</p>
+<p>请关注这个微博，后续会出更多关于space engine的教程。</p>
+<p>把链接复制到浏览器地址栏上，按回车键就可以看了</p>
+<p>宇宙模拟器space engine 基础教程和高级教程+坐标等链接合集（附带0.980版本下载，汉化，基础使用教程）</p>
+<p>https://teakki.com/p/5c27525ac70db4ac4f2eb9ab</p>
+<p>宇宙模拟器space engine官网</p>
+<p>http://spaceengine.org/</p>
+<p>space engineTODO，介绍了目前space engine已经实现的天文功能和未来计划开发的天文功能</p>
+<p>http://forum.spaceengine.org/viewtopic.php?f=6&amp;t=72</p>
+<p>宇宙模拟器space engine 0.990新增功能，新增天体，改进和优化功能和总结</p>
+<p>https://www.jianshu.com/p/fee2c14b9936</p>
+<p>宇宙模拟器space engine 作者采访和space engine 应用于领域合集</p>
+<p>https://www.jianshu.com/p/bb9e013f8e5d</p>
+<p>B站视频http://space.bilibili.com/345330124/video</p>
+<p>天文，宇宙模拟器Space Engine爱好者QQ群号246630656</p></section>
+<aside class="related"><h2>同版块相关攻略</h2><ul>
+<li><a href="../t/2150536.html">Space Engine创建天体8: Space Engine自定义行星纹理(CubeMap软件)...</a></li>
+<li><a href="../t/2150570.html">space engine教程14：创建行星城市夜景纹理教程，彩色和凹凸...</a></li>
+<li><a href="../t/2150504.html">Space Engine创建天体和天体系统教程6：吸积盘，彗尾，行星...</a></li>
+<li><a href="../t/2150601.html">space engine教程15：地球化月球，火星等行星和卫星的教程</a></li>
+<li><a href="../t/2151577.html">宇宙模拟器Space Engine 0.990教程2：基本设置，浏览观光，天...</a></li>
+<li><a href="../t/2150514.html">宇宙模拟器space engine基础教程和高级教程+坐标等链接合集...</a></li>
+<li><a href="../t/2150678.html">space engine教程16：创建新的行星环纹理（模型）</a></li>
+<li><a href="../t/2151578.html">宇宙模拟器Space Engine 0.990教程3:截图和视频录制，VR截图和...</a></li>
+</ul></aside>
+</article>
+<footer class="site">
+<p><strong>关于本站</strong>：这是对已关站的太空游戏社区 <b>深度时空 bbs.deeptimes.net</b> 的非官方社区存档，
+内容取自 <a href="https://web.archive.org/web/*/bbs.deeptimes.net" rel="nofollow">Wayback Machine</a> 公开存档，
+<b>版权归各原作者所有</b>，帖内保留了原作者署名与发帖时间。仅供游戏玩家学习交流与资料保存之用。</p>
+<p>如您是原作者或原站长，希望某内容下架或补充署名，请提交 GitHub Issue，我们会尽快处理。</p>
+<p class="muted">Archive of the defunct Chinese space-game forum DeepTimes (bbs.deeptimes.net). Content © original authors. Preservation mirror.</p>
+</footer></body></html>

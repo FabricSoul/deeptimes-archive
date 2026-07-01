@@ -1,0 +1,78 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>HQ喷涂车间教程-如何确定你要的颜色｜X3: 重聚(Reunion)讨论区攻略｜深度时空存档</title>
+<meta name="description" content="终于弄到了HQ，试了一下涂装功能，感觉不是一般的别扭，所以写这么一个教程，希望能让大家在喷涂飞船的时候不用一遍遍的进出站来看效果。 喷涂车间(Spray Shop)可以把你飞船的部分部件改称自己的颜色，有3个选项，最后一个是恢复初始设置用的，前两个控制色彩:Hue(色相)和Saturation(饱和">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://fabricsoul.github.io/deeptimes-archive/t/1310.html">
+<meta property="og:type" content="website"><meta property="og:site_name" content="深度时空太空游戏攻略存档">
+<meta property="og:title" content="HQ喷涂车间教程-如何确定你要的颜色｜X3: 重聚(Reunion)讨论区攻略｜深度时空存档"><meta property="og:description" content="终于弄到了HQ，试了一下涂装功能，感觉不是一般的别扭，所以写这么一个教程，希望能让大家在喷涂飞船的时候不用一遍遍的进出站来看效果。 喷涂车间(Spray Shop)可以把你飞船的部分部件改称自己的颜色，有3个选项，最后一个是恢复初始设置用的，前两个控制色彩:Hue(色相)和Saturation(饱和">
+<meta property="og:url" content="https://fabricsoul.github.io/deeptimes-archive/t/1310.html"><meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "DiscussionForumPosting", "headline": "HQ喷涂车间教程-如何确定你要的颜色", "articleBody": "终于弄到了HQ，试了一下涂装功能，感觉不是一般的别扭，所以写这么一个教程，希望能让大家在喷涂飞船的时候不用一遍遍的进出站来看效果。\n\r\n喷涂车间(Spray Shop)可以把你飞船的部分部件改称自己的颜色，有3个选项，最后一个是恢复初始设置用的，前两个控制色彩:Hue(色相)和Saturation(饱和度)，其中Hue最重要，确定了是什么颜色。\n\r\n\n\r\n\n\r\n这个教程就是用windows画图板所见即所得的确定颜色，并得到它对应的数值\n\r\n\n\r\n确定Hue的方法：\n\r\n1。打开windows自带的画图板，在“开始-程序-附件”里面\n\r\n2。双击画图板下面的色块打开调色工具，单击\"规定自定义颜色\"展开面板，如下图\n\r\n\n\r\n3。把右边的“亮度”一栏打上120，然后在色框中找到希望涂装飞船的颜色，然后记下它的“色调”（色相）值。例如上图中的颜色，得到色调（色相）：120。饱和度的值仅能做参考，因为和游戏里的差太多了，游戏里的很灰。\n\r\n4。把得到的色相值重新计算一下，公式为\n\r\n\n\r\n                              H*1.5-30    (H为所取色相的值)\n\r\n\n\r\n把算出来的这个数字设为喷涂车间里的Hue值即可得到所选的颜色。\n\r\n\n\r\n确定Saturation的方法：\n\r\n关于饱和度：喷涂车间里Saturation(饱和度)的值从-256到256，代表从最灰到最艳，值越小越趋向于白色（？？理论上应该是灰色……），值越大越趋向于鲜艳的色彩（其实就算调到最大也艳不到哪里去）。\n\r\n如果你需要涂装效果明显一点，调到最大。\n\r\n如果你需要白色，调到最小。\n\r\n一般情况保持“0”即可\n\r\n当然你也可以把得到的饱和度值换算成喷涂车间里的值，画图板的饱和度范围是从0-240，喷涂车间是-256到256，公式这里就不加赘述了。\n\r\n\n\r\n\n\r\n\n\r\n\n\r\n\n\r\n下面说下确定Hue值的原理，感兴趣的可以看看。如果你有photoshop，计算可以更方便点\n\r\n--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- \n\r\n确定色相值的原理：\n\r\n色相（Hue）就是颜色的相位，说白了也就是颜色的样子，说一个东西黄色的、红色的，就是说它的色相。色相可以被描绘成环形，从某个颜色开始，绕一圈又回到这个颜色，如果把这个环从某一点断开，拉直成条状，就得到下面图里所示的东西。\n\r\n\n\r\n这是画图板的色相条和X3中的（根据公式得到的）色相条对比。有两个最明显的区别\n\r\n第一，色相环变成条之后，就可以确定一个最小值和一个最大值，如画图板是从0-240（度），而喷涂车间用的，却是从0-360（度）。\n\r\n第二，如上所说，环转成条需要有一个断开点，画图板，包括大部分图像软件的取色器，都是从红色断开，即用红色作为色相条的最小值和最大值，而喷涂车间里却用了橙色（我也不知道干嘛要这么做）……总之这样以来，喷涂车间里色相的值，就与用一般色相条取到的值有一个偏差。如果假定两个色相条的最大值都一样的话，他们的偏差是12/max（max是最大值），如最大值是都360（度），偏差值就是30（度）\n\r\n\n\r\n我们已经知道画图板以及大多数取色工具得到的色相值和喷涂车间里色相值的关系，那么我们只需要公式就可以转换了\n\r\n\n\r\n喷涂车间色相值=取得的值/取色工具色相最大值*360-30\n\r\n\n\r\n画图板最大值240，所以可以简化到  喷涂车间色相值=取得的值*1.5-30\n\r\nphotoshop用的色相最大值是360，和喷涂车间一样，所以用photoshop取色的话，只要用取得的值-30就可以了。\n\r\n\n\r\n祝大家上色愉快:lol", "author": {"@type": "Person", "name": "freeman00"}, "url": "https://fabricsoul.github.io/deeptimes-archive/t/1310.html", "inLanguage": "zh-CN", "about": "X3: 重聚(Reunion)讨论区", "isPartOf": {"@type": "WebSite", "name": "深度时空太空游戏攻略存档", "url": "https://fabricsoul.github.io/deeptimes-archive/"}, "commentCount": 9, "datePublished": "2007-1-16"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "首页", "item": "https://fabricsoul.github.io/deeptimes-archive/"}, {"@type": "ListItem", "position": 2, "name": "X3: 重聚(Reunion)讨论区", "item": "https://fabricsoul.github.io/deeptimes-archive/s/reunion.html"}, {"@type": "ListItem", "position": 3, "name": "HQ喷涂车间教程-如何确定你要的颜色", "item": "https://fabricsoul.github.io/deeptimes-archive/t/1310.html"}]}</script>
+</head><body>
+<header class="site"><a href="../index.html" class="brand">深度时空 · 太空游戏攻略存档</a>
+<span class="tag">DeepTimes Space Game Archive</span></header>
+<nav class="crumb"><a href="../index.html">首页</a> › <a href="../s/reunion.html">X3: 重聚(Reunion)讨论区</a> › <span>HQ喷涂车间教程-如何确定你要的颜色</span></nav>
+<article><h1>HQ喷涂车间教程-如何确定你要的颜色</h1>
+<p class="src">原作者：freeman00　发表：2007-1-16　来源：bbs.deeptimes.net（已关站）· <a href="https://web.archive.org/web/20190920170909/https://bbs.deeptimes.net/forum.php?mod=viewthread&tid=1310" rel="nofollow">Wayback 存档</a></p>
+<section class="floor"><span class="fl">#1</span><p>终于弄到了HQ，试了一下涂装功能，感觉不是一般的别扭，所以写这么一个教程，希望能让大家在喷涂飞船的时候不用一遍遍的进出站来看效果。</p>
+<p>喷涂车间(Spray Shop)可以把你飞船的部分部件改称自己的颜色，有3个选项，最后一个是恢复初始设置用的，前两个控制色彩:Hue(色相)和Saturation(饱和度)，其中Hue最重要，确定了是什么颜色。</p>
+<p>这个教程就是用windows画图板所见即所得的确定颜色，并得到它对应的数值</p>
+<p>确定Hue的方法：</p>
+<p>1。打开windows自带的画图板，在“开始-程序-附件”里面</p>
+<p>2。双击画图板下面的色块打开调色工具，单击&quot;规定自定义颜色&quot;展开面板，如下图</p>
+<p>3。把右边的“亮度”一栏打上120，然后在色框中找到希望涂装飞船的颜色，然后记下它的“色调”（色相）值。例如上图中的颜色，得到色调（色相）：120。饱和度的值仅能做参考，因为和游戏里的差太多了，游戏里的很灰。</p>
+<p>4。把得到的色相值重新计算一下，公式为</p>
+<p>                              H*1.5-30    (H为所取色相的值)</p>
+<p>把算出来的这个数字设为喷涂车间里的Hue值即可得到所选的颜色。</p>
+<p>确定Saturation的方法：</p>
+<p>关于饱和度：喷涂车间里Saturation(饱和度)的值从-256到256，代表从最灰到最艳，值越小越趋向于白色（？？理论上应该是灰色……），值越大越趋向于鲜艳的色彩（其实就算调到最大也艳不到哪里去）。</p>
+<p>如果你需要涂装效果明显一点，调到最大。</p>
+<p>如果你需要白色，调到最小。</p>
+<p>一般情况保持“0”即可</p>
+<p>当然你也可以把得到的饱和度值换算成喷涂车间里的值，画图板的饱和度范围是从0-240，喷涂车间是-256到256，公式这里就不加赘述了。</p>
+<p>下面说下确定Hue值的原理，感兴趣的可以看看。如果你有photoshop，计算可以更方便点</p>
+<p>--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- </p>
+<p>确定色相值的原理：</p>
+<p>色相（Hue）就是颜色的相位，说白了也就是颜色的样子，说一个东西黄色的、红色的，就是说它的色相。色相可以被描绘成环形，从某个颜色开始，绕一圈又回到这个颜色，如果把这个环从某一点断开，拉直成条状，就得到下面图里所示的东西。</p>
+<p>这是画图板的色相条和X3中的（根据公式得到的）色相条对比。有两个最明显的区别</p>
+<p>第一，色相环变成条之后，就可以确定一个最小值和一个最大值，如画图板是从0-240（度），而喷涂车间用的，却是从0-360（度）。</p>
+<p>第二，如上所说，环转成条需要有一个断开点，画图板，包括大部分图像软件的取色器，都是从红色断开，即用红色作为色相条的最小值和最大值，而喷涂车间里却用了橙色（我也不知道干嘛要这么做）……总之这样以来，喷涂车间里色相的值，就与用一般色相条取到的值有一个偏差。如果假定两个色相条的最大值都一样的话，他们的偏差是12/max（max是最大值），如最大值是都360（度），偏差值就是30（度）</p>
+<p>我们已经知道画图板以及大多数取色工具得到的色相值和喷涂车间里色相值的关系，那么我们只需要公式就可以转换了</p>
+<p>喷涂车间色相值=取得的值/取色工具色相最大值*360-30</p>
+<p>画图板最大值240，所以可以简化到  喷涂车间色相值=取得的值*1.5-30</p>
+<p>photoshop用的色相最大值是360，和喷涂车间一样，所以用photoshop取色的话，只要用取得的值-30就可以了。</p>
+<p>祝大家上色愉快:lol</p></section>
+<section class="floor"><span class="fl">#2</span><p>好贴，顶个，温习下HS:o ？？不是HSB模式么:P</p></section>
+<section class="floor"><span class="fl">#3</span><p>顶lz呀</p>
+<p>回去把LX涂成红色试试</p></section>
+<section class="floor"><span class="fl">#4</span><p>图文并茂的好贴，大力支持楼主！:handshake</p></section>
+<section class="floor"><span class="fl">#5</span><p>对，描述颜色应该是HSB的，但是喷涂工厂只有H和S两个可选项</p></section>
+<section class="floor"><span class="fl">#6</span><p>本来还准备写这个....</p>
+<p>看来不用忙活了...:lol</p></section>
+<section class="floor"><span class="fl">#7</span><p>晕~~~~晕了~~~~~</p>
+<p>PS：楼上的签名好性感~~~有全图吗？？~~~~~~~</p></section>
+<section class="floor"><span class="fl">#8</span><p>想要吗?</p>
+<p>有哦...宽屏高分辨率哦</p></section>
+<section class="floor"><span class="fl">#9</span><p>要~~~~~要~~~~~~~:lol</p></section>
+<section class="floor"><span class="fl">#10</span><p>不给...;P ........</p></section>
+<aside class="related"><h2>同版块相关攻略</h2><ul>
+<li><a href="../t/300.html">X3 mod 和 scripts 索引&lt;2007年12月4日更新&gt;</a></li>
+<li><a href="../t/652.html">新手赚钱详细，逆天译稿</a></li>
+<li><a href="../t/1093.html">X3 Reunion 种族历史(中文)</a></li>
+<li><a href="../t/5297.html">X3：重聚 左版主线任务攻略</a></li>
+<li><a href="../t/1775.html">[XTM0.7] 大型MOD: Xtended 介绍 （2008年6月30更新）</a></li>
+<li><a href="../t/727.html">玩家总部QA</a></li>
+<li><a href="../t/40044.html">手把手教你玩转宇宙（11.12.06更新）</a></li>
+<li><a href="../t/2641.html">★★★ X3.Reunion 入门-进阶-高手全攻略★★★</a></li>
+</ul></aside>
+</article>
+<footer class="site">
+<p><strong>关于本站</strong>：这是对已关站的太空游戏社区 <b>深度时空 bbs.deeptimes.net</b> 的非官方社区存档，
+内容取自 <a href="https://web.archive.org/web/*/bbs.deeptimes.net" rel="nofollow">Wayback Machine</a> 公开存档，
+<b>版权归各原作者所有</b>，帖内保留了原作者署名与发帖时间。仅供游戏玩家学习交流与资料保存之用。</p>
+<p>如您是原作者或原站长，希望某内容下架或补充署名，请提交 GitHub Issue，我们会尽快处理。</p>
+<p class="muted">Archive of the defunct Chinese space-game forum DeepTimes (bbs.deeptimes.net). Content © original authors. Preservation mirror.</p>
+</footer></body></html>

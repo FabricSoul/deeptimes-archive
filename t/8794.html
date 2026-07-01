@@ -1,0 +1,104 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>锤大吐血推荐---OCS---来挑战自己吧｜X3：重聚 模组脚本攻略｜深度时空存档</title>
+<meta name="description" content="慎转游侠-策略/太空游戏专区 原因, 随便举个例子:http://game.ali213.net/thread-1833320-1-1.html,这样的事情发生太多次,希望大家谅解这个要求. OCS全称Open Combat System,就是&quot;开放式战斗系统&quot; 一.简介 下面是英文的介绍全文,我先">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://fabricsoul.github.io/deeptimes-archive/t/8794.html">
+<meta property="og:type" content="website"><meta property="og:site_name" content="深度时空太空游戏攻略存档">
+<meta property="og:title" content="锤大吐血推荐---OCS---来挑战自己吧｜X3：重聚 模组脚本攻略｜深度时空存档"><meta property="og:description" content="慎转游侠-策略/太空游戏专区 原因, 随便举个例子:http://game.ali213.net/thread-1833320-1-1.html,这样的事情发生太多次,希望大家谅解这个要求. OCS全称Open Combat System,就是&quot;开放式战斗系统&quot; 一.简介 下面是英文的介绍全文,我先">
+<meta property="og:url" content="https://fabricsoul.github.io/deeptimes-archive/t/8794.html"><meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "DiscussionForumPosting", "headline": "锤大吐血推荐---OCS---来挑战自己吧", "articleBody": "慎转游侠-策略/太空游戏专区\n原因, 随便举个例子:http://game.ali213.net/thread-1833320-1-1.html,这样的事情发生太多次,希望大家谅解这个要求.\n\r\n\n\r\nOCS全称Open Combat System,就是\"开放式战斗系统\"\n\r\n\n\r\n一.简介\n\r\n\n\r\n下面是英文的介绍全文,我先简单概括说下[不需要的朋友请直接看详细的英文].\n\r\n\n\r\n主要改进了战斗技能,使AI战机更加牛B [做好战斗准备喽].\n\r\n巨大的改变了导弹使用方式,会远程发射导弹,会击落导弹,200米内不再发射Hornet导弹以免伤到自己.会用多弹头的Hurricane来攻击K的飞船集体,会用大威力导弹攻击M1/M2和空间站.\n\r\n改变了Drone[无人战机]和LaserTower[激光炮塔]的战斗技能.\n\r\n\n\r\n为了进一步加强导弹威力,我为大家准备了2个文件[10.dat和10.cat], 用了我Hammer'sRetexMOD里的导弹部分和一点贴图.安装方法见下面说明.[推荐一起安装]\n\r\n\n\r\n--------------------\n\r\n\n\r\n1. Full fightskill levels\n\r\nThe vanilla scripts did not allow the highest level of fightskill (30) to spawn. Depending on the skill level assigned in the job.pck file, the OCS Apollo allows full spawning of all fightskill levels\n\r\nThis may not be compatible with other scripts that modify the !plugin.acp.fight.skill.std file\n\r\n\n\r\n2. Modified fightskill\n\r\nThe skills \"Max.speed\" and \"Defencedistance\" have been replaced with \"Missile.delay\" and \"Tactical.awareness\". These two new skills redefine how the AI handles combat. Missile delay sets how often the AI uses missiles (a bug in the vanilla scripts caused ships to fire all missiles at once). Tactical awareness determines how often the AI applies 'special' tactics. \n\r\n\n\r\n3. Fixed fightskill for drones and lasertowers\n\r\nIn the vanilla game drones and lasertowers spawn with a random fightskill level. OCS vanilla ensures that all drones and lasertowers have the same level of fightskill, making them generally more reliable.\n\r\n\n\r\n4. Long range missile support\n\r\nFighters and Corvettes will now launch missiles from long range.\n\r\n\n\r\n5. Improved missile awareness\n\r\nIn the vanilla game, if is ship is closing on a target but not yet in gun range it ignored missiles. In OCS Apollo fighters and corvettes actively running a combat script (i.e. with the ocs.fight.attack.object script running) will be aware of incoming missiles even when closing on a ship at long range.\n\r\n\n\r\n6. Improved missile tactics\n\r\nIn the vanilla game, some missile tactics were already written in. These were improved upon. Fighters will now:-\n\r\ni) launch a swarm of wasp missiles within 500m of a target as a 'kill' shot (500m is the range that wasp missiles fire in a tight group)\n\r\nii) will also use other missiles at dodging or otherwise vulnerable targets\n\r\niii) will NOT fire missiles under 200m from a target, reducing self-termination with Hornet missiles\n\r\niv) will use Hurricane missiles against Khaak Clusters\n\r\nv) will use Firestorm torpedos and other large missiles against Capital ships and Stations\n\r\n\n\r\n7. Improved anti-missile support\n\r\nImproved the vanilla anti-missile support to make fighters dodge and shoot down incoming missiles more effectively\n\r\n\n\r\n8. Improved dogfighting\n\r\nFighters will actively dodge if their target is firing on them. They will also take \"pop-shots\" more often using missiles as well as guns to attack any targets of opportunity. Higher skilled pilots will shoot at their attackers in an attempt to force the attacker into an evasive action so they can counter-attack.\n\r\n\n\r\n9. Improved chase code\n\r\nThe vanilla game code caused fighters to pursue an esacping target relentlessly even though there was no hope of catching it. OCS Apollo allows Fighters and Corvettes to disengage from an uncatchable target. The ship would then search for the next available target and pursue that instead. (If no other target is available then the ship will attempt to re-engage the first target.)\n\r\n\n\r\n10. Anti-capital ship tactics\n\r\nDue to collision avoidance, fighters (and sometimes corvettes) would circle uselessly around a large ship (e.g. M2 or TL). In OCS Apollo, the Fighters and Corvettes will dodge away from the capital ship then circle in to do an attack run. They will also use missiles more actively against capital ships.\n\r\n(note: - IREs, PBEs and Mass Drivers are too short ranged to allow fighters to attack Capital class ships in the vanilla game)\n\r\n\n\r\n二.安装说明:\n\r\n\n\r\n请仔细看安装说明,先解压缩文件\n\r\n\n\r\n脚本部分安装\n\r\n1.进入\\X3 Reunion\\scripts目录,找到!fight.attack.object.pck这个文件,找个地方备份这个文件,然后删除\\X3 Reunion\\scripts目录的这个文件.[不删除的话这个安装都将不起任何作用].\n\r\n2a..对于没有安装FightCommandSoftware Mk.III 的朋友[大多数玩家吧],把压缩包内的OCS脚本文件夹内所有文件拷贝到你的\\X3 Reunion\\scripts下.\n\r\n2b..对于使用FightCommandSoftware Mk.III 的朋友,在完成2a操作后,再把FCS-MK-III使用文件夹内所有文件拷贝到你的\\X3 Reunion\\scripts下覆盖.\n\r\n\n\r\nMOD部分安装\n\r\n1.请找到原来游戏目录\\X3 Reunion中*.cat和*.dat文件的序号最大是多少[例如10.dat和10.cat]。\n\r\n2.将OCS导弹MOD文件夹内的10.dat和10.cat文件改名，文件名为上一步找到的最大序号+1[例如11.cat和11.dat]\n\r\n3.将改名好的*.cat和 *.dat文件放入游戏目录\\X3 Reunion中\n\r\n--=此MOD与RogueMOD，DDRS MOD，汉化MOD兼容，但可能与Xtend存在潜在冲突，如Xtend玩家出现导弹工作问题，请删除改MOD文件=--\n\r\n\n\r\n\n\r\n\n\r\n\n三.下载地址:\n\r\nRapidshare (文件大小:1215kb)\n\r\nhttp://www.rayfile.com/files/2710a094-a534-11de-a34c-0014221b798a/\n\r\n\n\r\n[ 本帖最后由 HammerSun 于 2007-12-11 23:02 编辑 ]", "author": {"@type": "Person", "name": "HammerSun"}, "url": "https://fabricsoul.github.io/deeptimes-archive/t/8794.html", "inLanguage": "zh-CN", "about": "X3：重聚 模组脚本（Reunion MOD & Scripts）", "isPartOf": {"@type": "WebSite", "name": "深度时空太空游戏攻略存档", "url": "https://fabricsoul.github.io/deeptimes-archive/"}, "commentCount": 9, "datePublished": "2007-12-11"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "首页", "item": "https://fabricsoul.github.io/deeptimes-archive/"}, {"@type": "ListItem", "position": 2, "name": "X3：重聚 模组脚本", "item": "https://fabricsoul.github.io/deeptimes-archive/s/x3-reunion-mods.html"}, {"@type": "ListItem", "position": 3, "name": "锤大吐血推荐---OCS---来挑战自己吧", "item": "https://fabricsoul.github.io/deeptimes-archive/t/8794.html"}]}</script>
+</head><body>
+<header class="site"><a href="../index.html" class="brand">深度时空 · 太空游戏攻略存档</a>
+<span class="tag">DeepTimes Space Game Archive</span></header>
+<nav class="crumb"><a href="../index.html">首页</a> › <a href="../s/x3-reunion-mods.html">X3：重聚 模组脚本</a> › <span>锤大吐血推荐---OCS---来挑战自己吧</span></nav>
+<article><h1>锤大吐血推荐---OCS---来挑战自己吧</h1>
+<p class="src">原作者：HammerSun　发表：2007-12-11　来源：bbs.deeptimes.net（已关站）· <a href="https://web.archive.org/web/20190920170832/https://bbs.deeptimes.net/forum.php?mod=viewthread&tid=8794" rel="nofollow">Wayback 存档</a></p>
+<section class="floor"><span class="fl">#1</span><p>慎转游侠-策略/太空游戏专区
+原因, 随便举个例子:http://game.ali213.net/thread-1833320-1-1.html,这样的事情发生太多次,希望大家谅解这个要求.</p>
+<p>OCS全称Open Combat System,就是&quot;开放式战斗系统&quot;</p>
+<p>一.简介</p>
+<p>下面是英文的介绍全文,我先简单概括说下[不需要的朋友请直接看详细的英文].</p>
+<p>主要改进了战斗技能,使AI战机更加牛B [做好战斗准备喽].</p>
+<p>巨大的改变了导弹使用方式,会远程发射导弹,会击落导弹,200米内不再发射Hornet导弹以免伤到自己.会用多弹头的Hurricane来攻击K的飞船集体,会用大威力导弹攻击M1/M2和空间站.</p>
+<p>改变了Drone[无人战机]和LaserTower[激光炮塔]的战斗技能.</p>
+<p>为了进一步加强导弹威力,我为大家准备了2个文件[10.dat和10.cat], 用了我Hammer&#x27;sRetexMOD里的导弹部分和一点贴图.安装方法见下面说明.[推荐一起安装]</p>
+<p>--------------------</p>
+<p>1. Full fightskill levels</p>
+<p>The vanilla scripts did not allow the highest level of fightskill (30) to spawn. Depending on the skill level assigned in the job.pck file, the OCS Apollo allows full spawning of all fightskill levels</p>
+<p>This may not be compatible with other scripts that modify the !plugin.acp.fight.skill.std file</p>
+<p>2. Modified fightskill</p>
+<p>The skills &quot;Max.speed&quot; and &quot;Defencedistance&quot; have been replaced with &quot;Missile.delay&quot; and &quot;Tactical.awareness&quot;. These two new skills redefine how the AI handles combat. Missile delay sets how often the AI uses missiles (a bug in the vanilla scripts caused ships to fire all missiles at once). Tactical awareness determines how often the AI applies &#x27;special&#x27; tactics. </p>
+<p>3. Fixed fightskill for drones and lasertowers</p>
+<p>In the vanilla game drones and lasertowers spawn with a random fightskill level. OCS vanilla ensures that all drones and lasertowers have the same level of fightskill, making them generally more reliable.</p>
+<p>4. Long range missile support</p>
+<p>Fighters and Corvettes will now launch missiles from long range.</p>
+<p>5. Improved missile awareness</p>
+<p>In the vanilla game, if is ship is closing on a target but not yet in gun range it ignored missiles. In OCS Apollo fighters and corvettes actively running a combat script (i.e. with the ocs.fight.attack.object script running) will be aware of incoming missiles even when closing on a ship at long range.</p>
+<p>6. Improved missile tactics</p>
+<p>In the vanilla game, some missile tactics were already written in. These were improved upon. Fighters will now:-</p>
+<p>i) launch a swarm of wasp missiles within 500m of a target as a &#x27;kill&#x27; shot (500m is the range that wasp missiles fire in a tight group)</p>
+<p>ii) will also use other missiles at dodging or otherwise vulnerable targets</p>
+<p>iii) will NOT fire missiles under 200m from a target, reducing self-termination with Hornet missiles</p>
+<p>iv) will use Hurricane missiles against Khaak Clusters</p>
+<p>v) will use Firestorm torpedos and other large missiles against Capital ships and Stations</p>
+<p>7. Improved anti-missile support</p>
+<p>Improved the vanilla anti-missile support to make fighters dodge and shoot down incoming missiles more effectively</p>
+<p>8. Improved dogfighting</p>
+<p>Fighters will actively dodge if their target is firing on them. They will also take &quot;pop-shots&quot; more often using missiles as well as guns to attack any targets of opportunity. Higher skilled pilots will shoot at their attackers in an attempt to force the attacker into an evasive action so they can counter-attack.</p>
+<p>9. Improved chase code</p>
+<p>The vanilla game code caused fighters to pursue an esacping target relentlessly even though there was no hope of catching it. OCS Apollo allows Fighters and Corvettes to disengage from an uncatchable target. The ship would then search for the next available target and pursue that instead. (If no other target is available then the ship will attempt to re-engage the first target.)</p>
+<p>10. Anti-capital ship tactics</p>
+<p>Due to collision avoidance, fighters (and sometimes corvettes) would circle uselessly around a large ship (e.g. M2 or TL). In OCS Apollo, the Fighters and Corvettes will dodge away from the capital ship then circle in to do an attack run. They will also use missiles more actively against capital ships.</p>
+<p>(note: - IREs, PBEs and Mass Drivers are too short ranged to allow fighters to attack Capital class ships in the vanilla game)</p>
+<p>二.安装说明:</p>
+<p>请仔细看安装说明,先解压缩文件</p>
+<p>脚本部分安装</p>
+<p>1.进入\X3 Reunion\scripts目录,找到!fight.attack.object.pck这个文件,找个地方备份这个文件,然后删除\X3 Reunion\scripts目录的这个文件.[不删除的话这个安装都将不起任何作用].</p>
+<p>2a..对于没有安装FightCommandSoftware Mk.III 的朋友[大多数玩家吧],把压缩包内的OCS脚本文件夹内所有文件拷贝到你的\X3 Reunion\scripts下.</p>
+<p>2b..对于使用FightCommandSoftware Mk.III 的朋友,在完成2a操作后,再把FCS-MK-III使用文件夹内所有文件拷贝到你的\X3 Reunion\scripts下覆盖.</p>
+<p>MOD部分安装</p>
+<p>1.请找到原来游戏目录\X3 Reunion中*.cat和*.dat文件的序号最大是多少[例如10.dat和10.cat]。</p>
+<p>2.将OCS导弹MOD文件夹内的10.dat和10.cat文件改名，文件名为上一步找到的最大序号+1[例如11.cat和11.dat]</p>
+<p>3.将改名好的*.cat和 *.dat文件放入游戏目录\X3 Reunion中</p>
+<p>--=此MOD与RogueMOD，DDRS MOD，汉化MOD兼容，但可能与Xtend存在潜在冲突，如Xtend玩家出现导弹工作问题，请删除改MOD文件=--</p>
+<p>三.下载地址:</p>
+<p>Rapidshare (文件大小:1215kb)</p>
+<p>http://www.rayfile.com/files/2710a094-a534-11de-a34c-0014221b798a/</p>
+<p>[ 本帖最后由 HammerSun 于 2007-12-11 23:02 编辑 ]</p></section>
+<section class="floor"><span class="fl">#2</span><p>:lol :lol 我是沙发？</p></section>
+<section class="floor"><span class="fl">#3</span><p>好东西，板凳 我是板凳</p></section>
+<section class="floor"><span class="fl">#4</span><p>那我是铺张报纸坐地上看</p></section>
+<section class="floor"><span class="fl">#5</span><p>这个脚本会严重影响Enemy AI的.....</p>
+<p>安装之前先考虑一下自己的作战能力.....</p></section>
+<section class="floor"><span class="fl">#6</span><p>恩,改下标题醒目点哈</p></section>
+<section class="floor"><span class="fl">#7</span><p>锤大还搞点隐藏，呵呵，真小器~~</p></section>
+<section class="floor"><span class="fl">#8</span><p>没有某些网站的间谍偶就不会设置了.</p></section>
+<section class="floor"><span class="fl">#9</span><p>LZ补上关于XTM及FCK3的安装步骤吧</p>
+<p>1.安装XTM</p>
+<p>2.安装OCS</p>
+<p>3.安装FCK3</p>
+<p>注意:同时使用以上3个的朋友,!fight.attack.object.pck(FCK3附带的)需要被保留,不能删除</p></section>
+<section class="floor"><span class="fl">#10</span><p>LS用这个脚本很久了?</p>
+<p>我那里提供了FCK3的,!fight.attack.object.pck了,至于和Xtm的顺序倒是没注意过[没玩Xtend],Xtend也修改战斗脚本了?</p></section>
+<aside class="related"><h2>同版块相关攻略</h2><ul>
+<li><a href="../t/764.html">OVERTUNE BBS脚本介绍</a></li>
+<li><a href="../t/1319.html">Mod / Scripts 资料</a></li>
+<li><a href="../t/989.html">两个scripts的补丁-Capitol Ship Crews &amp; Mercenaries Guild</a></li>
+<li><a href="../t/1070.html">[Scripts] Player Equipment Dock</a></li>
+<li><a href="../t/974.html">小scripts: 可以把一个station的关系改成friendly</a></li>
+<li><a href="../t/950.html">Scripts: Repairing Hull Technology</a></li>
+<li><a href="../t/951.html">Scripts: Jumpdrive kits</a></li>
+<li><a href="../t/14448.html">▆◣巨量120个X3脚本中文说明及下载地址电子书 - 第3页</a></li>
+</ul></aside>
+</article>
+<footer class="site">
+<p><strong>关于本站</strong>：这是对已关站的太空游戏社区 <b>深度时空 bbs.deeptimes.net</b> 的非官方社区存档，
+内容取自 <a href="https://web.archive.org/web/*/bbs.deeptimes.net" rel="nofollow">Wayback Machine</a> 公开存档，
+<b>版权归各原作者所有</b>，帖内保留了原作者署名与发帖时间。仅供游戏玩家学习交流与资料保存之用。</p>
+<p>如您是原作者或原站长，希望某内容下架或补充署名，请提交 GitHub Issue，我们会尽快处理。</p>
+<p class="muted">Archive of the defunct Chinese space-game forum DeepTimes (bbs.deeptimes.net). Content © original authors. Preservation mirror.</p>
+</footer></body></html>

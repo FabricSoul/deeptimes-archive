@@ -1,0 +1,60 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>【X4 优化设置】亲测有效｜X4：基石攻略｜深度时空存档</title>
+<meta name="description" content="之前发了个帖子关于为啥3.0了，优化还这么烂！详细请看： https://bbs.deeptimes.net/forum. ... mp;page=5#pid911648 最近在国外论坛，看见别人分享的一个优化设置，亲测提升明显！ 先要说明，如果你的配置 超过了官方推荐的配置 （尤其是显卡在1070">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://fabricsoul.github.io/deeptimes-archive/t/2155528.html">
+<meta property="og:type" content="website"><meta property="og:site_name" content="深度时空太空游戏攻略存档">
+<meta property="og:title" content="【X4 优化设置】亲测有效｜X4：基石攻略｜深度时空存档"><meta property="og:description" content="之前发了个帖子关于为啥3.0了，优化还这么烂！详细请看： https://bbs.deeptimes.net/forum. ... mp;page=5#pid911648 最近在国外论坛，看见别人分享的一个优化设置，亲测提升明显！ 先要说明，如果你的配置 超过了官方推荐的配置 （尤其是显卡在1070">
+<meta property="og:url" content="https://fabricsoul.github.io/deeptimes-archive/t/2155528.html"><meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "DiscussionForumPosting", "headline": "【X4 优化设置】亲测有效", "articleBody": "之前发了个帖子关于为啥3.0了，优化还这么烂！详细请看： https://bbs.deeptimes.net/forum. ... mp;page=5#pid911648\n\n最近在国外论坛，看见别人分享的一个优化设置，亲测提升明显！\n\n先要说明，如果你的配置 超过了官方推荐的配置 （尤其是显卡在1070 及以上），并且发现游戏帧数基本上在30上下徘徊，这个时候可以很负责地说，提升显卡将没有任何意义。因为这游戏地性能瓶颈很大在CPU主频，其次在内存的主频……所以要升级设备，可以有限考虑CPU。\n\nOK，言归正传，这次的优化思路是降低游戏的交通（traffic），就是降低在空间站附近生成的舰船数量，尤其是小型船的数量，包括排队的那种特别小的。因为没多一艘船，都要多一次碰撞的运算，导致一到空间站帧数蹭蹭地往下掉。小飞船的驾驶员又经常喝了假酒，死活停靠不上。导致碰撞检测越来越贵。\n\n具体操作：\n\n第一次启动游戏后，你的C:/文档/Egosoft/x4下面会有个配置文件，config.xml。用记事本打开它，直接Ctrl + f 搜索traffic，然后你会看到它的默认值为0.5，可以考虑把它缩小10倍，改成0.05，保存。然后进游戏，可以考虑开个新档 （比如默认的那个新手开局）， 在空间站等上一段时间，看看帧数情况。\n\n我这边至少提升了15-25帧 （我之前在初始空间站大概在35-45帧左右，改了这个设置之后，基本上稳定在55-65左右）。配合steam 创意工坊里那个只显示大型陨石的mod，估计前中期的游戏体验还是可以保证的。\n\n我的配置：\n\nCPU: 3900X\n\nMEM: 32G + 3600 MHZ\n\nGPU: GTX1080\n\n游戏跑在SSD上面（新的SSD在路上，准备到了再测试一下）。\n\n我感觉Ego 是完全不做优化的。 而且感觉他们那个引擎也是醉了……一个小工作室，还用自研引擎，还用vulkan，简直在作死=-=。", "author": {"@type": "Person", "name": "张小木001"}, "url": "https://fabricsoul.github.io/deeptimes-archive/t/2155528.html", "inLanguage": "zh-CN", "about": "X4：基石（X4: Foundations）", "isPartOf": {"@type": "WebSite", "name": "深度时空太空游戏攻略存档", "url": "https://fabricsoul.github.io/deeptimes-archive/"}, "commentCount": 7, "datePublished": "2020-11-22"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "首页", "item": "https://fabricsoul.github.io/deeptimes-archive/"}, {"@type": "ListItem", "position": 2, "name": "X4：基石", "item": "https://fabricsoul.github.io/deeptimes-archive/s/x4-foundations.html"}, {"@type": "ListItem", "position": 3, "name": "【X4 优化设置】亲测有效", "item": "https://fabricsoul.github.io/deeptimes-archive/t/2155528.html"}]}</script>
+</head><body>
+<header class="site"><a href="../index.html" class="brand">深度时空 · 太空游戏攻略存档</a>
+<span class="tag">DeepTimes Space Game Archive</span></header>
+<nav class="crumb"><a href="../index.html">首页</a> › <a href="../s/x4-foundations.html">X4：基石</a> › <span>【X4 优化设置】亲测有效</span></nav>
+<article><h1>【X4 优化设置】亲测有效</h1>
+<p class="src">原作者：张小木001　发表：2020-11-22　来源：bbs.deeptimes.net（已关站）· <a href="https://web.archive.org/web/20240507161403/https://bbs.deeptimes.net/forum.php?mod=viewthread&tid=2155528" rel="nofollow">Wayback 存档</a></p>
+<section class="floor"><span class="fl">#1</span><p>之前发了个帖子关于为啥3.0了，优化还这么烂！详细请看： https://bbs.deeptimes.net/forum. ... mp;page=5#pid911648</p>
+<p>最近在国外论坛，看见别人分享的一个优化设置，亲测提升明显！</p>
+<p>先要说明，如果你的配置 超过了官方推荐的配置 （尤其是显卡在1070 及以上），并且发现游戏帧数基本上在30上下徘徊，这个时候可以很负责地说，提升显卡将没有任何意义。因为这游戏地性能瓶颈很大在CPU主频，其次在内存的主频……所以要升级设备，可以有限考虑CPU。</p>
+<p>OK，言归正传，这次的优化思路是降低游戏的交通（traffic），就是降低在空间站附近生成的舰船数量，尤其是小型船的数量，包括排队的那种特别小的。因为没多一艘船，都要多一次碰撞的运算，导致一到空间站帧数蹭蹭地往下掉。小飞船的驾驶员又经常喝了假酒，死活停靠不上。导致碰撞检测越来越贵。</p>
+<p>具体操作：</p>
+<p>第一次启动游戏后，你的C:/文档/Egosoft/x4下面会有个配置文件，config.xml。用记事本打开它，直接Ctrl + f 搜索traffic，然后你会看到它的默认值为0.5，可以考虑把它缩小10倍，改成0.05，保存。然后进游戏，可以考虑开个新档 （比如默认的那个新手开局）， 在空间站等上一段时间，看看帧数情况。</p>
+<p>我这边至少提升了15-25帧 （我之前在初始空间站大概在35-45帧左右，改了这个设置之后，基本上稳定在55-65左右）。配合steam 创意工坊里那个只显示大型陨石的mod，估计前中期的游戏体验还是可以保证的。</p>
+<p>我的配置：</p>
+<p>CPU: 3900X</p>
+<p>MEM: 32G + 3600 MHZ</p>
+<p>GPU: GTX1080</p>
+<p>游戏跑在SSD上面（新的SSD在路上，准备到了再测试一下）。</p>
+<p>我感觉Ego 是完全不做优化的。 而且感觉他们那个引擎也是醉了……一个小工作室，还用自研引擎，还用vulkan，简直在作死=-=。</p></section>
+<section class="floor"><span class="fl">#2</span><p>这样不知道会不会有个问题，就是空间站周围的罪犯飞船数量会不会大幅减少。</p>
+<p>在前期和Split搞关系的时候打击罪犯是非常有效的手段。</p></section>
+<section class="floor"><span class="fl">#3</span><p>意义不大，这个到后期就不是吃资源大户了，而是空间站交通，HQ扩展太大等等。</p></section>
+<section class="floor"><span class="fl">#4</span><p>我终于找到我电脑卡的原因了，就是因为我用了贸易mod，关了稳定30帧以上，大部分时间都在40-60帧，但是一用贸易mod就卡死到10帧</p>
+<p>求问各位有没有好用的贸易mod</p></section>
+<section class="floor"><span class="fl">#5</span><p>请问改成0是不是就没有这些小船了？</p></section>
+<section class="floor"><span class="fl">#6</span><p>这些小民用机确实会大幅度降低帧率，有时候空间站周围能刷出几百架，直接就卡成PPT了</p></section>
+<section class="floor"><span class="fl">#7</span><p>本帖最后由 雨翼 于 2020-11-23 19:53 编辑 </p>
+<p>空间站那些小船屏蔽了可以。可是要是碰到X大规模进攻你的要塞那战斗的激烈程度。怎么解决卡顿问题呢。 X大把的船自己也大把的船要塞在放出海量的无人机的时候</p></section>
+<section class="floor"><span class="fl">#8</span><p>还是得要优化，不过能管一时用。</p></section>
+<aside class="related"><h2>同版块相关攻略</h2><ul>
+<li><a href="../t/2150760.html">2.5bate 开始了～</a></li>
+<li><a href="../t/2151090.html">给一脸懵逼的新人们写的攻略</a></li>
+<li><a href="../t/2154713.html">X4 3.0测试版出来了</a></li>
+<li><a href="../t/2155524.html">看到X4可以选择4.00 beta1的测试版本</a></li>
+<li><a href="../t/2154709.html">X重生船包（XR ShipPack)汉化问题讨论</a></li>
+<li><a href="../t/2158460.html">妖王全部5个数据仓库位置最可靠获取方法（亲测有效）</a></li>
+<li><a href="../t/2149981.html">新人入门指引+X扫盲（持续更新）</a></li>
+<li><a href="../t/2155372.html">P\S族任务就是个大坑啊</a></li>
+</ul></aside>
+</article>
+<footer class="site">
+<p><strong>关于本站</strong>：这是对已关站的太空游戏社区 <b>深度时空 bbs.deeptimes.net</b> 的非官方社区存档，
+内容取自 <a href="https://web.archive.org/web/*/bbs.deeptimes.net" rel="nofollow">Wayback Machine</a> 公开存档，
+<b>版权归各原作者所有</b>，帖内保留了原作者署名与发帖时间。仅供游戏玩家学习交流与资料保存之用。</p>
+<p>如您是原作者或原站长，希望某内容下架或补充署名，请提交 GitHub Issue，我们会尽快处理。</p>
+<p class="muted">Archive of the defunct Chinese space-game forum DeepTimes (bbs.deeptimes.net). Content © original authors. Preservation mirror.</p>
+</footer></body></html>

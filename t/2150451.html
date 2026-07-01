@@ -1,0 +1,95 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>舰队MOD（框架测试版）（12-30更新）｜X4模组脚本(X4: Foundations MOD&amp;Scripts)攻略｜深度时空存档</title>
+<meta name="description" content="简介 初期版本，提供舰队内攻击分组，简单设定小组攻击对象，自动停靠飞船，自动补给弹药和无人机。 因为我对舰队非地图指挥的执念，保留了手动指挥小组攻击不同对象的功能。 考虑了好久，还是放弃了CODEA那种海军式分组方式，转而使用自定义攻击小组的方式来实现舰队分组。 因为最初的目标只想做个自己手动控制舰">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://fabricsoul.github.io/deeptimes-archive/t/2150451.html">
+<meta property="og:type" content="website"><meta property="og:site_name" content="深度时空太空游戏攻略存档">
+<meta property="og:title" content="舰队MOD（框架测试版）（12-30更新）｜X4模组脚本(X4: Foundations MOD&amp;Scripts)攻略｜深度时空存档"><meta property="og:description" content="简介 初期版本，提供舰队内攻击分组，简单设定小组攻击对象，自动停靠飞船，自动补给弹药和无人机。 因为我对舰队非地图指挥的执念，保留了手动指挥小组攻击不同对象的功能。 考虑了好久，还是放弃了CODEA那种海军式分组方式，转而使用自定义攻击小组的方式来实现舰队分组。 因为最初的目标只想做个自己手动控制舰">
+<meta property="og:url" content="https://fabricsoul.github.io/deeptimes-archive/t/2150451.html"><meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "DiscussionForumPosting", "headline": "舰队MOD（框架测试版）（12-30更新）", "articleBody": "本帖最后由 slan 于 2018-12-30 20:47 编辑 \n\n简介\n\r\n初期版本，提供舰队内攻击分组，简单设定小组攻击对象，自动停靠飞船，自动补给弹药和无人机。\n\r\n因为我对舰队非地图指挥的执念，保留了手动指挥小组攻击不同对象的功能。\n\r\n考虑了好久，还是放弃了CODEA那种海军式分组方式，转而使用自定义攻击小组的方式来实现舰队分组。\n\r\n因为最初的目标只想做个自己手动控制舰队的MOD，但是不小心写HIGH了。中间重构了三次，可能有许多未知BUG。见谅\n\r\n大部分功能都只搭建了框架，细节很不完善，大家可以回复希望的改进（关键是我自己没好好玩舰队，现在抓瞎了）。\n\r\n使用前请先备份好存档！\n\r\n效果如图：\n\r\n\n\r\n\n\r\n更新1：2018-12-30\n\r\n\n\r\n\n\r\n\n操作介绍:\n\r\n\n\r\n通过默认指令中的舰队设置新指令来设置母舰（玩家当前操作的飞船可以通过另一方式设置母舰，稍后说。）\n\r\n\n\r\n\n\r\n攻击距离：雷达可视范围的百分比，舰队非手动指定下只会攻击这个范围内的敌人。\n\r\n跳跃跟随:暂时无效，这个功能和作弊菜单重复了，已取消。\n\r\n反应模式：选中为主动，不选为被动，后面随时可更改。\n\r\n确定后等待一会，当默认指令变回原地待命后则完成设置。\n\r\n\n\r\n成功设置母舰后，和母舰舰长对话可看到远程控制选项。\n\r\n\n\r\n\n\r\n全部召回：让舰队成员忽视当前的所有敌人回到母舰身旁，这个过程中不会反击。\n\r\n舰队设置：舰队的详细设置\n\r\n索敌方式:与默认指令中的设置相同。\n\r\n\n\r\n\n\r\n组设置：设置各个分组\n\r\n舰队设置：与默认指令中的设置相同。\n\r\n当前舰队解散：顾名思义，解散当前的舰队。\n\r\n\n\r\n\n\r\n组设置：设置当前已有的小组属性。\n\r\n管理成员：顾名思义，添加或删除舰队成员（需要将飞船设置为母舰下属）\n\r\n添加新攻击组：理论上，舰队的攻击小组是无限添加的。\n\r\n所有队员添加为：将当前非成员下属添加到某个小组中\n\r\n解除组：将当前某个小组删除\n\r\n\n\r\n\n\r\n优先攻击：指定攻击的对象（目前初步设置了空间站和不同飞船吨位，以后会添加更多优先选项）\n\r\n只攻击优先目标：成员只打优先目标\n\r\n以上两项防御组没有\n\r\n攻击方式：分散）飞船在保证至少3打1的情况下攻击所有敌人，适合打小船；集中）集中所有飞船攻击同一目标，打大船比较合适\n\r\n炮塔设置：设置本组内所有飞船炮塔（如果有炮塔的话）\n\r\n补给设置：设置补给空间站以及补给列表。\n\r\n\n\r\n\n\r\n补给品：指定空间站提供的所有补给品列表（目前只有弹药以及无人机）。可设置补给品以及补给品在飞船中占用的空间百分比。\n\r\n当前列表：可设置已经设置的补给品的占用百分比\n\r\n清空列表：顾名思义\n\r\n选择空间站：将玩家点选的空间站设置为该小组的补给站，只有这里设置了，补给品才会显示列表。（建议一个小组内，只设置同样改装范围的飞船，我没试验过是不是能跨级别补给）（刚看到补给船的MOD，这里暂时不支持，只支持空间站。）\n\r\n\n\r\n\n\r\n通过shift + 2两次激活（如果使用了作弊菜单，会在作弊菜单的快捷菜单中第六项出现）\n\r\n手动攻击：比远程设置多了集火选中、针对攻击的功能。\n\r\n集火选中：所有小组成员一起砸玩家选中的对象。包括防御组\n\r\n针对攻击:让指定的组集火玩家选中的对象\n\r\n\n\r\n停靠：\n\r\n当舰队脱离战斗一段时间，所有成员飞船会在舰队成员中自动寻找可停靠目标。目前直接用的瞬间停靠。\n\r\n注意：\n\r\n1、不要手动修改舰队成员的指挥官，要卸载后修改。\n\r\n2、尽量不要修改舰队成员（母舰除外）的默认指令。因为我没增加自动修复指令，会导致默认指令被修改的飞船自动停靠失效。\n\r\n3、我是在1.5游戏版本下做的，1.3我没测试过，目前确定的应该是炮塔模式1.3少一个，其他未知。\n\r\n\n\r\n下载：", "author": {"@type": "Person", "name": "slan"}, "url": "https://fabricsoul.github.io/deeptimes-archive/t/2150451.html", "inLanguage": "zh-CN", "about": "X4模组脚本(X4: Foundations MOD&Scripts)", "isPartOf": {"@type": "WebSite", "name": "深度时空太空游戏攻略存档", "url": "https://fabricsoul.github.io/deeptimes-archive/"}, "commentCount": 6, "datePublished": "2018-12-30"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "首页", "item": "https://fabricsoul.github.io/deeptimes-archive/"}, {"@type": "ListItem", "position": 2, "name": "X4模组脚本(X4: Foundations MOD&Scripts)", "item": "https://fabricsoul.github.io/deeptimes-archive/s/x4-foundations-mod.html"}, {"@type": "ListItem", "position": 3, "name": "舰队MOD（框架测试版）（12-30更新）", "item": "https://fabricsoul.github.io/deeptimes-archive/t/2150451.html"}]}</script>
+</head><body>
+<header class="site"><a href="../index.html" class="brand">深度时空 · 太空游戏攻略存档</a>
+<span class="tag">DeepTimes Space Game Archive</span></header>
+<nav class="crumb"><a href="../index.html">首页</a> › <a href="../s/x4-foundations-mod.html">X4模组脚本(X4: Foundations MOD&amp;Scripts)</a> › <span>舰队MOD（框架测试版）（12-30更新）</span></nav>
+<article><h1>舰队MOD（框架测试版）（12-30更新）</h1>
+<p class="src">原作者：slan　发表：2018-12-30　来源：bbs.deeptimes.net（已关站）· <a href="https://web.archive.org/web/20190918215327/https://bbs.deeptimes.net/forum.php?mod=viewthread&tid=2150451" rel="nofollow">Wayback 存档</a></p>
+<section class="floor"><span class="fl">#1</span><p>本帖最后由 slan 于 2018-12-30 20:47 编辑 </p>
+<p>简介</p>
+<p>初期版本，提供舰队内攻击分组，简单设定小组攻击对象，自动停靠飞船，自动补给弹药和无人机。</p>
+<p>因为我对舰队非地图指挥的执念，保留了手动指挥小组攻击不同对象的功能。</p>
+<p>考虑了好久，还是放弃了CODEA那种海军式分组方式，转而使用自定义攻击小组的方式来实现舰队分组。</p>
+<p>因为最初的目标只想做个自己手动控制舰队的MOD，但是不小心写HIGH了。中间重构了三次，可能有许多未知BUG。见谅</p>
+<p>大部分功能都只搭建了框架，细节很不完善，大家可以回复希望的改进（关键是我自己没好好玩舰队，现在抓瞎了）。</p>
+<p>使用前请先备份好存档！</p>
+<p>效果如图：</p>
+<p>更新1：2018-12-30</p>
+<p>操作介绍:</p>
+<p>通过默认指令中的舰队设置新指令来设置母舰（玩家当前操作的飞船可以通过另一方式设置母舰，稍后说。）</p>
+<p>攻击距离：雷达可视范围的百分比，舰队非手动指定下只会攻击这个范围内的敌人。</p>
+<p>跳跃跟随:暂时无效，这个功能和作弊菜单重复了，已取消。</p>
+<p>反应模式：选中为主动，不选为被动，后面随时可更改。</p>
+<p>确定后等待一会，当默认指令变回原地待命后则完成设置。</p>
+<p>成功设置母舰后，和母舰舰长对话可看到远程控制选项。</p>
+<p>全部召回：让舰队成员忽视当前的所有敌人回到母舰身旁，这个过程中不会反击。</p>
+<p>舰队设置：舰队的详细设置</p>
+<p>索敌方式:与默认指令中的设置相同。</p>
+<p>组设置：设置各个分组</p>
+<p>舰队设置：与默认指令中的设置相同。</p>
+<p>当前舰队解散：顾名思义，解散当前的舰队。</p>
+<p>组设置：设置当前已有的小组属性。</p>
+<p>管理成员：顾名思义，添加或删除舰队成员（需要将飞船设置为母舰下属）</p>
+<p>添加新攻击组：理论上，舰队的攻击小组是无限添加的。</p>
+<p>所有队员添加为：将当前非成员下属添加到某个小组中</p>
+<p>解除组：将当前某个小组删除</p>
+<p>优先攻击：指定攻击的对象（目前初步设置了空间站和不同飞船吨位，以后会添加更多优先选项）</p>
+<p>只攻击优先目标：成员只打优先目标</p>
+<p>以上两项防御组没有</p>
+<p>攻击方式：分散）飞船在保证至少3打1的情况下攻击所有敌人，适合打小船；集中）集中所有飞船攻击同一目标，打大船比较合适</p>
+<p>炮塔设置：设置本组内所有飞船炮塔（如果有炮塔的话）</p>
+<p>补给设置：设置补给空间站以及补给列表。</p>
+<p>补给品：指定空间站提供的所有补给品列表（目前只有弹药以及无人机）。可设置补给品以及补给品在飞船中占用的空间百分比。</p>
+<p>当前列表：可设置已经设置的补给品的占用百分比</p>
+<p>清空列表：顾名思义</p>
+<p>选择空间站：将玩家点选的空间站设置为该小组的补给站，只有这里设置了，补给品才会显示列表。（建议一个小组内，只设置同样改装范围的飞船，我没试验过是不是能跨级别补给）（刚看到补给船的MOD，这里暂时不支持，只支持空间站。）</p>
+<p>通过shift + 2两次激活（如果使用了作弊菜单，会在作弊菜单的快捷菜单中第六项出现）</p>
+<p>手动攻击：比远程设置多了集火选中、针对攻击的功能。</p>
+<p>集火选中：所有小组成员一起砸玩家选中的对象。包括防御组</p>
+<p>针对攻击:让指定的组集火玩家选中的对象</p>
+<p>停靠：</p>
+<p>当舰队脱离战斗一段时间，所有成员飞船会在舰队成员中自动寻找可停靠目标。目前直接用的瞬间停靠。</p>
+<p>注意：</p>
+<p>1、不要手动修改舰队成员的指挥官，要卸载后修改。</p>
+<p>2、尽量不要修改舰队成员（母舰除外）的默认指令。因为我没增加自动修复指令，会导致默认指令被修改的飞船自动停靠失效。</p>
+<p>3、我是在1.5游戏版本下做的，1.3我没测试过，目前确定的应该是炮塔模式1.3少一个，其他未知。</p>
+<p>下载：</p></section>
+<section class="floor"><span class="fl">#2</span><p>赞赞赞，舰队建设走起来</p></section>
+<section class="floor"><span class="fl">#3</span><p>大佬6666，现阶段游戏自带命令就是个摆设，大佬做得太及时了，大佬加油</p></section>
+<section class="floor"><span class="fl">#4</span><p>有哪位大佬会建模，我想要大飞船，P族的，主要是舰桥开起来高端。现在的航母个头太小了，至少要比“I”大一些！最好长度十公里以上的量级</p></section>
+<section class="floor"><span class="fl">#5</span><p>你先学着，如果学成。希望能建造一艘星球战舰。我想要这种已经等了10年了……</p></section>
+<section class="floor"><span class="fl">#6</span><p>本帖最后由 idofwsl 于 2018-12-30 17:23 编辑 </p>
+<p>非常棒的MOD，这正是游戏里缺失的一块重要功能</p>
+<p>想问下楼主，关于“指定攻击的对象”，如果我选择了XL级，并且不选择“只攻击优先目标”，那么在攻击范围内没有XL级舰的情况下，是否就会任意攻击？如果是这样，那就会出现鱼雷机在没有XL目标，但有L级目标的情况下，仍选择战机为攻击目标。</p>
+<p>其实对于制定攻击目标的需求，大致就是分两类，反舰（包括空间站）和反战机。假设我配置了一组鱼雷（或等离子炮）重型战机，那攻击目标必定是XL级，L级以及空间站。所以我觉得，对于优先攻击目标的选项，与其按船级细分，到不如只有“大型目标”或“小型目标”两个选项，会更有效，更有针对性一些。或者，也可以把这两个选项分开，优先目标的制定仍然像现在这样指定攻击的对象，另外提供一个叫“舰队功能”的设置，可以选择（反舰/反战机/通用），这样可以防止舰队攻击预想目标之外的单位，同时让攻击目标更有针对性。比如设置XL级，同时选择反舰，那么该组舰队就会只攻击大型目标，但优选攻击XL级的舰船。</p></section>
+<section class="floor"><span class="fl">#7</span><p>学呀，你以为我写MOD是本来就会呀，这都是X4上线前一个月用XR补课学到的呀。</p></section>
+<aside class="related"><h2>同版块相关攻略</h2><ul>
+<li><a href="../t/2150167.html">【中文/英文】精选MOD（远不止18个） 起很好辅助作用</a></li>
+<li><a href="../t/2155600.html">星战MOD个人小改</a></li>
+<li><a href="../t/2151082.html">【MOD】自用分享、指路，2.5版本下测试（7月3日更新）</a></li>
+<li><a href="../t/2150744.html">舰船MOD和原版武器大修MOD推荐指路</a></li>
+<li><a href="../t/2149869.html">作弊MOD (2018-12-17更新v0.9763)（已修复上传错误）</a></li>
+<li><a href="../t/2155606.html">N网星战模组最新更新版本0.4.7.2 HF2汉化与个人修改</a></li>
+<li><a href="../t/2154990.html">XReborn Ship Ports（N网最新船包）</a></li>
+<li><a href="../t/2158590.html">星球大战mod0.62版本汉化发布</a></li>
+</ul></aside>
+</article>
+<footer class="site">
+<p><strong>关于本站</strong>：这是对已关站的太空游戏社区 <b>深度时空 bbs.deeptimes.net</b> 的非官方社区存档，
+内容取自 <a href="https://web.archive.org/web/*/bbs.deeptimes.net" rel="nofollow">Wayback Machine</a> 公开存档，
+<b>版权归各原作者所有</b>，帖内保留了原作者署名与发帖时间。仅供游戏玩家学习交流与资料保存之用。</p>
+<p>如您是原作者或原站长，希望某内容下架或补充署名，请提交 GitHub Issue，我们会尽快处理。</p>
+<p class="muted">Archive of the defunct Chinese space-game forum DeepTimes (bbs.deeptimes.net). Content © original authors. Preservation mirror.</p>
+</footer></body></html>

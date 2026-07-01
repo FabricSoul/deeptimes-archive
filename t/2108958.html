@@ -1,0 +1,69 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Python脚本 - 用于计算Component文件的XYZ方位｜X3：地球人冲突/阿尔比恩序曲 模组脚本攻略｜深度时空存档</title>
+<meta name="description" content="便民便己~ 同志们添加新飞船模型，新炮塔的时候会用到的。。 用IDLE运行即可。。 语言：Python 2.7.1 dxyz是3D方位-&gt;Component方位 rdxyz是倒过来 import math import cmath minx,miny,minz = raw_input(&#x27;Insert">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://fabricsoul.github.io/deeptimes-archive/t/2108958.html">
+<meta property="og:type" content="website"><meta property="og:site_name" content="深度时空太空游戏攻略存档">
+<meta property="og:title" content="Python脚本 - 用于计算Component文件的XYZ方位｜X3：地球人冲突/阿尔比恩序曲 模组脚本攻略｜深度时空存档"><meta property="og:description" content="便民便己~ 同志们添加新飞船模型，新炮塔的时候会用到的。。 用IDLE运行即可。。 语言：Python 2.7.1 dxyz是3D方位-&gt;Component方位 rdxyz是倒过来 import math import cmath minx,miny,minz = raw_input(&#x27;Insert">
+<meta property="og:url" content="https://fabricsoul.github.io/deeptimes-archive/t/2108958.html"><meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "DiscussionForumPosting", "headline": "Python脚本 - 用于计算Component文件的XYZ方位", "articleBody": "便民便己~\n\r\n\n\r\n同志们添加新飞船模型，新炮塔的时候会用到的。。\n\r\n\n\r\n用IDLE运行即可。。\n\r\n语言：Python 2.7.1\n\r\n\n\r\ndxyz是3D方位->Component方位\n\r\nrdxyz是倒过来\n\r\n\rimport math\n\rimport cmath\n\r\n\rminx,miny,minz = raw_input('Insert value for min xyz: ').split(';')\n\rmaxx,maxy,maxz = raw_input('Insert value for max xyz: ').split(';')\n\r\n\rwhile True:\n\r  anstype = raw_input('What are you looking for?: ')\n\r  if anstype == 'dxyz':\n\r    while True:\n\r      x,y,z = raw_input('Insert value for desired xyz: ').split(';')\n\r\n\r      dx = float(x)/((float(minx)+float(maxx))/2)\n\r      dy = float(y)/((float(miny)+float(maxy))/2)\n\r      dz = float(z)/((float(minz)+float(maxz))/2)\n\r       \n\r       \n\r      print 'dx: ', round(dx, 6)\n\r      print 'dy: ', round(dy, 6)\n\r      print 'dz: ', round(dz, 6)\n\r\n\r\n\r\n\r  if anstype == 'rdxyz':\n\r    while True:\n\r      dx,dy,dz = raw_input('Insert value for component xyz: ').split(';')\n\r\n\r      x = float(dx)*((float(minx)+float(maxx))/2)\n\r      y = float(dy)*((float(miny)+float(maxy))/2)\n\r      z = float(dz)*((float(minz)+float(maxz))/2)\n\r\n\r      print 'rdx: ', round(x, 6)\n\r      print 'rdy: ', round(y, 6)\n\r      print 'rdz: ', round(z, 6)\n\r\n复制代码", "author": {"@type": "Person", "name": "黑暗枪骑兵"}, "url": "https://fabricsoul.github.io/deeptimes-archive/t/2108958.html", "inLanguage": "zh-CN", "about": "X3：地球人冲突/阿尔比恩序曲 模组脚本（TC/AP MOD & Scripts）", "isPartOf": {"@type": "WebSite", "name": "深度时空太空游戏攻略存档", "url": "https://fabricsoul.github.io/deeptimes-archive/"}, "commentCount": 1, "datePublished": "2011-3-6"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "首页", "item": "https://fabricsoul.github.io/deeptimes-archive/"}, {"@type": "ListItem", "position": 2, "name": "X3：地球人冲突/阿尔比恩序曲 模组脚本", "item": "https://fabricsoul.github.io/deeptimes-archive/s/x3-tc-ap-mods.html"}, {"@type": "ListItem", "position": 3, "name": "Python脚本 - 用于计算Component文件的XYZ方位", "item": "https://fabricsoul.github.io/deeptimes-archive/t/2108958.html"}]}</script>
+</head><body>
+<header class="site"><a href="../index.html" class="brand">深度时空 · 太空游戏攻略存档</a>
+<span class="tag">DeepTimes Space Game Archive</span></header>
+<nav class="crumb"><a href="../index.html">首页</a> › <a href="../s/x3-tc-ap-mods.html">X3：地球人冲突/阿尔比恩序曲 模组脚本</a> › <span>Python脚本 - 用于计算Component文件的XYZ方位</span></nav>
+<article><h1>Python脚本 - 用于计算Component文件的XYZ方位</h1>
+<p class="src">原作者：黑暗枪骑兵　发表：2011-3-6　来源：bbs.deeptimes.net（已关站）· <a href="https://web.archive.org/web/20191021140022/https://bbs.deeptimes.net/forum.php?mod=viewthread&tid=2108958" rel="nofollow">Wayback 存档</a></p>
+<section class="floor"><span class="fl">#1</span><p>便民便己~</p>
+<p>同志们添加新飞船模型，新炮塔的时候会用到的。。</p>
+<p>用IDLE运行即可。。</p>
+<p>语言：Python 2.7.1</p>
+<p>dxyz是3D方位-&gt;Component方位</p>
+<p>rdxyz是倒过来</p>
+<p>import math
+import cmath</p>
+<p>minx,miny,minz = raw_input(&#x27;Insert value for min xyz: &#x27;).split(&#x27;;&#x27;)
+maxx,maxy,maxz = raw_input(&#x27;Insert value for max xyz: &#x27;).split(&#x27;;&#x27;)</p>
+<p>while True:
+  anstype = raw_input(&#x27;What are you looking for?: &#x27;)
+  if anstype == &#x27;dxyz&#x27;:
+    while True:
+      x,y,z = raw_input(&#x27;Insert value for desired xyz: &#x27;).split(&#x27;;&#x27;)</p>
+<p>      dx = float(x)/((float(minx)+float(maxx))/2)
+      dy = float(y)/((float(miny)+float(maxy))/2)
+      dz = float(z)/((float(minz)+float(maxz))/2)</p>
+<p>      print &#x27;dx: &#x27;, round(dx, 6)
+      print &#x27;dy: &#x27;, round(dy, 6)
+      print &#x27;dz: &#x27;, round(dz, 6)</p>
+<p>  if anstype == &#x27;rdxyz&#x27;:
+    while True:
+      dx,dy,dz = raw_input(&#x27;Insert value for component xyz: &#x27;).split(&#x27;;&#x27;)</p>
+<p>      x = float(dx)*((float(minx)+float(maxx))/2)
+      y = float(dy)*((float(miny)+float(maxy))/2)
+      z = float(dz)*((float(minz)+float(maxz))/2)</p>
+<p>      print &#x27;rdx: &#x27;, round(x, 6)
+      print &#x27;rdy: &#x27;, round(y, 6)
+      print &#x27;rdz: &#x27;, round(z, 6)</p>
+<p>复制代码</p></section>
+<section class="floor"><span class="fl">#2</span><p>原来是~~Python这语言除了算数就没啥了~~不过运算功能之强，匪夷所思~~</p></section>
+<aside class="related"><h2>同版块相关攻略</h2><ul>
+<li><a href="../t/2109739.html">Ship Rebalance Mod:Continued v1.06 (27/4/11): A Huge Update</a></li>
+<li><a href="../t/2110042.html">X3: Time Of The Truth V1.1</a></li>
+<li><a href="../t/2111136.html">[MOD] Combat Mod 4 - v4.13 14/6/11 - Tweaks and Sounds</a></li>
+<li><a href="../t/2110038.html">[MOD] Combat Mod 4 - v4.11b 20/5/11 - Fixes &amp; SRM 1.08 compatibility</a></li>
+<li><a href="../t/2109845.html">[MOD] Combat Mod 4 - v4.10 4/5/11 - New IonD Implimentation</a></li>
+<li><a href="../t/2117112.html">TC(AP)、RE常用脚本集………………</a></li>
+<li><a href="../t/2109834.html">2011年1月23日 Lucikes_Skript_Kollektion脚本个人汉化</a></li>
+<li><a href="../t/2109073.html">Tship数据批量修改器</a></li>
+</ul></aside>
+</article>
+<footer class="site">
+<p><strong>关于本站</strong>：这是对已关站的太空游戏社区 <b>深度时空 bbs.deeptimes.net</b> 的非官方社区存档，
+内容取自 <a href="https://web.archive.org/web/*/bbs.deeptimes.net" rel="nofollow">Wayback Machine</a> 公开存档，
+<b>版权归各原作者所有</b>，帖内保留了原作者署名与发帖时间。仅供游戏玩家学习交流与资料保存之用。</p>
+<p>如您是原作者或原站长，希望某内容下架或补充署名，请提交 GitHub Issue，我们会尽快处理。</p>
+<p class="muted">Archive of the defunct Chinese space-game forum DeepTimes (bbs.deeptimes.net). Content © original authors. Preservation mirror.</p>
+</footer></body></html>
