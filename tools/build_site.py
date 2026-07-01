@@ -151,7 +151,7 @@ def head(title, desc, canonical, rel_prefix, noindex=False, extra_ld=None):
 <link rel="stylesheet" href="{rel_prefix}assets/style.css">
 {ld}</head><body>
 <header class="site"><a href="{rel_prefix}index.html" class="brand">深度时空 · 太空游戏攻略存档</a>
-<span class="tag">DeepTimes Space Game Archive</span></header>'''
+<span class="tag">DeepTimes Space Game Archive</span><a class="gh" href="https://github.com/FabricSoul/deeptimes-archive" target="_blank" rel="noopener">GitHub ↗</a></header>'''
 
 FOOTER=f'''<footer class="site">
 <p><strong>关于本站</strong>：这是对已关站的太空游戏社区 <b>深度时空 bbs.deeptimes.net</b> 的非官方社区存档，
@@ -256,13 +256,15 @@ a{color:#2155a4;text-decoration:none}a:hover{text-decoration:underline}
 header.site{background:#111827;color:#fff;padding:14px 20px;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
 header.site .brand{color:#fff;font-weight:700;font-size:1.05em}
 header.site .tag{color:#9aa4b2;font-size:.8em}
+header.site .gh{margin-left:auto;color:#e2e8f0;font-size:.85em;border:1px solid #ffffff33;padding:3px 11px;border-radius:6px;white-space:nowrap}
+header.site .gh:hover{background:#ffffff1a;text-decoration:none}
 body>*:not(header):not(footer){max-width:900px;margin:0 auto;padding:0 18px}
 h1{font-size:1.6em;border-bottom:3px solid #c0392b;padding-bottom:8px}
 .crumb{color:#888;font-size:.85em;margin:16px 0}
 .lead{color:#444}
 .hero{background:#fff;border:1px solid #eee;border-radius:12px;padding:22px 24px;margin:22px auto}
 .search{width:100%;padding:12px 14px;font-size:1em;border:2px solid #d5d5d5;border-radius:10px;margin-top:6px}
-.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px;margin:14px 0}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px;margin:14px auto;max-width:900px}
 .card{background:#fff;border:1px solid #e8e8e8;border-radius:10px;padding:14px 16px;display:flex;flex-direction:column;gap:4px}
 .card b{color:#c0392b}.card span{color:#888;font-size:.82em}.card em{color:#666;font-size:.82em;font-style:normal}
 ul.list{list-style:none;padding:0}
