@@ -11,6 +11,7 @@ from collections import defaultdict, OrderedDict
 ROOT   = "/home/fabric/bbs/deeptimes-archive"
 RAW    = f"{ROOT}/_src/raw"
 SITE_BASE = "https://fabricsoul.github.io/deeptimes-archive"
+ASSET_VER = "4"   # 改 CSS/JS 后 +1，强制浏览器刷新缓存
 SITE_NAME = "深度时空太空游戏攻略存档"
 SITE_NAME_EN = "DeepTimes Space Game Archive"
 NOINDEX_MIN_CHARS = 300   # 正文少于此值 → noindex，避免薄内容拖累SEO
@@ -148,7 +149,7 @@ def head(title, desc, canonical, rel_prefix, noindex=False, extra_ld=None):
 <meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}">
 <meta property="og:url" content="{canonical}"><meta property="og:locale" content="zh_CN">
 <meta name="twitter:card" content="summary">
-<link rel="stylesheet" href="{rel_prefix}assets/style.css">
+<link rel="stylesheet" href="{rel_prefix}assets/style.css?v={ASSET_VER}">
 {ld}</head><body>
 <header class="site"><a href="{rel_prefix}index.html" class="brand">深度时空 · 太空游戏攻略存档</a>
 <span class="tag">DeepTimes Space Game Archive</span><a class="gh" href="https://github.com/FabricSoul/deeptimes-archive" target="_blank" rel="noopener">GitHub ↗</a></header>'''
@@ -241,7 +242,7 @@ for slug in sec_order:
     top=ds[0]["title"]
     p.append(f'<a class="card" href="s/{slug}.html"><b>{esc(game)}</b><span>{len(ds)} 篇攻略</span><em>{esc(top[:28])}…</em></a>')
 p.append('</div>')
-p.append('<script src="assets/search.js"></script>')
+p.append(f'<script src="assets/search.js?v={ASSET_VER}"></script>')
 p.append(FOOTER)
 open(f"{ROOT}/index.html","w",encoding="utf-8").write("\n".join(p))
 
